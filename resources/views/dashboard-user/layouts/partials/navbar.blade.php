@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-lg bg-dark navbar-dark">
    <div class="container-fluid">
-      <a href="index.html" class="navbar-brand">
-         <img src="/img/dashboard-user/logo.png" alt="">
+      <a href="{{ route('/') }}" class="navbar-brand">
+         <img src="img/dashboard-user/logo.png" alt="">
       </a>
       <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
          <span class="navbar-toggler-icon"></span>
@@ -10,9 +10,9 @@
       <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
          <div class="navbar-nav ml-auto">
             <div class="nav-item dropdown">
-               <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Tentang Kami</a>
+               <a href="#" class="nav-link dropdown-toggle {{ Route::is('sekilas*') ? 'active' : '' }}" data-toggle="dropdown">Tentang Kami</a>
                <div class="dropdown-menu">
-                  <a href="" class="dropdown-item">Sekilas bjb Sekuritas</a>
+                  <a href="{{ route('sekilas.dashuser') }}" class="dropdown-item {{ Route::is('sekilas*') ? 'active' : '' }}">Sekilas bjb Sekuritas</a>
                   <a href="" class="dropdown-item">Sejarah Kami</a>
                   <a href="" class="dropdown-item">Struktur Organisasi</a>
                   <a href="" class="dropdown-item">Pakta Kepatuhan & Audit Internal</a>

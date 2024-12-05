@@ -14,4 +14,8 @@ use App\Http\Controllers\DashboardUser\DashboardUserController;
 |
 */
 
+//Halaman Awal
 Route::get('/', [DashboardUserController::class, 'index'])->name('/');
+
+//Halaman Sekilas BJB Sekuritas
+Route::get('/sekilas-bjb-sekuritas', [DashboardUserController::class, 'indexSekilas'])->name('sekilas.dashuser');

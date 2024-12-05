@@ -11,4 +11,9 @@ class DashboardUserController extends Controller
     {
         return view('dashboard-user.index');
     }
+
+    public function indexSekilas()
+    {
+        return view('dashboard-user.sekilas-sekuritas.index');
+    }
 }

@@ -44,26 +44,35 @@
             <div class="row align-items-center">
                <div class="col-lg-3 col-md-6">
                      <div class="fact-item">
-                        <img src="img/icon-4.png" alt="Icon">
-                        <h2>Qualified Team</h2>
+                        <a href="">
+                           <img src="img/icon-4.png" alt="Icon">
+                           <h2>Pembukaan Akun</h2>
+                        </a>
                      </div>
                </div>
                <div class="col-lg-3 col-md-6">
                      <div class="fact-item">
-                        <img src="img/icon-1.png" alt="Icon">
-                        <h2>Individual Approach</h2>
+                        <a href="">
+                           <img src="img/icon-7.png" alt="Icon">
+                           <h2>Aplikasi Trading</h2>
+                        </a>
+                        
                      </div>
                </div>
                <div class="col-lg-3 col-md-6">
                      <div class="fact-item">
-                        <img src="img/icon-8.png" alt="Icon">
-                        <h2>100% Success</h2>
+                        <a href="">
+                           <img src="img/icon-1.png" alt="Icon">
+                           <h2>Media</h2>
+                        </a>
                      </div>
                </div>
                <div class="col-lg-3 col-md-6">
                      <div class="fact-item">
-                        <img src="img/icon-6.png" alt="Icon">
-                        <h2>100% Satisfaction</h2>
+                        <a href="">
+                           <img src="img/icon-6.png" alt="Icon">
+                           <h2>Panduan</h2>
+                        </a>
                      </div>
                </div>
             </div>
@@ -78,26 +87,23 @@
                <div class="col-md-6">
                      <div class="about-img">
                         <div class="about-img-1">
-                           <img src="img/about-2.jpg" alt="Image">
+                           <img src="img/dashboard-user/abouts.jpg" alt="Image">
                         </div>
                         <div class="about-img-2">
-                           <img src="img/about-1.jpg" alt="Image">
+                           <img src="img/dashboard-user/about.jpg" alt="Image">
                         </div>
                      </div>
                </div>
                <div class="col-md-6">
                      <div class="section-header">
-                        <p>Learn About Us</p>
-                        <h2>25 Years Experience</h2>
+                        <p>PT. bjb Sekuritas Jawa Barat</p>
+                        <h2>Tentang Kami</h2>
                      </div>
                      <div class="about-text">
                         <p>
-                           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
-                        </p>
+                           PT bjb Sekuritas Jawa Barat didirikan sejak tahun 2020 tepatnya pada tanggal 23 November 2020 sesuai dengan Akta Pendirian Perusahaan nomor 38 yang dibuat oleh Notaris R. Tendy Suwarman, S.H. di Bandung Jawa Barat.                        </p>
                         <p>
-                           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. Aenean consectetur convallis porttitor. Aliquam interdum at lacus non blandit.
-                        </p>
-                        <a class="btn" href="">Learn More</a>
+                           bjb Sekuritas memiliki izin usaha sebagai Perantara Pedagang Efek yang diterbitkan pada tanggal 29 Juni 2021 oleh Otoritas Jasa Keuangan sesuai surat OJK No KEP-29/D.04/2021 tanggal 29 Juni 2021 perihal izin usaha PT bjb Sekuritas Jawa Barat sebagai Perusahaan Efek Daerah dan dilanjutkan dengan pengajuan izin ke Bursa Efek Indonesia (BEI) dan mendapat izin pada tanggal 27 September 2021 sesuai surat BEI No. S-06969/BEI.ANG/09-2021.                        </p>
                      </div>
                </div>
             </div>
@@ -110,88 +116,35 @@
    <div class="service">
          <div class="container">
             <div class="section-header">
-               <p>Consulting Services</p>
-               <h2>Our Best Consulting Services</h2>
+               <p>Services</p>
+               <h2>PT. bjb Sekuritas Jawa Barat</h2>
             </div>
             <div class="row">
-               <div class="col-lg-3 col-md-6">
+               <div class="col-lg-4 col-md-6">
                      <div class="service-item">
                         <img src="img/icon-1.png" alt="Icon">
-                        <h3>Business Strategy</h3>
+                        <h3>Perantara Pedagang Efek</h3>
                         <p>
-                           Lorem ipsum dolor sit amet elit. Phasellus nec pretium ornare velit non
+                           bjb Sekuritas sebagai PED pertama di Indonesia memberikan layanan Pertama Pedagang Efek bagi masyarakat Jawa Barat                        
                         </p>
-                        <a href="">Read More</a>
                      </div>
                </div>
-               <div class="col-lg-3 col-md-6">
+               <div class="col-lg-4 col-md-6">
                      <div class="service-item">
                         <img src="img/icon-2.png" alt="Icon">
-                        <h3>Project Management</h3>
+                        <h3>Investasi</h3>
                         <p>
-                           Lorem ipsum dolor sit amet elit. Phasellus nec pretium ornare velit non
+                           bjb Sekuritas memberikan Alternatif Investasi bagi warga Jawa Barat, dan memberikan kenyamanan dan keamanan bertransaksi di pasar modal                        
                         </p>
-                        <a href="">Read More</a>
                      </div>
                </div>
-               <div class="col-lg-3 col-md-6">
+               <div class="col-lg-4 col-md-6">
                      <div class="service-item">
                         <img src="img/icon-3.png" alt="Icon">
-                        <h3>Market Research</h3>
+                        <h3>Pemegang Saham</h3>
                         <p>
-                           Lorem ipsum dolor sit amet elit. Phasellus nec pretium ornare velit non
+                           bjb Sekuritas didukung Penuh oleh bank bjb untuk mendorong Perubahan Investasi di Jawa Barat                             
                         </p>
-                        <a href="">Read More</a>
-                     </div>
-               </div>
-               <div class="col-lg-3 col-md-6">
-                     <div class="service-item">
-                        <img src="img/icon-4.png" alt="Icon">
-                        <h3>Human Resource</h3>
-                        <p>
-                           Lorem ipsum dolor sit amet elit. Phasellus nec pretium ornare velit non
-                        </p>
-                        <a href="">Read More</a>
-                     </div>
-               </div>
-               <div class="col-lg-3 col-md-6">
-                     <div class="service-item">
-                        <img src="img/icon-5.png" alt="Icon">
-                        <h3>Online Business</h3>
-                        <p>
-                           Lorem ipsum dolor sit amet elit. Phasellus nec pretium ornare velit non
-                        </p>
-                        <a href="">Read More</a>
-                     </div>
-               </div>
-               <div class="col-lg-3 col-md-6">
-                     <div class="service-item">
-                        <img src="img/icon-6.png" alt="Icon">
-                        <h3>Capital Management</h3>
-                        <p>
-                           Lorem ipsum dolor sit amet elit. Phasellus nec pretium ornare velit non
-                        </p>
-                        <a href="">Read More</a>
-                     </div>
-               </div>
-               <div class="col-lg-3 col-md-6">
-                     <div class="service-item">
-                        <img src="img/icon-7.png" alt="Icon">
-                        <h3>Business Insurance</h3>
-                        <p>
-                           Lorem ipsum dolor sit amet elit. Phasellus nec pretium ornare velit non
-                        </p>
-                        <a href="">Read More</a>
-                     </div>
-               </div>
-               <div class="col-lg-3 col-md-6">
-                     <div class="service-item">
-                        <img src="img/icon-8.png" alt="Icon">
-                        <h3>Online Marketing</h3>
-                        <p>
-                           Lorem ipsum dolor sit amet elit. Phasellus nec pretium ornare velit non
-                        </p>
-                        <a href="">Read More</a>
                      </div>
                </div>
             </div>
@@ -202,258 +155,205 @@
 
    <!-- Feature Start -->
    <div class="feature">
-         <div class="container">
-            <div class="row align-items-end">
-               <div class="col-md-6">
-                     <div class="feature-img">
-                        <img src="img/business-man.png" alt="Image">
-                     </div>
-               </div>
-               <div class="col-md-6">
-                     <div class="section-header">
-                        <p>Our Feature</p>
-                        <h2>Why Choose Us?</h2>
-                     </div>
-                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus 
-                     </p>
-                     <div class="row counters">
-                        <div class="col-6">
-                           <i class="fa fa-user"></i>
-                           <div class="counters-text">
-                                 <h2 data-toggle="counter-up">100</h2>
-                                 <p>Our Staffs</p>
-                           </div>
-                        </div>
-                        <div class="col-6">
-                           <i class="fa fa-users"></i>
-                           <div class="counters-text">
-                                 <h2 data-toggle="counter-up">200</h2>
-                                 <p>Our Clients</p>
-                           </div>
-                        </div>
-                        <div class="col-6">
-                           <i class="fa fa-check"></i>
-                           <div class="counters-text">
-                                 <h2 data-toggle="counter-up">300</h2>
-                                 <p>Completed Projects</p>
-                           </div>
-                        </div>
-                        <div class="col-6">
-                           <i class="fa fa-running"></i>
-                           <div class="counters-text">
-                                 <h2 data-toggle="counter-up">400</h2>
-                                 <p>Running Projects</p>
-                           </div>
-                        </div>
-                     </div>
-               </div>
+      <div class="container">
+         <div class="row align-items-center">
+            <div class="col-md-6">
+                  <div class="feature-img">
+                     <iframe 
+                        src="https://www.youtube.com/embed/ePxMqh7NvUw?autoplay=1&mute=1&playlist=ePxMqh7NvUw&loop=1" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen
+                     ></iframe>
+                  </div>
+            </div>
+            <div class="col-md-6">
+                  <div class="section-header">
+                     <h2>Company Profile</h2>
+                  </div>
             </div>
          </div>
+      </div>
    </div>
    <!-- Feature End -->
 
-   <!-- Testimonial Start -->
-   <div class="testimonial">
-         <div class="container">
-            <div class="section-header">
-               <p>Testimonial Carousel</p>
-               <h2>100% Positive Customer Reviews</h2>
-            </div>
-            <div class="owl-carousel testimonials-carousel">
-               <div class="testimonial-item">
-                     <img src="img/testimonial-1.jpg" alt="Image">
-                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut mollis mauris. Vivamus egestas eleifend dui ac consequat
-                     </p>
-                     <h2>Client Name</h2>
-                     <h3>Profession</h3>
-               </div>
-               <div class="testimonial-item">
-                     <img src="img/testimonial-2.jpg" alt="Image">
-                     <p>
-                        Phasellus pellentesque tempus pretium. Quisque in enim sit amet purus venenatis porttitor sed non velit. Vivamus vehicula finibus
-                     </p>
-                     <h2>Client Name</h2>
-                     <h3>Profession</h3>
-               </div>
-               <div class="testimonial-item">
-                     <img src="img/testimonial-3.jpg" alt="Image">
-                     <p>
-                        Sed in lectus eu eros tincidunt cursus. Aliquam eleifend velit nisl. Sed et posuere urna, ut vestibulum massa. Integer quis magna
-                     </p>
-                     <h2>Client Name</h2>
-                     <h3>Profession</h3>
-               </div>
-               <div class="testimonial-item">
-                     <img src="img/testimonial-4.jpg" alt="Image">
-                     <p>
-                        Sed in lectus eu eros tincidunt cursus. Aliquam eleifend velit nisl. Sed et posuere urna, ut vestibulum massa. Integer quis magna
-                     </p>
-                     <h2>Client Name</h2>
-                     <h3>Profession</h3>
-               </div>
-            </div>
-         </div>
-   </div>
-   <!-- Testimonial End -->
-
 
    <!-- Team Start -->
-   <div class="team">
-         <div class="container">
-            <div class="section-header">
-               <p>Meet Our Advisors</p>
-               <h2>Our Professional Consulting Team</h2>
-            </div>
-            <div class="row">
-               <div class="col-lg-3 col-md-6">
-                     <div class="team-item">
-                        <div class="team-img">
-                           <img src="img/team-1.jpg" alt="Team Image">
-                        </div>
-                        <div class="team-text">
-                           <h2>Donald John</h2>
-                           <p>Founder & CEO</p>
-                           <div class="team-social">
-                                 <a href=""><i class="fab fa-twitter"></i></a>
-                                 <a href=""><i class="fab fa-facebook-f"></i></a>
-                                 <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                 <a href=""><i class="fab fa-instagram"></i></a>
-                           </div>
+   <div class="team text-center">
+      <div class="container">
+         <div class="section-header mb-4">
+            <h2 class="text-center">Manajemen & Eksekutif Senior</h2>
+         </div>
+         <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 mb-4">
+                  <div class="team-item">
+                     <div class="team-img">
+                        <img src="img/dashboard-user/team/budiman.png" alt="Team Image" class="img-fluid rounded-circle">
+                     </div>
+                     <div class="team-text mt-3">
+                        <h2 class="h5">Muhammad As'adi Budiman</h2>
+                        <p class="text-muted">Commissioner</p>
+                        <div class="team-social">
+                              <a href="" class="mx-2"><i class="fab fa-twitter"></i></a>
+                              <a href="" class="mx-2"><i class="fab fa-facebook-f"></i></a>
+                              <a href="" class="mx-2"><i class="fab fa-linkedin-in"></i></a>
+                              <a href="" class="mx-2"><i class="fab fa-instagram"></i></a>
                         </div>
                      </div>
-               </div>
-               <div class="col-lg-3 col-md-6">
-                     <div class="team-item">
-                        <div class="team-img">
-                           <img src="img/team-2.jpg" alt="Team Image">
-                        </div>
-                        <div class="team-text">
-                           <h2>Adam Phillips</h2>
-                           <p>Chef Executive</p>
-                           <div class="team-social">
-                                 <a href=""><i class="fab fa-twitter"></i></a>
-                                 <a href=""><i class="fab fa-facebook-f"></i></a>
-                                 <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                 <a href=""><i class="fab fa-instagram"></i></a>
-                           </div>
-                        </div>
-                     </div>
-               </div>
-               <div class="col-lg-3 col-md-6">
-                     <div class="team-item">
-                        <div class="team-img">
-                           <img src="img/team-3.jpg" alt="Team Image">
-                        </div>
-                        <div class="team-text">
-                           <h2>Thomas Olsen</h2>
-                           <p>Chef Advisor</p>
-                           <div class="team-social">
-                                 <a href=""><i class="fab fa-twitter"></i></a>
-                                 <a href=""><i class="fab fa-facebook-f"></i></a>
-                                 <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                 <a href=""><i class="fab fa-instagram"></i></a>
-                           </div>
-                        </div>
-                     </div>
-               </div>
-               <div class="col-lg-3 col-md-6">
-                     <div class="team-item">
-                        <div class="team-img">
-                           <img src="img/team-4.jpg" alt="Team Image">
-                        </div>
-                        <div class="team-text">
-                           <h2>James Alien</h2>
-                           <p>Advisor</p>
-                           <div class="team-social">
-                                 <a href=""><i class="fab fa-twitter"></i></a>
-                                 <a href=""><i class="fab fa-facebook-f"></i></a>
-                                 <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                 <a href=""><i class="fab fa-instagram"></i></a>
-                           </div>
-                        </div>
-                     </div>
-               </div>
+                  </div>
             </div>
          </div>
+         <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 mb-4">
+                  <div class="team-item">
+                     <div class="team-img">
+                        <img src="img/dashboard-user/team/maryadi.png" alt="Team Image" class="img-fluid rounded-circle">
+                     </div>
+                     <div class="team-text mt-3">
+                        <h2 class="h5">Maryandi Suwondo</h2>
+                        <p class="text-muted">President Director</p>
+                        <div class="team-social">
+                              <a href="" class="mx-2"><i class="fab fa-twitter"></i></a>
+                              <a href="" class="mx-2"><i class="fab fa-facebook-f"></i></a>
+                              <a href="" class="mx-2"><i class="fab fa-linkedin-in"></i></a>
+                              <a href="" class="mx-2"><i class="fab fa-instagram"></i></a>
+                        </div>
+                     </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                  <div class="team-item">
+                     <div class="team-img">
+                        <img src="img/dashboard-user/team/yogi.png" alt="Team Image" class="img-fluid rounded-circle">
+                     </div>
+                     <div class="team-text mt-3">
+                        <h2 class="h5">Yogi Heditia Permadi</h2>
+                        <p class="text-muted">Director</p>
+                        <div class="team-social">
+                              <a href="" class="mx-2"><i class="fab fa-twitter"></i></a>
+                              <a href="" class="mx-2"><i class="fab fa-facebook-f"></i></a>
+                              <a href="" class="mx-2"><i class="fab fa-linkedin-in"></i></a>
+                              <a href="" class="mx-2"><i class="fab fa-instagram"></i></a>
+                        </div>
+                     </div>
+                  </div>
+            </div>
+         </div>
+         <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 mb-4">
+                  <div class="team-item">
+                     <div class="team-img">
+                        <img src="img/dashboard-user/team/agus.png" alt="Team Image" class="img-fluid rounded-circle">
+                     </div>
+                     <div class="team-text mt-3">
+                        <h2 class="h5">Agus Rochman</h2>
+                        <p class="text-muted">Group Head Finance & Accounting</p>
+                        <div class="team-social">
+                              <a href="" class="mx-2"><i class="fab fa-twitter"></i></a>
+                              <a href="" class="mx-2"><i class="fab fa-facebook-f"></i></a>
+                              <a href="" class="mx-2"><i class="fab fa-linkedin-in"></i></a>
+                              <a href="" class="mx-2"><i class="fab fa-instagram"></i></a>
+                        </div>
+                     </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                  <div class="team-item">
+                     <div class="team-img">
+                        <img src="img/dashboard-user/team/budi.png" alt="Team Image" class="img-fluid rounded-circle">
+                     </div>
+                     <div class="team-text mt-3">
+                        <h2 class="h5">Budi Nugraha</h2>
+                        <p class="text-muted">Group Head of Information Technology & General Affair</p>
+                        <div class="team-social">
+                              <a href="" class="mx-2"><i class="fab fa-twitter"></i></a>
+                              <a href="" class="mx-2"><i class="fab fa-facebook-f"></i></a>
+                              <a href="" class="mx-2"><i class="fab fa-linkedin-in"></i></a>
+                              <a href="" class="mx-2"><i class="fab fa-instagram"></i></a>
+                        </div>
+                     </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                  <div class="team-item">
+                     <div class="team-img">
+                        <img src="img/dashboard-user/team/yongki.png" alt="Team Image" class="img-fluid rounded-circle">
+                     </div>
+                     <div class="team-text mt-3">
+                        <h2 class="h5">Yongki Abdurahman</h2>
+                        <p class="text-muted">Group Head of Settlement & Custodian</p>
+                        <div class="team-social">
+                              <a href="" class="mx-2"><i class="fab fa-twitter"></i></a>
+                              <a href="" class="mx-2"><i class="fab fa-facebook-f"></i></a>
+                              <a href="" class="mx-2"><i class="fab fa-linkedin-in"></i></a>
+                              <a href="" class="mx-2"><i class="fab fa-instagram"></i></a>
+                        </div>
+                     </div>
+                  </div>
+            </div>
+         </div>
+         <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 mb-4">
+                  <div class="team-item">
+                     <div class="team-img">
+                        <img src="img/dashboard-user/team/risa.png" alt="Team Image" class="img-fluid rounded-circle">
+                     </div>
+                     <div class="team-text mt-3">
+                        <h2 class="h5">Risa Dwitanti</h2>
+                        <p class="text-muted">Group Head of Compliance & Internal Audit</p>
+                        <div class="team-social">
+                              <a href="" class="mx-2"><i class="fab fa-twitter"></i></a>
+                              <a href="" class="mx-2"><i class="fab fa-facebook-f"></i></a>
+                              <a href="" class="mx-2"><i class="fab fa-linkedin-in"></i></a>
+                              <a href="" class="mx-2"><i class="fab fa-instagram"></i></a>
+                        </div>
+                     </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                  <div class="team-item">
+                     <div class="team-img">
+                        <img src="img/dashboard-user/team/joko.png" alt="Team Image" class="img-fluid rounded-circle">
+                     </div>
+                     <div class="team-text mt-3">
+                        <h2 class="h5">Joko Hadi Susilo</h2>
+                        <p class="text-muted">Group Head Sales & Marketing</p>
+                        <div class="team-social">
+                              <a href="" class="mx-2"><i class="fab fa-twitter"></i></a>
+                              <a href="" class="mx-2"><i class="fab fa-facebook-f"></i></a>
+                              <a href="" class="mx-2"><i class="fab fa-linkedin-in"></i></a>
+                              <a href="" class="mx-2"><i class="fab fa-instagram"></i></a>
+                        </div>
+                     </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                  <div class="team-item">
+                     <div class="team-img">
+                        <img src="img/dashboard-user/team/nuryane.png" alt="Team Image" class="img-fluid rounded-circle">
+                     </div>
+                     <div class="team-text mt-3">
+                        <h2 class="h5">Nuryane Komalasari</h2>
+                        <p class="text-muted">Group Head Risk Management</p>
+                        <div class="team-social">
+                              <a href="" class="mx-2"><i class="fab fa-twitter"></i></a>
+                              <a href="" class="mx-2"><i class="fab fa-facebook-f"></i></a>
+                              <a href="" class="mx-2"><i class="fab fa-linkedin-in"></i></a>
+                              <a href="" class="mx-2"><i class="fab fa-instagram"></i></a>
+                        </div>
+                     </div>
+                  </div>
+            </div>
+         </div>
+      </div>
    </div>
    <!-- Team End -->
-
-   <!-- Contact Start -->
-   <div class="contact">
-         <div class="container">
-            <div class="section-header">
-               <p>Get In Touch</p>
-               <h2>Get In Touch For Any Query</h2>
-            </div>
-            <div class="row align-items-center">
-               <div class="col-md-5">
-                     <div class="contact-info">
-                        <div class="contact-icon">
-                           <i class="fa fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-text">
-                           <h3>Our Head Office</h3>
-                           <p>123 Street, New York, USA</p>
-                        </div>
-                     </div>
-                     <div class="contact-info">
-                        <div class="contact-icon">
-                           <i class="fa fa-phone-alt"></i>
-                        </div>
-                        <div class="contact-text">
-                           <h3>Call for Help</h3>
-                           <p>+012 345 6789</p>
-                        </div>
-                     </div>
-                     <div class="contact-info">
-                        <div class="contact-icon">
-                           <i class="fa fa-envelope"></i>
-                        </div>
-                        <div class="contact-text">
-                           <h3>Email for Information</h3>
-                           <p>info@example.com</p>
-                        </div>
-                     </div>
-               </div>
-               <div class="col-md-7">
-                     <div class="contact-form">
-                        <div id="success"></div>
-                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                           <div class="control-group">
-                                 <input type="text" class="form-control" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
-                                 <p class="help-block text-danger"></p>
-                           </div>
-                           <div class="control-group">
-                                 <input type="email" class="form-control" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
-                                 <p class="help-block text-danger"></p>
-                           </div>
-                           <div class="control-group">
-                                 <input type="text" class="form-control" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
-                                 <p class="help-block text-danger"></p>
-                           </div>
-                           <div class="control-group">
-                                 <textarea class="form-control" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
-                                 <p class="help-block text-danger"></p>
-                           </div>
-                           <div>
-                                 <button class="btn" type="submit" id="sendMessageButton">Send Message</button>
-                           </div>
-                        </form>
-                     </div>
-               </div>
-            </div>
-         </div>
-   </div>
-   <!-- Contact End -->
 
    <!-- Blog Start -->
    <div class="blog">
          <div class="container">
             <div class="section-header">
-               <p>Consulting Blog</p>
-               <h2>Latest From Our Consulting Blog</h2>
+               <h2>Artikel Terbaru</h2>
             </div>
             <div class="owl-carousel blog-carousel">
                <div class="blog-item">

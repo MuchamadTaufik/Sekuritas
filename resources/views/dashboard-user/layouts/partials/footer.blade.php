@@ -3,54 +3,43 @@
       <div class="row">
          <div class="col-lg-7">
             <div class="row">
-               <div class="col-md-6">
+               <div class="col-md-4">
                   <div class="footer-contact">
-                     <h2>Our Head Office</h2>
-                     <p><i class="fa fa-map-marker-alt"></i>123 Street, New York, USA</p>
-                     <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
-                     <p><i class="fa fa-envelope"></i>info@example.com</p>
-                     <div class="footer-social">
-                        <a href=""><i class="fab fa-twitter"></i></a>
-                        <a href=""><i class="fab fa-facebook-f"></i></a>
-                        <a href=""><i class="fab fa-youtube"></i></a>
-                        <a href=""><i class="fab fa-instagram"></i></a>
-                        <a href=""><i class="fab fa-linkedin-in"></i></a>
-                     </div>
+                     <img src="/img/dashboard-user/logo.png" alt="">
                   </div>
                </div>
-               <div class="col-md-6">
+               <div class="col-md-4">
                   <div class="footer-link">
-                     <h2>Quick Links</h2>
-                     <a href="">Terms of use</a>
-                     <a href="">Privacy policy</a>
-                     <a href="">Cookies</a>
-                     <a href="">Help</a>
-                     <a href="">FQAs</a>
+                     <h2>Bantuan</h2>
+                     <a href="">FAQ</a>
+                     <a href="">Kebijakan Privasi</a>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="footer-newsletter">
+                     <h2>Media Sosial</h2>
+                     <div class="social-icons">
+                        <a href="https://www.youtube.com/@bjbsekuritas" class="mx-2"><i class="fab fa-youtube fa-2x"></i></a>
+                        <a href="http://instagram.com/bjbsekuritas" class="mx-2"><i class="fab fa-instagram fa-2x"></i></a>
+                     </div>
                   </div>
                </div>
             </div>
          </div>
          <div class="col-lg-5">
             <div class="footer-newsletter">
-               <h2>Newsletter</h2>
-               <p>
-                     Lorem ipsum dolor sit amet elit. Quisque eu lectus a leo dictum nec non quam. Tortor eu placerat rhoncus, lorem quam iaculis felis, sed lacus neque id eros.
-               </p>
-               <div class="form">
-                  <input class="form-control" placeholder="Email goes here">
-                  <button class="btn">Submit</button>
-               </div>
+               <h2>Kantor Pusat</h2>
+               <p><i class="fa fa-map-marker-alt"></i> Jl. Teuku Umar No.10, Lebakgede, Kecamatan Coblong, Kota Bandung, Jawa Barat 40132</p>
+               <p><i class="fa fa-phone-alt"></i> (022) 4211415</p>
+               <p><i class="fa fa-envelope"></i> info@bjbsekuritas.co.id</p>
             </div>
          </div>
       </div>
    </div>
    <div class="container copyright">
       <div class="row">
-         <div class="col-md-6">
-            <p>&copy; <a href="#">Your Site Name</a>, All Right Reserved.</p>
-         </div>
-         <div class="col-md-6">
-            <p>Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>
+         <div class="col-md-12">
+            <p>&copy; <a href="{{ route('/') }}">bjb Sekuritas 2024</a>, All Right Reserved.</p>
          </div>
       </div>
    </div>
