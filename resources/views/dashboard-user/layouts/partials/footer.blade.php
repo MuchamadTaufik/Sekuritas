@@ -43,4 +43,17 @@
          </div>
       </div>
    </div>
+   <div class="container-fluid bg-footer">
+      <div class="row">
+         <div class="col-4 bar-1" style="background-color: #0078ff; height: 10px;">
+            <!-- Optional: You can add content here if needed -->
+         </div>
+         <div class="col-4 bar-2" style="background-color: #0078ff; height: 10px;">
+            <!-- Optional: You can add content here if needed -->
+         </div>
+         <div class="col-4 bar-3" style="background-color: #edc817; height: 10px;">
+            <!-- Optional: You can add content here if needed -->
+         </div>
+      </div>
+   </div>
 </div>

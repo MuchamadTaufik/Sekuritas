@@ -110,13 +110,37 @@
          </div>
    </div>
    <!-- About End -->
-
+   
+   <!-- Partner Start -->
+   <div class="partner">
+      <div class="container">
+         <div class="partner-logo-carousel d-flex justify-content-center align-items-center overflow-hidden">
+            <div class="partner-logo-track d-flex align-items-center">
+               <div class="partner-logo mx-4">
+                  <img src="img/dashboard-user/partner/idclear.png" alt="Partner 1" class="img-fluid grayscale" style="max-height: 100px;">
+               </div>
+               <div class="partner-logo mx-4">
+                  <img src="img/dashboard-user/partner/idx.png" alt="Partner 2" class="img-fluid grayscale" style="max-height: 100px;">
+               </div>
+               <div class="partner-logo mx-4">
+                  <img src="img/dashboard-user/partner/ksei.png" alt="Partner 3" class="img-fluid grayscale" style="max-height: 100px;">
+               </div>
+               <div class="partner-logo mx-4">
+                  <img src="img/dashboard-user/partner/ojk.jpg" alt="Partner 4" class="img-fluid grayscale" style="max-height: 100px;">
+               </div>
+               <div class="partner-logo mx-4">
+                  <img src="img/dashboard-user/partner/sipf.png" alt="Partner 5" class="img-fluid grayscale" style="max-height: 100px;">
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- Partner End -->
 
    <!-- Service Start -->
    <div class="service">
          <div class="container">
             <div class="section-header">
-               <p>Services</p>
                <h2>PT. bjb Sekuritas Jawa Barat</h2>
             </div>
             <div class="row">
@@ -420,4 +444,10 @@
          </div>
    </div>
    <!-- Blog End -->
+   <script>
+      document.addEventListener('DOMContentLoaded', function() {
+         const track = document.querySelector('.partner-logo-track');
+          track.innerHTML += track.innerHTML; // Double the logos for seamless loop
+      });
+      </script>
 @endsection
