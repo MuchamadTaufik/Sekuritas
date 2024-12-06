@@ -112,26 +112,22 @@
    <!-- About End -->
    
    <!-- Partner Start -->
-   <div class="partner">
-      <div class="container">
-         <div class="partner-logo-carousel d-flex justify-content-center align-items-center overflow-hidden">
-            <div class="partner-logo-track d-flex align-items-center">
-               <div class="partner-logo mx-4">
-                  <img src="img/dashboard-user/partner/idclear.png" alt="Partner 1" class="img-fluid grayscale" style="max-height: 100px;">
-               </div>
-               <div class="partner-logo mx-4">
-                  <img src="img/dashboard-user/partner/idx.png" alt="Partner 2" class="img-fluid grayscale" style="max-height: 100px;">
-               </div>
-               <div class="partner-logo mx-4">
-                  <img src="img/dashboard-user/partner/ksei.png" alt="Partner 3" class="img-fluid grayscale" style="max-height: 100px;">
-               </div>
-               <div class="partner-logo mx-4">
-                  <img src="img/dashboard-user/partner/ojk.jpg" alt="Partner 4" class="img-fluid grayscale" style="max-height: 100px;">
-               </div>
-               <div class="partner-logo mx-4">
-                  <img src="img/dashboard-user/partner/sipf.png" alt="Partner 5" class="img-fluid grayscale" style="max-height: 100px;">
-               </div>
-            </div>
+   <div class="partner-carousel-container">
+      <div class="partner-logo-track">
+         <div class="partner-logo">
+            <img src="img/dashboard-user/partner/idclear.png" alt="IDClear">
+         </div>
+         <div class="partner-logo">
+            <img src="img/dashboard-user/partner/idx.png" alt="IDX">
+         </div>
+         <div class="partner-logo">
+            <img src="img/dashboard-user/partner/ksei.png" alt="KSEI">
+         </div>
+         <div class="partner-logo">
+            <img src="img/dashboard-user/partner/ojk.jpg" alt="OJK">
+         </div>
+         <div class="partner-logo">
+            <img src="img/dashboard-user/partner/sipf.png" alt="SIPF">
          </div>
       </div>
    </div>
@@ -444,10 +440,90 @@
          </div>
    </div>
    <!-- Blog End -->
+
+
    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-         const track = document.querySelector('.partner-logo-track');
-          track.innerHTML += track.innerHTML; // Double the logos for seamless loop
-      });
-      </script>
+         class InfiniteCarousel {
+            constructor(trackSelector, options = {}) {
+               this.track = document.querySelector(trackSelector);
+               this.logos = Array.from(this.track.children);
+               this.options = {
+                     speed: options.speed || 50,  // pixel per second
+                     pauseOnHover: options.pauseOnHover ?? true
+               };
+
+               this.position = 0;
+               this.totalWidth = 0;
+               this.animationFrame = null;
+
+               this.init();
+            }
+
+            init() {
+               // Hitung total lebar logo
+               this.logos.forEach(logo => {
+                     this.totalWidth += logo.offsetWidth + 
+                        (parseInt(getComputedStyle(logo).marginLeft) || 0) +
+                        (parseInt(getComputedStyle(logo).marginRight) || 0);
+               });
+
+               // Duplikasi logo untuk membuat efek tak terbatas
+               this.logos.forEach(logo => {
+                     const clone = logo.cloneNode(true);
+                     this.track.appendChild(clone);
+               });
+
+               // Update logo yang baru
+               this.logos = Array.from(this.track.children);
+
+               this.startAnimation();
+
+               if (this.options.pauseOnHover) {
+                     this.track.addEventListener('mouseenter', () => this.pause());
+                     this.track.addEventListener('mouseleave', () => this.resume());
+               }
+            }
+
+            startAnimation() {
+               const animate = () => {
+                     // Geser posisi
+                     this.position -= this.options.speed / 60;
+
+                     // Reset posisi jika melewati total lebar
+                     if (Math.abs(this.position) >= this.totalWidth) {
+                        this.position = 0;
+                     }
+
+                     // Terapkan transformasi
+                     this.track.style.transform = `translateX(${this.position}px)`;
+
+                     // Lanjutkan animasi
+                     this.animationFrame = requestAnimationFrame(animate);
+               };
+
+               this.animationFrame = requestAnimationFrame(animate);
+            }
+
+            pause() {
+               if (this.animationFrame) {
+                     cancelAnimationFrame(this.animationFrame);
+                     this.animationFrame = null;
+               }
+            }
+
+            resume() {
+               if (!this.animationFrame) {
+                     this.startAnimation();
+               }
+            }
+         }
+
+         // Inisialisasi carousel saat dokumen dimuat
+         document.addEventListener('DOMContentLoaded', () => {
+            new InfiniteCarousel('.partner-logo-track', {
+               speed: 50,  // Sesuaikan kecepatan scroll
+               pauseOnHover: true
+            });
+         });
+   </script>
 @endsection

@@ -41,7 +41,7 @@
                   <a href="" class="dropdown-item">Download</a>
                </div>
             </div>
-            <a href="service.html" class="nav-item nav-link">bjb Sekuritas Karir</a>
+            <a href="service.html" class="nav-item nav-link">Karir</a>
          </div>
       </div>
    </div>
