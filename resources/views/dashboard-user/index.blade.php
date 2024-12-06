@@ -46,7 +46,7 @@
                      <div class="fact-item">
                         <a href="">
                            <img src="img/icon-4.png" alt="Icon">
-                           <h2>Pembukaan Akun</h2>
+                           <h2>Pembukaan Akun 2</h2>
                         </a>
                      </div>
                </div>
