@@ -20,24 +20,6 @@
    </div>
    <!-- Carousel End -->
 
-   <!-- Video Modal Start-->
-   <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-         <div class="modal-dialog" role="document">
-            <div class="modal-content">
-               <div class="modal-body">
-                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                     </button>        
-                     <!-- 16:9 aspect ratio -->
-                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
-                     </div>
-               </div>
-            </div>
-         </div>
-   </div> 
-   <!-- Video Modal End -->
-
    <!-- Fact Start -->
    <div class="fact">
          <div class="container">
@@ -46,7 +28,7 @@
                      <div class="fact-item">
                         <a href="">
                            <img src="img/icon-4.png" alt="Icon">
-                           <h2>Pembukaan Akun 2</h2>
+                           <h2>Pembukaan Akun</h2>
                         </a>
                      </div>
                </div>
@@ -112,25 +94,7 @@
    <!-- About End -->
    
    <!-- Partner Start -->
-   <div class="partner-carousel-container">
-      <div class="partner-logo-track">
-         <div class="partner-logo">
-            <img src="img/dashboard-user/partner/idclear.png" alt="IDClear">
-         </div>
-         <div class="partner-logo">
-            <img src="img/dashboard-user/partner/idx.png" alt="IDX">
-         </div>
-         <div class="partner-logo">
-            <img src="img/dashboard-user/partner/ksei.png" alt="KSEI">
-         </div>
-         <div class="partner-logo">
-            <img src="img/dashboard-user/partner/ojk.jpg" alt="OJK">
-         </div>
-         <div class="partner-logo">
-            <img src="img/dashboard-user/partner/sipf.png" alt="SIPF">
-         </div>
-      </div>
-   </div>
+   
    <!-- Partner End -->
 
    <!-- Service Start -->
@@ -441,6 +405,25 @@
    </div>
    <!-- Blog End -->
 
+   <div class="partner-carousel-container mt-5">
+      <div class="partner-logo-track">
+         <div class="partner-logo">
+            <img src="img/dashboard-user/partner/idclear.png" alt="IDClear">
+         </div>
+         <div class="partner-logo">
+            <img src="img/dashboard-user/partner/idx.png" alt="IDX">
+         </div>
+         <div class="partner-logo">
+            <img src="img/dashboard-user/partner/ksei.png" alt="KSEI">
+         </div>
+         <div class="partner-logo">
+            <img src="img/dashboard-user/partner/ojk.jpg" alt="OJK">
+         </div>
+         <div class="partner-logo">
+            <img src="img/dashboard-user/partner/sipf.png" alt="SIPF">
+         </div>
+      </div>
+   </div>
 
    <script>
          class InfiniteCarousel {

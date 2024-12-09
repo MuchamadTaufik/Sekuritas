@@ -55,5 +55,26 @@
 
       <!-- Template Javascript -->
       <script src="/js/main.js"></script>
+      <script>
+            // Get the navbar element and logo element
+            const navbar = document.querySelector('.navbar');
+            const logo = document.getElementById('logo');
+         
+            // Define the logo images
+            const staticLogoSrc = 'img/dashboard-user/logo.png';
+            const stickyLogoSrc = 'img/dashboard-user/logo2.png';
+         
+            // Add a scroll event listener to the window
+            window.addEventListener('scroll', function() {
+            // Check if the navbar has the 'nav-sticky' class
+            if (navbar.classList.contains('nav-sticky')) {
+               // Change the logo to the sticky version
+               logo.src = stickyLogoSrc;
+            } else {
+               // Change the logo to the static version
+               logo.src = staticLogoSrc;
+            }
+            });
+      </script>
    </body>
 </html>

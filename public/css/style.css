@@ -81,7 +81,7 @@ a:focus {
 .top-bar {
     position: relative;
     height: 35px;
-    background-image: linear-gradient(to right, #0796fe, #092a49);
+    background-image: linear-gradient(to right, #0078ff, #edc817);
 }
 
 .top-bar .top-bar-left {
@@ -567,7 +567,7 @@ a:focus {
     position: relative;
     width: 100%;
     margin-bottom: 30px;
-    padding: 30px 0 25px 0;
+    padding: 20px 0 15px 0;
     text-align: center;
     background: #ffffff;
     border: 1px solid transparent;
@@ -580,14 +580,13 @@ a:focus {
 }
 
 .fact .fact-item img {
-    max-height: 50px;
+    max-height: 40px;
     margin-bottom: 15px;
 }
 
 .fact .fact-item h2 {
-    font-size: 22px;
+    font-size: 1.3rem;
     font-weight: 300;
-    letter-spacing: 1px;
 }
 
 /*******************************/
@@ -702,6 +701,7 @@ a:focus {
     position: relative;
     width: 100%;
     padding: 45px 0 15px 0;
+    background-color: #f6f7f7;
 }
 
 .service .service-item {
@@ -947,6 +947,7 @@ a:focus {
     position: relative;
     width: 100%;
     padding: 45px 0;
+    background-color: #f6f7f7;
 }
 
 .blog .section-header {
@@ -1477,3 +1478,65 @@ a:focus {
 }
 
 /* partner end */
+
+/* Background Route Start */
+.route {
+    position: relative;
+    width: 100%;
+    text-align: left;
+}
+
+.bg-route {
+    position: relative;
+}
+
+.bg-route img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.title-route {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #092a49; /* Adjust the transparency as needed */
+    padding: 15px 20px; /* Adjust padding to reduce the height */
+    display: flex;
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    color: #fff;
+    gap: 10px;
+}
+
+.title-route span {
+    font-size: 1rem;
+}
+
+.title-route .active {
+    font-weight: bold;
+    color: #fff; /* Change the color to match the provided image */
+}
+
+.title-route .non-active a {
+    margin: 0;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.title-route .non-active a:hover {
+    color: #ddd;
+    margin-left: -5px; /* Moves the link 5px to the left */
+    transition: margin-left 0.3s ease;
+}
+
+/* Background Route End */
+.sekilas-text p {
+    font-size: 1.1rem;
+}
+
+.sekilas-text img {
+    height: auto;
+    max-width: 100%;
+}

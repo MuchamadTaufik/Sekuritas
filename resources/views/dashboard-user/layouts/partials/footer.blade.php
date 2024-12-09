@@ -5,7 +5,7 @@
             <div class="row">
                <div class="col-md-4">
                   <div class="footer-contact">
-                     <img src="/img/dashboard-user/logo.png" alt="">
+                     <img src="/img/dashboard-user/logo2.png" alt="">
                   </div>
                </div>
                <div class="col-md-4">
