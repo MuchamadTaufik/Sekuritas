@@ -800,7 +800,7 @@ a:focus {
 .feature .feature-img {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1492,8 +1492,12 @@ a:focus {
 
 .bg-route img {
     width: 100%;
-    height: auto;
+    max-height: 500px;
     display: block;
+    object-fit: cover; /* Memastikan gambar dipotong untuk mengisi kontainer */
+    object-position: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan lembut */
+    transition: transform 0.3s ease;
 }
 
 .title-route {
@@ -1501,7 +1505,7 @@ a:focus {
     bottom: 0;
     left: 0;
     width: 100%;
-    background: #092a49; /* Adjust the transparency as needed */
+    background: rgba(9, 42, 73, 0.5); /* Adjust the transparency as needed */
     padding: 15px 20px; /* Adjust padding to reduce the height */
     display: flex;
     justify-content: center; /* Center text horizontally */
@@ -1532,11 +1536,81 @@ a:focus {
 }
 
 /* Background Route End */
-.sekilas-text p {
+
+/* halaman Sekilas bjb start */
+
+.sekilas-text p,
+.sejarah p {
     font-size: 1.1rem;
 }
 
-.sekilas-text img {
-    height: auto;
-    max-width: 100%;
+.sejarah {
+    background: url("/img/dashboard-user/bg-route.jpg") no-repeat center center;
+    background-size: cover; /* Memastikan gambar latar belakang menutupi seluruh area */
+    padding: 20px; /* Tambahkan padding jika diperlukan untuk mengatur spasi di sekitar teks */
 }
+
+.sejarah img {
+    max-height: 400px;
+    width: 100%;
+    display: block;
+    object-fit: cover; /* Memastikan gambar dipotong untuk mengisi kontainer */
+    object-position: center;
+}
+
+.visi img {
+    width: 100%;
+    height: auto;
+}
+
+/* halaman Sekilas bjb end */
+
+/* Organisasi Start */
+
+.organisasi img {
+    width: 100%;
+    height: auto;
+}
+
+.organisasi {
+    background: url("/img/dashboard-user/bg-route.jpg") no-repeat center center;
+    background-size: cover; /* Memastikan gambar latar belakang menutupi seluruh area */
+    padding: 20px; /* Tambahkan padding jika diperlukan untuk mengatur spasi di sekitar teks */
+}
+
+/* Organisasi End */
+
+/* Card Kepatuhan Start */
+.card {
+    border: 1px solid #ccc; /* Batas kartu */
+    border-radius: 8px; /* Sudut kartu melengkung */
+    padding: 20px; /* Ruang dalam kartu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Bayangan untuk efek 3D */
+    margin: 10px 0; /* Ruang antar kartu */
+    background-color: #fff; /* Warna latar belakang kartu */
+    display: flex; /* Menampilkan item secara horizontal */
+    justify-content: space-between; /* Menyelaraskan item dengan ruang di antara */
+    align-items: center; /* Menyelaraskan item di tengah vertikal */
+}
+
+.card-pdf h3 {
+    font-size: 1.5rem; /* Ukuran font judul */
+    margin: 0; /* Menghapus margin bawah judul */
+}
+
+.card-pdf a {
+    text-decoration: none; /* Menghapus garis bawah link */
+    color: #d9534f; /* Warna teks link */
+    font-size: 1.5rem; /* Ukuran font link */
+    transition: color 0.3s ease; /* Animasi transisi warna */
+}
+
+.card-pdf a:hover {
+    color: #c9302c; /* Warna teks link saat hover */
+}
+
+.card-pdf i {
+    font-size: 1.5rem; /* Ukuran ikon */
+}
+
+/* Card Kepatuhan End */

@@ -17,11 +17,6 @@ class DashboardUserController extends Controller
         return view('dashboard-user.tentang-kami.sekilas-sekuritas.index');
     }
 
-    public function indexSejarah()
-    {
-        return view('dashboard-user.tentang-kami.sejarah.index');
-    }
-
     public function indexStruktur()
     {
         return view('dashboard-user.tentang-kami.struktur.index');

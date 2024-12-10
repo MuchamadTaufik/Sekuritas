@@ -19,6 +19,7 @@
                <div class="social">
                   <a href="https://www.youtube.com/@bjbsekuritas"><i class="fab fa-youtube"></i></a>
                   <a href="http://instagram.com/bjbsekuritas"><i class="fab fa-instagram"></i></a>
+                  <a href="https://jb.bofis.id/"><i class="fab fa-b"></i></a>
                </div>
             </div>
          </div>

@@ -20,9 +20,6 @@ Route::get('/', [DashboardUserController::class, 'index'])->name('/');
 //Halaman Sekilas BJB Sekuritas
 Route::get('/sekilas-bjb-sekuritas', [DashboardUserController::class, 'indexSekilas'])->name('sekilas.dashuser');
 
-//Halaman Sejarah Kami
-Route::get('/sejarah-kami', [DashboardUserController::class, 'indexSejarah'])->name('sejarah.dashuser');
-
 //Halaman Struktur Organisasi
 Route::get('/struktur-organisasi', [DashboardUserController::class, 'indexStruktur'])->name('struktur.dashuser');
 

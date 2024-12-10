@@ -18,6 +18,7 @@
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
       <link href="/lib/animate/animate.min.css" rel="stylesheet">
       <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
       <!-- Template Stylesheet -->
       <link href="/css/style.css" rel="stylesheet">
@@ -76,5 +77,89 @@
             }
             });
       </script>
+      <script>
+         class InfiniteCarousel {
+            constructor(trackSelector, options = {}) {
+               this.track = document.querySelector(trackSelector);
+               this.logos = Array.from(this.track.children);
+               this.options = {
+                     speed: options.speed || 50,  // pixel per second
+                     pauseOnHover: options.pauseOnHover ?? true
+               };
+
+               this.position = 0;
+               this.totalWidth = 0;
+               this.animationFrame = null;
+
+               this.init();
+            }
+
+            init() {
+               // Hitung total lebar logo
+               this.logos.forEach(logo => {
+                     this.totalWidth += logo.offsetWidth + 
+                        (parseInt(getComputedStyle(logo).marginLeft) || 0) +
+                        (parseInt(getComputedStyle(logo).marginRight) || 0);
+               });
+
+               // Duplikasi logo untuk membuat efek tak terbatas
+               this.logos.forEach(logo => {
+                     const clone = logo.cloneNode(true);
+                     this.track.appendChild(clone);
+               });
+
+               // Update logo yang baru
+               this.logos = Array.from(this.track.children);
+
+               this.startAnimation();
+
+               if (this.options.pauseOnHover) {
+                     this.track.addEventListener('mouseenter', () => this.pause());
+                     this.track.addEventListener('mouseleave', () => this.resume());
+               }
+            }
+
+            startAnimation() {
+               const animate = () => {
+                     // Geser posisi
+                     this.position -= this.options.speed / 60;
+
+                     // Reset posisi jika melewati total lebar
+                     if (Math.abs(this.position) >= this.totalWidth) {
+                        this.position = 0;
+                     }
+
+                     // Terapkan transformasi
+                     this.track.style.transform = `translateX(${this.position}px)`;
+
+                     // Lanjutkan animasi
+                     this.animationFrame = requestAnimationFrame(animate);
+               };
+
+               this.animationFrame = requestAnimationFrame(animate);
+            }
+
+            pause() {
+               if (this.animationFrame) {
+                     cancelAnimationFrame(this.animationFrame);
+                     this.animationFrame = null;
+               }
+            }
+
+            resume() {
+               if (!this.animationFrame) {
+                     this.startAnimation();
+               }
+            }
+         }
+
+         // Inisialisasi carousel saat dokumen dimuat
+         document.addEventListener('DOMContentLoaded', () => {
+            new InfiniteCarousel('.partner-logo-track', {
+               speed: 50,  // Sesuaikan kecepatan scroll
+               pauseOnHover: true
+            });
+         });
+   </script>
    </body>
 </html>

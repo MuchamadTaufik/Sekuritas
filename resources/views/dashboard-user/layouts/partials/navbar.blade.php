@@ -13,7 +13,6 @@
                <a href="#" class="nav-link dropdown-toggle {{ Route::is('sekilas*','sejarah*','struktur*','kepatuhan*') ? 'active' : '' }}" data-toggle="dropdown">Tentang Kami</a>
                <div class="dropdown-menu">
                   <a href="{{ route('sekilas.dashuser') }}" class="dropdown-item {{ Route::is('sekilas*') ? 'active' : '' }}">Sekilas bjb Sekuritas</a>
-                  <a href="{{ route('sejarah.dashuser') }}" class="dropdown-item {{ Route::is('sejarah*') ? 'active' : '' }}">Sejarah Kami</a>
                   <a href="{{ route('struktur.dashuser') }}" class="dropdown-item {{ Route::is('struktur*') ? 'active' : '' }}">Struktur Organisasi</a>
                   <a href="{{ route('kepatuhan.dashuser') }}" class="dropdown-item {{ Route::is('kepatuhan*') ? 'active' : '' }}">Fakta Kepatuhan & Audit Internal</a>
                </div>
