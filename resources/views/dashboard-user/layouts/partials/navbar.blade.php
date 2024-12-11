@@ -22,10 +22,10 @@
                <a href="{{ route('perantara.dashuser') }}" class="nav-link {{ Route::is('perantara*') ? 'active' : '' }}">Produk & Layanan</a>
             </div>
             <div class="nav-item dropdown">
-               <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Hubungan Investor</a>
+               <a href="#" class="nav-link dropdown-toggle {{ Route::is('rups*','download*') ? 'active' : '' }}" data-toggle="dropdown">Hubungan Investor</a>
                <div class="dropdown-menu">
-                  <a href="blog.html" class="dropdown-item">RUPS</a>
-                  <a href="" class="dropdown-item">Download</a>
+                  <a href="{{ route('rups.dashuser') }}" class="dropdown-item {{ Route::is('rups*') ? 'active' : '' }}">RUPS</a>
+                  <a href="{{ route('download.dashuser') }}" class="dropdown-item {{ Route::is('download*') ? 'active' : '' }}">Download</a>
                </div>
             </div>
             <a href="service.html" class="nav-item nav-link">Karir</a>

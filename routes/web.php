@@ -31,3 +31,9 @@ Route::get('/tata-kelola-perusahaan', [DashboardUserController::class, 'indexKel
 
 //Halaman Perantara Pedagang Efek
 Route::get('/perantara-pedagang-efek', [DashboardUserController::class, 'indexPerantara'])->name('perantara.dashuser');
+
+//Halaman RUPS
+Route::get('/rups', [DashboardUserController::class, 'indexRups'])->name('rups.dashuser');
+
+//Halaman Download
+Route::get('/download', [DashboardUserController::class, 'indexDownload'])->name('download.dashuser');

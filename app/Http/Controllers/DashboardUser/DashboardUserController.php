@@ -36,4 +36,14 @@ class DashboardUserController extends Controller
     {
         return view('dashboard-user.produk-layanan.perantara.index');
     }
+
+    public function indexRups()
+    {
+        return view('dashboard-user.hubungan-investor.rups.index');
+    }
+
+    public function indexDownload()
+    {
+        return view('dashboard-user.hubungan-investor.download.index');
+    }
 }

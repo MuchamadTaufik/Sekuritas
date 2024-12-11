@@ -1799,3 +1799,66 @@ a:focus {
 }
 
 /* perantara end */
+
+/* rups start */
+.rups {
+    background: url("/img/dashboard-user/bg-route.jpg") no-repeat center center;
+    background-size: cover; /* Memastikan gambar latar belakang menutupi seluruh area */
+    padding: 20px 0;
+}
+
+.rups h3 {
+    text-align: center;
+}
+/* rups end */
+
+/* download start */
+
+.download {
+    background: url("/img/dashboard-user/bg-route.jpg") no-repeat center center;
+    background-size: cover; /* Memastikan gambar latar belakang menutupi seluruh area */
+    padding: 20px 0;
+}
+
+.table-download {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+.table-download th,
+.table-download td {
+    padding: 12px 15px;
+    border: 1px solid #000000;
+}
+
+.table-download th {
+    background-color: #092a49;
+    color: white;
+}
+
+.table-download tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table-download tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.btn-download {
+    color: #fff;
+    background-color: #0796fe;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.btn-download:hover {
+    background-color: #092a49;
+    color: #fff;
+}
+
+/* download end */
