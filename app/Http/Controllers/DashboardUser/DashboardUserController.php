@@ -29,21 +29,11 @@ class DashboardUserController extends Controller
 
     public function indexKelola()
     {
-        return view('dashboard-user.tata-kelola.kelola.index');
+        return view('dashboard-user.tentang-kami.kelola.index');
     }
 
-    public function indexPedoman()
+    public function indexPerantara()
     {
-        return view('dashboard-user.tata-kelola.pedoman.index');
-    }
-
-    public function indexKebijakan()
-    {
-        return view('dashboard-user.tata-kelola.kebijakan.index');
-    }
-
-    public function indexEtik()
-    {
-        return view('dashboard-user.tata-kelola.etik.index');
+        return view('dashboard-user.produk-layanan.perantara.index');
     }
 }

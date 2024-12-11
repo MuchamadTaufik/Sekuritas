@@ -1614,3 +1614,188 @@ a:focus {
 }
 
 /* Card Kepatuhan End */
+
+/* Kelola Perusahaan Start */
+
+.card-kelola-left {
+    background-color: #092a49;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+    margin: auto;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.card-kelola-left:hover {
+    background-color: #ffffff;
+    color: #092a49;
+}
+
+.card-kelola-left:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    width: 40px;
+    height: 40px;
+    background-color: #092a49;
+    transform: translateY(-50%) rotate(45deg);
+    z-index: -1;
+}
+
+.card-kelola-right {
+    background-color: #092a49;
+    color: #fff;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    position: relative;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.card-kelola-right:hover {
+    background-color: #ffffff;
+    color: #092a49;
+}
+
+.card-kelola-right:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    width: 40px;
+    height: 40px;
+    background-color: #092a49;
+    transform: translateY(-50%) rotate(45deg);
+    z-index: -1;
+}
+
+.card-kelola-left p,
+.card-kelola-right p {
+    margin: 0;
+}
+
+/* Kelola Perusahaan End */
+
+/* pedoman start */
+.pedoman {
+    background: url("/img/dashboard-user/bg-route.jpg") no-repeat center center;
+    background-size: cover; /* Memastikan gambar latar belakang menutupi seluruh area */
+    padding: 20px 0;
+}
+
+.image-bjb img {
+    width: 120px;
+    height: auto;
+}
+
+.pedoman ol li {
+    font-size: 1.1rem;
+}
+
+.card-pedoman-pdf {
+    background: #f8f9fa; /* Warna latar belakang */
+    border: 1px solid #dee2e6; /* Warna border */
+    padding: 20px;
+    border-radius: 5px; /* Membuat sudut card melengkung */
+    display: flex;
+    justify-content: space-between; /* Menempatkan ikon di paling kanan */
+    align-items: center; /* Menyelaraskan teks dan ikon secara vertikal */
+}
+
+.card-pedoman-pdf p {
+    margin: 0;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-pedoman-pdf a {
+    text-decoration: none; /* Menghapus garis bawah link */
+    color: #d9534f; /* Warna teks link */
+    font-size: 1.5rem; /* Ukuran font link */
+    transition: color 0.3s ease; /* Animasi transisi warna */
+    margin-left: 10px;
+}
+
+.card-pedoman-pdf a:hover {
+    color: #c9302c; /* Warna teks link saat hover */
+}
+
+.card-pedoman-pdf i {
+    font-size: 1.5rem; /* Ukuran ikon */
+}
+/* pedoman end */
+
+/* perantara start */
+.perantara {
+    background: url("/img/dashboard-user/bg-route.jpg") no-repeat center center;
+    background-size: cover; /* Memastikan gambar latar belakang menutupi seluruh area */
+    padding: 20px 0;
+}
+
+.perantara img {
+    width: 100%;
+    height: auto;
+}
+
+.perantara h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.perantara .left img,
+.perantara .right img,
+.perantara .mid img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.perantara .left img {
+    transform: rotate(-10deg);
+    max-height: 200px;
+    width: auto;
+}
+
+.perantara .right img {
+    transform: rotate(10deg);
+    max-height: 200px;
+    width: auto;
+}
+
+.perantara .left img:hover,
+.perantara .right img:hover {
+    transform: rotate(0deg);
+}
+
+.perantara .mid img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.perantara .mid img:hover {
+    transform: scale(1.1);
+}
+
+.web-app {
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.web,
+.app {
+    max-width: 150px;
+    height: auto;
+}
+
+.web a img:hover,
+.app a img:hover {
+    transform: scale(1.1);
+}
+
+/* perantara end */
