@@ -28,7 +28,7 @@
                   <a href="{{ route('download.dashuser') }}" class="dropdown-item {{ Route::is('download*') ? 'active' : '' }}">Download</a>
                </div>
             </div>
-            <a href="service.html" class="nav-item nav-link">Karir</a>
+            <a href="{{ route('karir.dashuser') }}" class="nav-item nav-link {{ Route::is('karir*') ? 'active' : '' }}">Karir</a>
          </div>
       </div>
    </div>

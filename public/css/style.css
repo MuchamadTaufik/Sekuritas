@@ -1862,3 +1862,116 @@ a:focus {
 }
 
 /* download end */
+
+/* Karir Start */
+.karir {
+    background: url("/img/dashboard-user/bg-route.jpg") no-repeat center center;
+    background-size: cover; /* Memastikan gambar latar belakang menutupi seluruh area */
+    padding: 20px 0;
+}
+
+.karir h2 {
+    text-align: center;
+}
+
+.card-karir {
+    border-radius: 20px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.card-karir:hover {
+    transform: translateY(-5px);
+}
+
+.card-karir h6 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #092a49;
+}
+
+.card-karir p {
+    font-size: 0.8rem;
+    color: #0796fe;
+    margin-bottom: 0;
+}
+
+.card-karir .btn-karir {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    background-color: #092a49;
+    color: white;
+}
+
+.btn-karir:hover {
+    background-color: #0796fe;
+}
+
+.card-karir .row > div {
+    display: flex;
+    align-items: center;
+}
+
+.text-end {
+    text-align: end;
+}
+
+@media (max-width: 768px) {
+    .card-karir h6 {
+        font-size: 0.9rem;
+    }
+
+    .card-karir p {
+        font-size: 0.7rem;
+        color: #0796fe;
+        margin-bottom: 0;
+    }
+
+    .card-karir .btn-karir {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.5rem;
+    }
+}
+
+.card-karir-detail {
+    border-radius: 20px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.button-karir-detail {
+    margin-top: 20px;
+}
+
+.btn-karir-detail {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    background-color: #092a49;
+    color: white;
+    margin-right: 20px;
+}
+
+.btn-karir-detail:hover {
+    color: white;
+    background-color: #0796fe;
+}
+
+.card-karir-detail h1 {
+    font-weight: bold;
+    color: #092a49;
+}
+
+.card-karir-detail h4 {
+    color: #092a49;
+    font-weight: bold;
+}
+
+.card-karir-detail h6 {
+    font-weight: 500;
+    color: #092a49;
+}
+/* Karir End */

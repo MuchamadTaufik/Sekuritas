@@ -46,4 +46,9 @@ class DashboardUserController extends Controller
     {
         return view('dashboard-user.hubungan-investor.download.index');
     }
+
+    public function indexKarir()
+    {
+        return view('dashboard-user.karir.index');
+    }
 }

@@ -37,3 +37,6 @@ Route::get('/rups', [DashboardUserController::class, 'indexRups'])->name('rups.d
 
 //Halaman Download
 Route::get('/download', [DashboardUserController::class, 'indexDownload'])->name('download.dashuser');
+
+//Halaman Karir
+Route::get('/karir', [DashboardUserController::class, 'indexKarir'])->name('karir.dashuser');
