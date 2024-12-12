@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\DashboardAdmin\DashboardAdminController;
 use App\Http\Controllers\DashboardUser\DashboardUserController;
 
 /*
@@ -46,3 +48,12 @@ Route::get('/faq', [DashboardUserController::class, 'indexFaq'])->name('faq.dash
 
 //Halaman Kebijakan - Kebijakan
 Route::get('/kebijakan-kebijakan', [DashboardUserController::class, 'indexKebijakan'])->name('kebijakan.dashuser');
+
+Route::group(['middleware' => 'guest'], function(){
+   Route::get('/login-account-sekuritas', [AuthController::class, 'index'])->name('login');
+   Route::post('/login-account-sekuritas/login', [AuthController::class, 'authenticate'])->name('login.auth');
+});
+
+Route::group(['middleware' => ['auth', 'role:admin']], function(){
+   Route::get('/dashboard', [DashboardAdminController::class, 'index'])->name('dashboard');
+});

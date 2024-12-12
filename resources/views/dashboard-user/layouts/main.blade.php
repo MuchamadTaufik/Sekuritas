@@ -25,6 +25,8 @@
    </head>
 
    <body>
+      @include('sweetalert::alert')
+
       <!-- Top Bar Start -->
       @include('dashboard-user.layouts.partials.topbar')
       <!-- Top Bar End -->
@@ -185,5 +187,26 @@
             });
          });
    </script>
+   <script>
+      document.addEventListener('DOMContentLoaded', () => {
+            const serviceItems = document.querySelectorAll('.service-item');
+         
+            serviceItems.forEach(item => {
+               const iconDetail = item.querySelector('.icon-detail');
+               
+               iconDetail.addEventListener('click', () => {
+                     // Toggle active class on clicked item
+                     item.classList.toggle('active');
+         
+                     // Optional: Close other open items
+                     serviceItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                           otherItem.classList.remove('active');
+                        }
+                     });
+               });
+            });
+         });
+      </script>
    </body>
 </html>

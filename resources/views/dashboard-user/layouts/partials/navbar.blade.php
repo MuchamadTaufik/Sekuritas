@@ -29,6 +29,9 @@
                </div>
             </div>
             <a href="{{ route('karir.dashuser') }}" class="nav-item nav-link {{ Route::is('karir*') ? 'active' : '' }}">Karir</a>
+            @can('isAdmin')
+               <a href="{{ route('dashboard') }}" class="nav-item nav-link">Dashboard</a>
+            @endcan
          </div>
       </div>
    </div>

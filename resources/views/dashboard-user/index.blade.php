@@ -27,7 +27,7 @@
                <div class="col-lg-3 col-md-6">
                      <div class="fact-item">
                         <a href="">
-                           <img src="img/icon-4.png" alt="Icon">
+                           <i class="fa-solid fa-user-plus fa-2x"></i>
                            <h2>Pembukaan Akun</h2>
                         </a>
                      </div>
@@ -35,7 +35,7 @@
                <div class="col-lg-3 col-md-6">
                      <div class="fact-item">
                         <a href="">
-                           <img src="img/icon-7.png" alt="Icon">
+                           <i class="fa-solid fa-chart-column fa-2x"></i>
                            <h2>Aplikasi Trading</h2>
                         </a>
                         
@@ -44,7 +44,7 @@
                <div class="col-lg-3 col-md-6">
                      <div class="fact-item">
                         <a href="">
-                           <img src="img/icon-1.png" alt="Icon">
+                           <i class="fa-solid fa-newspaper fa-2x"></i>
                            <h2>Media</h2>
                         </a>
                      </div>
@@ -52,7 +52,7 @@
                <div class="col-lg-3 col-md-6">
                      <div class="fact-item">
                         <a href="">
-                           <img src="img/icon-6.png" alt="Icon">
+                           <i class="fa-solid fa-book fa-2x "></i>
                            <h2>Panduan</h2>
                         </a>
                      </div>
@@ -99,40 +99,49 @@
 
    <!-- Service Start -->
    <div class="service">
-         <div class="container">
-            <div class="section-header">
-               <h2>PT. bjb Sekuritas Jawa Barat</h2>
+      <div class="container">
+         <div class="section-header">
+            <h2>PT. bjb Sekuritas Jawa Barat</h2>
+         </div>
+         <div class="row">
+            <div class="col-lg-4 col-md-6">
+               <div class="service-item">
+                  <div class="icon-detail">
+                     <i class="fa-solid fa-money-bill-transfer fa-3x"></i>
+                     <h3>Perantara Pedagang Efek</h3>
+                     <i class="fa-solid fa-chevron-down toggle-icon"></i>
+                  </div>
+                     <p>
+                        bjb Sekuritas sebagai PED pertama di Indonesia memberikan layanan Pertama Pedagang Efek bagi masyarakat Jawa Barat
+                     </p>
+                  </div>
             </div>
-            <div class="row">
-               <div class="col-lg-4 col-md-6">
-                     <div class="service-item">
-                        <img src="img/icon-1.png" alt="Icon">
-                        <h3>Perantara Pedagang Efek</h3>
-                        <p>
-                           bjb Sekuritas sebagai PED pertama di Indonesia memberikan layanan Pertama Pedagang Efek bagi masyarakat Jawa Barat                        
-                        </p>
-                     </div>
-               </div>
-               <div class="col-lg-4 col-md-6">
-                     <div class="service-item">
-                        <img src="img/icon-2.png" alt="Icon">
-                        <h3>Investasi</h3>
-                        <p>
-                           bjb Sekuritas memberikan Alternatif Investasi bagi warga Jawa Barat, dan memberikan kenyamanan dan keamanan bertransaksi di pasar modal                        
-                        </p>
-                     </div>
-               </div>
-               <div class="col-lg-4 col-md-6">
-                     <div class="service-item">
-                        <img src="img/icon-3.png" alt="Icon">
-                        <h3>Pemegang Saham</h3>
-                        <p>
-                           bjb Sekuritas didukung Penuh oleh bank bjb untuk mendorong Perubahan Investasi di Jawa Barat                             
-                        </p>
-                     </div>
-               </div>
+            <div class="col-lg-4 col-md-6">
+               <div class="service-item">
+                  <div class="icon-detail">
+                     <i class="fa-solid fa-money-bill-trend-up fa-3x"></i>
+                     <h3>Investasi</h3>
+                     <i class="fa-solid fa-chevron-down toggle-icon"></i>
+                  </div>
+                  <p>
+                     bjb Sekuritas memberikan Alternatif Investasi bagi warga Jawa Barat, dan memberikan kenyamanan dan keamanan bertransaksi di pasar modal
+                  </p>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+               <div class="service-item">
+                  <div class="icon-detail">
+                     <i class="fa-solid fa-hand-holding-dollar fa-3x"></i>
+                     <h3>Pemegang Saham</h3>
+                     <i class="fa-solid fa-chevron-down toggle-icon"></i>
+                  </div>
+                  <p>
+                     bjb Sekuritas didukung Penuh oleh bank bjb untuk mendorong Perubahan Investasi di Jawa Barat
+                  </p>
+                  </div>
             </div>
          </div>
+      </div>
    </div>
    <!-- Service End -->
 
@@ -141,7 +150,7 @@
    <div class="feature">
       <div class="container">
          <div class="row align-items-center">
-            <div class="col-md-6">
+            <div class="col-md-7">
                   <div class="feature-img">
                      <iframe 
                         src="https://www.youtube.com/embed/ePxMqh7NvUw?autoplay=1&mute=1&playlist=ePxMqh7NvUw&loop=1" 
@@ -151,7 +160,7 @@
                      ></iframe>
                   </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-5">
                   <div class="section-header">
                      <h2>Company Profile</h2>
                   </div>
