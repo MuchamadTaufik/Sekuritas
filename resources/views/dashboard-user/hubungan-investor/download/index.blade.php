@@ -9,13 +9,15 @@
          <div class="title-route">
             <p class="non-active"><a href="{{ route('/') }}"><i class="fas fa-arrow-left"></i> Kembali</a></p>
             <p>|</p>
-            <p class="active">Download</p>
+            <p class="active">Download Dokumen</p>
          </div>
       </div>
    </div>
 
    <div class="download">
       <div class="container">
+         <h2>Download Dokumen</h2>
+         <hr>
          <table class="table-download">
             <thead>
                <tr>
@@ -28,7 +30,7 @@
             <tbody>
                <tr>
                   <td>1</td>
-                  <td>File A</td>
+                  <td>File Aasdasdasdas assdasda s adasd</td>
                   <td>100</td>
                   <td><a href="#" class="btn-download">Download</a></td>
                </tr>

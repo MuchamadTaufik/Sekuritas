@@ -40,3 +40,9 @@ Route::get('/download', [DashboardUserController::class, 'indexDownload'])->name
 
 //Halaman Karir
 Route::get('/karir', [DashboardUserController::class, 'indexKarir'])->name('karir.dashuser');
+
+//Halaman FAQ
+Route::get('/faq', [DashboardUserController::class, 'indexFaq'])->name('faq.dashuser');
+
+//Halaman Kebijakan - Kebijakan
+Route::get('/kebijakan-kebijakan', [DashboardUserController::class, 'indexKebijakan'])->name('kebijakan.dashuser');

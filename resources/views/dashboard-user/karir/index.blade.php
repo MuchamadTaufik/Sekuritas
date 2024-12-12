@@ -16,6 +16,8 @@
 
    <div class="karir">
       <div class="container">
+         <h2>Mulai perjalanan Anda ke jenjang karier berikutnya.</h2>
+         <hr>
          <div class="row gy-5">
             <div class="col-12 col-md-12 mb-3 mb-md-0">
                <div class="card-karir p-3 mb-3 shadow-sm">

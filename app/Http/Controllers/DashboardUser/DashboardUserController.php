@@ -51,4 +51,14 @@ class DashboardUserController extends Controller
     {
         return view('dashboard-user.karir.index');
     }
+
+    public function indexFaq()
+    {
+        return view('dashboard-user.bantuan.faq.index');
+    }
+
+    public function indexKebijakan()
+    {
+        return view('dashboard-user.bantuan.kebijakan-privasi.index');
+    }
 }

@@ -161,5 +161,29 @@
             });
          });
    </script>
+   <script>
+      document.addEventListener('DOMContentLoaded', () => {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+               question.addEventListener('click', () => {
+                     const answer = question.nextElementSibling;
+                     const isActive = answer.classList.contains('active');
+
+                     // Close all answers first
+                     document.querySelectorAll('.faq-answer').forEach(a => {
+                        a.classList.remove('active');
+                        a.previousElementSibling.classList.remove('active');
+                     });
+
+                     // Toggle current answer if not already open
+                     if (!isActive) {
+                        answer.classList.add('active');
+                        question.classList.add('active');
+                     }
+               });
+            });
+         });
+   </script>
    </body>
 </html>

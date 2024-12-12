@@ -1831,7 +1831,7 @@ a:focus {
 .table-download th,
 .table-download td {
     padding: 12px 15px;
-    border: 1px solid #000000;
+    border: 1px solid #f1eeee;
 }
 
 .table-download th {
@@ -1861,6 +1861,9 @@ a:focus {
     color: #fff;
 }
 
+.download h2 {
+    text-align: center;
+}
 /* download end */
 
 /* Karir Start */
@@ -1975,3 +1978,85 @@ a:focus {
     color: #092a49;
 }
 /* Karir End */
+
+/* faq start */
+.faq {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.faq h2 {
+    text-align: center;
+    color: #092a49;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.faq-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #092a49;
+    color: #ffffff;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #0a3b63;
+}
+
+.faq-question span {
+    font-size: 1.2rem;
+}
+
+.faq-answer {
+    display: none;
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.faq-answer.active {
+    display: block;
+}
+
+.toggle-icon {
+    transition: transform 0.3s ease;
+}
+
+.faq-question.active .toggle-icon {
+    transform: rotate(180deg);
+}
+
+@media screen and (max-width: 600px) {
+    .faq {
+        padding: 10px;
+        margin: 15px auto;
+    }
+
+    .faq h2 {
+        font-size: 1.5rem;
+    }
+
+    .faq-question {
+        padding: 12px 15px;
+    }
+
+    .faq-answer {
+        padding: 15px;
+    }
+}
+/* faq end */

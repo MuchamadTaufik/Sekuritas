@@ -11,8 +11,8 @@
                <div class="col-md-4">
                   <div class="footer-link">
                      <h2>Bantuan</h2>
-                     <a href="">FAQ</a>
-                     <a href="">Kebijakan Privasi</a>
+                     <a href="{{ route('faq.dashuser') }}">FAQ</a>
+                     <a href="{{ route('kebijakan.dashuser') }}">Kebijakan Privasi</a>
                   </div>
                </div>
                <div class="col-md-4">

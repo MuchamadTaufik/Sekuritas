@@ -161,11 +161,6 @@
    </div>
    <!-- Feature End -->
 
-
-   <!-- Team Start -->
-   @include('dashboard-user.layouts.partials.team')
-   <!-- Team End -->
-
    <!-- Blog Start -->
    <div class="blog">
          <div class="container">
@@ -237,6 +232,10 @@
          </div>
    </div>
    <!-- Blog End -->
+
+   {{-- Perantara Start --}}
+   @include('dashboard-user.layouts.partials.produk')
+   {{-- Perantara End --}}
 
    {{-- partner start --}}
    @include('dashboard-user.layouts.partials.partner')
