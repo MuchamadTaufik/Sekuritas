@@ -107,7 +107,7 @@
             <div class="col-lg-4 col-md-6">
                <div class="service-item">
                   <div class="icon-detail">
-                     <i class="fa-solid fa-money-bill-transfer fa-3x"></i>
+                     <i class="fa-solid fa-money-bill-transfer fa-2x"></i>
                      <h3>Perantara Pedagang Efek</h3>
                      <i class="fa-solid fa-chevron-down toggle-icon"></i>
                   </div>
@@ -119,7 +119,7 @@
             <div class="col-lg-4 col-md-6">
                <div class="service-item">
                   <div class="icon-detail">
-                     <i class="fa-solid fa-money-bill-trend-up fa-3x"></i>
+                     <i class="fa-solid fa-money-bill-trend-up fa-2x"></i>
                      <h3>Investasi</h3>
                      <i class="fa-solid fa-chevron-down toggle-icon"></i>
                   </div>
@@ -131,7 +131,7 @@
             <div class="col-lg-4 col-md-6">
                <div class="service-item">
                   <div class="icon-detail">
-                     <i class="fa-solid fa-hand-holding-dollar fa-3x"></i>
+                     <i class="fa-solid fa-hand-holding-dollar fa-2x"></i>
                      <h3>Pemegang Saham</h3>
                      <i class="fa-solid fa-chevron-down toggle-icon"></i>
                   </div>

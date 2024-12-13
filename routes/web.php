@@ -54,6 +54,10 @@ Route::group(['middleware' => 'guest'], function(){
    Route::post('/login-account-sekuritas/login', [AuthController::class, 'authenticate'])->name('login.auth');
 });
 
-Route::group(['middleware' => ['auth', 'role:admin']], function(){
+Route::group(['middleware' => 'auth'], function(){
+   Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+});
+
+Route::group(['middleware' => ['auth', 'role:admin,superadmin']], function(){
    Route::get('/dashboard', [DashboardAdminController::class, 'index'])->name('dashboard');
 });

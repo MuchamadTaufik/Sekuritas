@@ -1,25 +1,6 @@
 @extends('dashboard-user.layouts.main')
 
 @section('container')
-   <!-- Carousel Start -->
-   <div class="carousel">
-      <div class="container-fluid">
-         <div class="owl-carousel">
-            <div class="carousel-item">
-               <div class="carousel-img">
-                  <img src="img/dashboard-user/carousel/carousel-1.png" alt="Image">
-               </div>
-            </div>
-            <div class="carousel-item">
-               <div class="carousel-img">
-                  <img src="img/dashboard-user/carousel/carousel-2.png" alt="Image">
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-   <!-- Carousel End -->   
-
    <div class="login-section">
       <div class="container">
          <div class="login-wrapper">
@@ -55,7 +36,7 @@
 
                         <div class="form-actions">
                            <button type="submit" class="btn btn-primary">
-                              Sign In
+                              Login
                            </button>
                            <a href="" class="forgot-password">
                               Forgot Password?

@@ -66,7 +66,7 @@
         </div>
 
         {{-- footer --}}
-        @yield('dashboard-admin.layouts.partials.footer')
+        @include('dashboard-admin.layouts.partials.footer')
       </div>
 
       <!-- Custom template | don't include it in your project! -->

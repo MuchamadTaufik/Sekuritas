@@ -43,4 +43,14 @@ class AuthController extends Controller
         toast()->error('Gagal', 'Email atau password salah.');
         return back()->withInput();
     }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        toast()->success('Berhasil', 'Berhasil anda telah logout');
+        return redirect('/');
+    }
 }
