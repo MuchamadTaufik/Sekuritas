@@ -61,3 +61,6 @@ Route::group(['middleware' => 'auth'], function(){
 Route::group(['middleware' => ['auth', 'role:admin,superadmin']], function(){
    Route::get('/dashboard', [DashboardAdminController::class, 'index'])->name('dashboard');
 });
+
+
+
