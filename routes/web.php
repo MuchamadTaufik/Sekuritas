@@ -61,9 +61,16 @@ Route::group(['middleware' => 'auth'], function(){
 
 Route::group(['middleware' => ['auth', 'role:admin,superadmin']], function(){
    Route::get('/dashboard', [DashboardAdminController::class, 'index'])->name('dashboard');
+<<<<<<< HEAD
 
    //Kegiatan
    Route::get('/dashboard/kegiatan', [KegiatanController::class, 'index'])->name('kegiatan');
    Route::get('/dashboard/kegiatan/create', [KegiatanController::class, 'create'])->name('kegiatan.create');
    Route::post('/dashboard/kegiatan/store', [KegiatanController::class, 'store'])->name('kegiatan.store');
 });
+=======
+});
+
+
+
+>>>>>>> 90eafc81e6cbe62337da91b99777f5a4d3849efd
