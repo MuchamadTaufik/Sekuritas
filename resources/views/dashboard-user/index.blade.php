@@ -174,7 +174,7 @@
    <div class="blog">
          <div class="container">
             <div class="section-header">
-               <h2>Artikel Terbaru</h2>
+               <h2>Kegiatan Terbaru</h2>
             </div>
             <div class="owl-carousel blog-carousel">
                <div class="blog-item">

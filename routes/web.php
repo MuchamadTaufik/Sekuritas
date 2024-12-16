@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\DashboardAdmin\DashboardAdminController;
 use App\Http\Controllers\DashboardUser\DashboardUserController;
+use App\Http\Controllers\DashboardAdmin\KegiatanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,4 +61,9 @@ Route::group(['middleware' => 'auth'], function(){
 
 Route::group(['middleware' => ['auth', 'role:admin,superadmin']], function(){
    Route::get('/dashboard', [DashboardAdminController::class, 'index'])->name('dashboard');
+
+   //Kegiatan
+   Route::get('/dashboard/kegiatan', [KegiatanController::class, 'index'])->name('kegiatan');
+   Route::get('/dashboard/kegiatan/create', [KegiatanController::class, 'create'])->name('kegiatan.create');
+   Route::post('/dashboard/kegiatan/store', [KegiatanController::class, 'store'])->name('kegiatan.store');
 });

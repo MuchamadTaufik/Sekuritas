@@ -33,6 +33,15 @@
 
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link rel="stylesheet" href="/assets/css/demo.css" />
+
+    {{-- css trix --}}
+    <link rel="stylesheet" href="/css/trix.css" />
+
+    <style>
+      trix-toolbar [data-trix-button-group="file-tools"]{
+          display: none;
+        }
+    </style>
 </head>
 <body>
   @include('sweetalert::alert')
@@ -269,6 +278,9 @@
     <script src="/assets/js/core/popper.min.js"></script>
     <script src="/assets/js/core/bootstrap.min.js"></script>
 
+    {{-- Trix --}}
+    <script src="/js/trix.js"></script>
+
     <!-- jQuery Scrollbar -->
     <script src="/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
 
@@ -327,6 +339,32 @@
         lineColor: "#ffa534",
         fillColor: "rgba(255, 165, 52, .14)",
       });
+    </script>
+    <script>
+      document.addEventListener('trix-file-accept', function(e){
+          e.preventDefault();
+        })
+    </script>
+
+    <script>
+        function previewImage() {
+              const fileInput = document.getElementById('images');
+              const imagePreview = document.getElementById('image-preview');
+              const file = fileInput.files[0];
+              
+              if (file) {
+                const reader = new FileReader();
+                
+                reader.onload = function(e) {
+                    imagePreview.src = e.target.result;
+                    imagePreview.style.display = 'block';
+                }
+                
+                reader.readAsDataURL(file);
+              } else {
+                imagePreview.style.display = 'none';
+              }
+          }
     </script>
 </body>
 </html>
