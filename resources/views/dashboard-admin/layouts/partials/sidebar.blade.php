@@ -19,6 +19,12 @@
                <p>Kegiatan</p>
             </a>
          </li>
+         <li class="nav-item {{ Route::is('rups*') ? 'active' : '' }}">
+            <a href="{{ route('rups') }}">
+               <i class="fas fa-file"></i>
+               <p>RUPS</p>
+            </a>
+         </li>
       </ul>
    </div>
 </div>

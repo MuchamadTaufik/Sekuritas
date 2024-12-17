@@ -1,10 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ErrorController;
 use App\Http\Controllers\Auth\AuthController;
-use App\Http\Controllers\DashboardAdmin\DashboardAdminController;
-use App\Http\Controllers\DashboardUser\DashboardUserController;
+use App\Http\Controllers\DashboardAdmin\RupsController;
 use App\Http\Controllers\DashboardAdmin\KegiatanController;
+use App\Http\Controllers\DashboardUser\DashboardUserController;
+use App\Http\Controllers\DashboardAdmin\DashboardAdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -69,4 +71,15 @@ Route::group(['middleware' => ['auth', 'role:admin,superadmin']], function(){
    Route::get('/dashboard/kegiatan/edit/{slug}', [KegiatanController::class, 'edit'])->name('kegiatan.edit');
    Route::put('/dashboard/kegiatan/update/{slug}', [KegiatanController::class, 'update'])->name('kegiatan.update');
    Route::delete('/dashboard/kegiatan/delete/{slug}', [KegiatanController::class, 'destroy'])->name('kegiatan.delete');
+
+   //Rups
+   Route::get('/dashboard/rups', [RupsController::class, 'index'])->name('rups');
+   Route::get('/dashboard/rups/create', [RupsController::class, 'create'])->name('rups.create');
+   Route::post('/dashboard/rups/store', [RupsController::class, 'store'])->name('rups.store');
+   Route::get('/dashboard/rups/edit/{slug}', [RupsController::class, 'edit'])->name('rups.edit');
+   Route::put('/dashboard/rups/update/{slug}', [RupsController::class, 'update'])->name('rups.update');
+   Route::delete('/dashboard/rups/delete/{slug}', [RupsController::class, 'destroy'])->name('rups.delete');
 });
+
+// errors
+Route::any('{catchall}', [ErrorController::class, 'notfound'])->where('catchall', '.*');
