@@ -25,6 +25,12 @@
                <p>RUPS</p>
             </a>
          </li>
+         <li class="nav-item {{ Route::is('dokumen*') ? 'active' : '' }}">
+            <a href="{{ route('dokumen') }}">
+               <i class="fas fa-download"></i>
+               <p>Dokumen Download</p>
+            </a>
+         </li>
       </ul>
    </div>
 </div>

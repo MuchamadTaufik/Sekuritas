@@ -7,6 +7,7 @@ use App\Http\Controllers\DashboardAdmin\RupsController;
 use App\Http\Controllers\DashboardAdmin\KegiatanController;
 use App\Http\Controllers\DashboardUser\DashboardUserController;
 use App\Http\Controllers\DashboardAdmin\DashboardAdminController;
+use App\Http\Controllers\DashboardAdmin\DokumenController;
 
 /*
 |--------------------------------------------------------------------------
@@ -79,6 +80,9 @@ Route::group(['middleware' => ['auth', 'role:admin,superadmin']], function(){
    Route::get('/dashboard/rups/edit/{slug}', [RupsController::class, 'edit'])->name('rups.edit');
    Route::put('/dashboard/rups/update/{slug}', [RupsController::class, 'update'])->name('rups.update');
    Route::delete('/dashboard/rups/delete/{slug}', [RupsController::class, 'destroy'])->name('rups.delete');
+
+   //Dokumen Download
+   Route::get('/dashboard/dokumen', [DokumenController::class, 'index'])->name('dokumen');
 });
 
 // errors
