@@ -44,10 +44,10 @@
                                  <td>{{ $data->views }}</td>
                                  <td>
                                     <div class="form-button-action">
-                                       <a href="" type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
+                                       <a href="{{ route('kegiatan.edit', $data->slug) }}" type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">
                                           <i class="fa fa-edit"></i>
                                        </a>
-                                       <form action="" method="POST">
+                                       <form action="{{ route('kegiatan.delete', $data->slug) }}" method="POST">
                                           @csrf
                                           @method('delete')
                                           <button type="submit" data-bs-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove" onclick="return confirm('Apakah yakin ingin menghapus data?')">

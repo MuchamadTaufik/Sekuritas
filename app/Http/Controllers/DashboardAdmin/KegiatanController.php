@@ -4,6 +4,7 @@ namespace App\Http\Controllers\DashboardAdmin;
 
 use App\Models\Kegiatan;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\StoreKegiatanRequest;
 use App\Http\Requests\UpdateKegiatanRequest;
 use Cviebrock\EloquentSluggable\Services\SlugService;
@@ -65,24 +66,66 @@ class KegiatanController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Kegiatan $kegiatan)
+    public function edit($slug)
     {
-        //
+        $kegiatan = Kegiatan::where('slug', $slug)->firstOrFail();
+        return view('dashboard-admin.kegiatan.edit', compact('kegiatan'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateKegiatanRequest $request, Kegiatan $kegiatan)
+    public function update(UpdateKegiatanRequest $request, $slug)
     {
-        //
+        $kegiatan = Kegiatan::where('slug', $slug)->firstOrFail();
+
+        try {
+            $rules = [
+                'images' => 'image|file|max:4096',
+                'title' => 'required|max:255',
+                'tanggal' => 'required|date_format:Y-m-d',
+                'deskripsi' => 'required',
+            ];
+
+            $validateData = $request->validate($rules);
+
+            $validateData['slug'] = SlugService::createSlug(Kegiatan::class, 'slug', $validateData['title']);
+
+            if ($request->hasFile('images')) {
+                if ($kegiatan->images) {
+                    // Delete old image
+                    Storage::delete($kegiatan->images);
+                }
+                // Store new image in storage
+                $validateData['images'] = $request->file('images')->store('images-kegiatan');
+            } else {
+                // Keep old image if no new image is uploaded
+                $validateData['images'] = $kegiatan->images;
+            }
+
+            $kegiatan->update($validateData);
+
+            alert()->success('Berhasil', 'Kegiatan berhasil diubah');
+            return redirect('/dashboard/kegiatan')->withInput();
+            } catch (\Exception $e) {
+                dd($e->getMessage());
+        }
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Kegiatan $kegiatan)
+    public function destroy($slug)
     {
-        //
+        $kegiatan = Kegiatan::where('slug', $slug)->firstOrFail();
+
+        if ($kegiatan->images) {
+            Storage::delete($kegiatan->images);
+        }
+
+        Kegiatan::destroy($kegiatan->id);
+
+        alert()->success('Success', 'Kegiatan berhasil dihapus');
+        return redirect('/dashboard/kegiatan')->withInput();
     }
 }
