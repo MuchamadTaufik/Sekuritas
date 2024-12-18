@@ -18,27 +18,19 @@
       <div class="container">
          <h3>Rapat Umum Pemegang Saham (RUPS)</h2>
          <hr>
-         <div class="card card-pedoman-pdf">
-            <p>Ringkasan Risalah RUPS Tahunan 2024 
-               <a href="/pdf/ringkasan-risalah-rups-tahunan-2024.pdf" target="_blank">
-                  <i class="fas fa-file-pdf"></i>
-               </a>
-            </p>
-         </div>
-         <div class="card card-pedoman-pdf">
-            <p>Pengumuman RUPS Tahunan 27 Juli 2023 
-               <a href="/pdf/ringkasan-risalah-rups-tahunan-2023.pdf" target="_blank">
-                  <i class="fas fa-file-pdf"></i>
-               </a>
-            </p>
-         </div>
-         <div class="card card-pedoman-pdf">
-            <p>Ringkasan Risalah RUPS Luar Biasa 2023 
-               <a href="/pdf/ringkasan-risalah-rups-luar-biasa-2023.pdf" target="_blank">
-                  <i class="fas fa-file-pdf"></i>
-               </a>
-            </p>
-         </div>
+         @if ($rups->isEmpty())
+            <p class="text-center">RUPS Belum Tersedia</p>
+         @else
+            @foreach ($rups as $data )
+               <div class="card card-pedoman-pdf">
+                  <p>{{ $data->title }} 
+                     <a href="{{ asset('storage/' . $data->pdf) }}" target="_blank">
+                        <i class="fas fa-file-pdf"></i>
+                     </a>
+                  </p>
+               </div>
+            @endforeach
+         @endif
       </div>
    </div>
 

@@ -26,7 +26,7 @@
             <div class="row align-items-center">
                <div class="col-lg-3 col-md-6">
                      <div class="fact-item">
-                        <a href="">
+                        <a href="https://opening-jb.bofis.id/#/" target="_blank">
                            <i class="fa-solid fa-user-plus fa-2x"></i>
                            <h2>Pembukaan Akun</h2>
                         </a>
@@ -34,7 +34,7 @@
                </div>
                <div class="col-lg-3 col-md-6">
                      <div class="fact-item">
-                        <a href="">
+                        <a href="https://jb.bofis.id/" target="_blank">
                            <i class="fa-solid fa-chart-column fa-2x"></i>
                            <h2>Aplikasi Trading</h2>
                         </a>
@@ -51,7 +51,7 @@
                </div>
                <div class="col-lg-3 col-md-6">
                      <div class="fact-item">
-                        <a href="">
+                        <a href="{{ route('download.dashuser') }}">
                            <i class="fa-solid fa-book fa-2x "></i>
                            <h2>Panduan</h2>
                         </a>
@@ -177,66 +177,32 @@
                <h2>Kegiatan Terbaru</h2>
             </div>
             <div class="owl-carousel blog-carousel">
-               <div class="blog-item">
-                     <div class="blog-img">
-                        <img src="img/blog-1.jpg" alt="Blog">
+               @if ($kegiatan->isEmpty())
+                  <p class="text-center">Kegiatan Belum Tersedia</p>
+               @else
+                  @foreach ($kegiatan as $data )
+                     <div class="blog-item">
+                           <div class="blog-img">
+                              <img src="{{ asset('storage/' . $data->images) }}" alt="Blog">
+                           </div>
+                           <div class="blog-content">
+                              <h2 class="blog-title">{{ $data->title }} </h2>
+                              <div class="blog-meta">
+                                 <i class="fa fa-eye"></i>
+                                 <a href="">{{ $data->views }} view(s) </a>
+                                 <i class="fa fa-calendar-alt"></i>
+                                 <p>{{ $data->tanggal }} </p>
+                              </div>
+                              <div class="blog-text">
+                                 <article class="my-3 fs-6">
+                                    {!! $data->deskripsi !!}
+                                 </article>
+                                 <a class="btn" href="">Read More</a>
+                              </div>
+                           </div>
                      </div>
-                     <div class="blog-content">
-                        <h2 class="blog-title">Lorem ipsum dolor sit amet</h2>
-                        <div class="blog-meta">
-                           <i class="fa fa-list-alt"></i>
-                           <a href="">Category</a>
-                           <i class="fa fa-calendar-alt"></i>
-                           <p>01-Jan-2045</p>
-                        </div>
-                        <div class="blog-text">
-                           <p>
-                                 Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor. Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor
-                           </p>
-                           <a class="btn" href="">Read More</a>
-                        </div>
-                     </div>
-               </div>
-               <div class="blog-item">
-                     <div class="blog-img">
-                        <img src="img/blog-2.jpg" alt="Blog">
-                     </div>
-                     <div class="blog-content">
-                        <h2 class="blog-title">Lorem ipsum dolor sit amet</h2>
-                        <div class="blog-meta">
-                           <i class="fa fa-list-alt"></i>
-                           <a href="">Category</a>
-                           <i class="fa fa-calendar-alt"></i>
-                           <p>01-Jan-2045</p>
-                        </div>
-                        <div class="blog-text">
-                           <p>
-                                 Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor. Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor
-                           </p>
-                           <a class="btn" href="">Read More</a>
-                        </div>
-                     </div>
-               </div>
-               <div class="blog-item">
-                     <div class="blog-img">
-                        <img src="img/blog-3.jpg" alt="Blog">
-                     </div>
-                     <div class="blog-content">
-                        <h2 class="blog-title">Lorem ipsum dolor sit amet</h2>
-                        <div class="blog-meta">
-                           <i class="fa fa-list-alt"></i>
-                           <a href="">Category</a>
-                           <i class="fa fa-calendar-alt"></i>
-                           <p>01-Jan-2045</p>
-                        </div>
-                        <div class="blog-text">
-                           <p>
-                                 Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor. Lorem ipsum dolor sit amet elit. Neca pretim miura bitur facili ornare velit non vulpte liqum metus tortor
-                           </p>
-                           <a class="btn" href="">Read More</a>
-                        </div>
-                     </div>
-               </div>
+                  @endforeach
+               @endif
             </div>
          </div>
    </div>

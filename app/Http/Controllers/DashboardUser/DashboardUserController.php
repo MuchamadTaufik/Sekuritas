@@ -2,14 +2,24 @@
 
 namespace App\Http\Controllers\DashboardUser;
 
+use App\Models\Kegiatan;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Dokumen;
+use App\Models\Rups;
 
 class DashboardUserController extends Controller
 {
     public function index()
     {
-        return view('dashboard-user.index');
+        $kegiatan = Kegiatan::latest()->take(10)->get();
+
+        foreach ($kegiatan as $data) {
+            $data->title = Str::limit($data->title, 50);
+            $data->deskripsi = Str::limit($data->deskripsi, 150);
+        }
+        return view('dashboard-user.index', compact('kegiatan'));
     }
 
     public function indexSekilas()
@@ -38,13 +48,32 @@ class DashboardUserController extends Controller
     }
 
     public function indexRups()
-    {
-        return view('dashboard-user.hubungan-investor.rups.index');
+    {   
+        $rups = Rups::latest()->get();
+        return view('dashboard-user.hubungan-investor.rups.index', compact('rups'));
     }
 
     public function indexDownload()
     {
-        return view('dashboard-user.hubungan-investor.download.index');
+        $dokumen = Dokumen::latest()->get();
+        return view('dashboard-user.hubungan-investor.download.index', compact('dokumen'));
+    }
+    
+    public function download($dokumenId)
+    {
+       // Temukan dokumen berdasarkan ID
+        $dokumen = Dokumen::find($dokumenId);
+
+        if ($dokumen) {
+            // Increment jumlah hits
+            $dokumen->hits = $dokumen->hits + 1;
+            $dokumen->save();
+            
+            // Download file
+            return response()->download(storage_path('app/public/' . $dokumen->pdf));
+        }
+        
+        return redirect()->route('dokumen')->with('error', 'Dokumen tidak ditemukan');
     }
 
     public function indexKarir()

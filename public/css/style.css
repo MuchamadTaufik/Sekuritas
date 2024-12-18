@@ -135,7 +135,7 @@ a:focus {
 .top-bar .social {
     display: flex;
     height: 35px;
-    font-size: 0;
+    font-size: 1rem;
     justify-content: flex-end;
 }
 
@@ -999,22 +999,12 @@ a:focus {
     font-size: 0;
 }
 
-.team .team-social a {
+.team .team-social p {
     display: inline-block;
-    width: 35px;
-    height: 35px;
-    margin: 0 3px;
-    padding: 5px 0;
     text-align: center;
     font-size: 14px;
     color: #092a49;
-    border: 2px solid #092a49;
     transition: 0.3s;
-}
-
-.team .team-social a:hover {
-    color: #0796fe;
-    border-color: #0796fe;
 }
 
 .team .team-item:hover .team-text {

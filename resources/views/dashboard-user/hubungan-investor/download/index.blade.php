@@ -28,24 +28,20 @@
                </tr>
             </thead>
             <tbody>
-               <tr>
-                  <td>1</td>
-                  <td>File Aasdasdasdas assdasda s adasd</td>
-                  <td>100</td>
-                  <td><a href="#" class="btn-download">Download</a></td>
-               </tr>
-               <tr>
-                  <td>2</td>
-                  <td>File B</td>
-                  <td>150</td>
-                  <td><a href="#" class="btn-download">Download</a></td>
-               </tr>
-               <tr>
-                  <td>3</td>
-                  <td>File C</td>
-                  <td>200</td>
-                  <td><a href="#" class="btn-download">Download</a></td>
-               </tr>
+               @if ($dokumen->isEmpty())
+                  <tr>
+                     <td colspan="4" class="text-center">Data belum tersedia</td>
+                  </tr>
+               @else
+                  @foreach ($dokumen as $data )
+                     <tr>
+                        <td>{{ $loop->iteration }}.</td>
+                        <td>{{ $data->title }} </td>
+                        <td>{{ $data->hits }} </td>
+                        <td><a href="{{ route('dokumen.download', $data->id) }}" class="btn-download">Download</a></td>
+                     </tr>
+                  @endforeach
+               @endif
             </tbody>
          </table>
       </div>
