@@ -83,6 +83,11 @@ Route::group(['middleware' => ['auth', 'role:admin,superadmin']], function(){
 
    //Dokumen Download
    Route::get('/dashboard/dokumen', [DokumenController::class, 'index'])->name('dokumen');
+   Route::get('/dashboard/dokumen/create', [DokumenController::class, 'create'])->name('dokumen.create');
+   Route::post('/dashboard/dokumen/store', [DokumenController::class, 'store'])->name('dokumen.store');
+   Route::get('/dashboard/dokumen/edit/{slug}', [DokumenController::class, 'edit'])->name('dokumen.edit');
+   Route::put('/dashboard/dokumen/update/{slug}', [DokumenController::class, 'update'])->name('dokumen.update');
+   Route::delete('/dashboard/dokumen/delete/{slug}', [DokumenController::class, 'destroy'])->name('dokumen.delete');
 });
 
 // errors
