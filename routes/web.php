@@ -8,6 +8,7 @@ use App\Http\Controllers\DashboardAdmin\KegiatanController;
 use App\Http\Controllers\DashboardUser\DashboardUserController;
 use App\Http\Controllers\DashboardAdmin\DashboardAdminController;
 use App\Http\Controllers\DashboardAdmin\DokumenController;
+use App\Http\Controllers\DashboardAdmin\KarirController;
 
 /*
 |--------------------------------------------------------------------------
@@ -94,6 +95,11 @@ Route::group(['middleware' => ['auth', 'role:admin,superadmin']], function(){
 //Dashboard untuk seluruh Role Admin
 Route::group(['middleware' => ['auth', 'role:admin,superadmin,hrd']], function(){
    Route::get('/dashboard', [DashboardAdminController::class, 'index'])->name('dashboard');
+});
+
+//Dashboard untuk seluruh Role Admin
+Route::group(['middleware' => ['auth', 'role:superadmin,hrd']], function(){
+   Route::get('/dashboard/karir', [KarirController::class, 'index'])->name('karir');
 });
 
 // errors

@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\DashboardAdmin;
 
-use App\Models\Visitor;
-use App\Http\Requests\StoreVisitorRequest;
-use App\Http\Requests\UpdateVisitorRequest;
+use App\Models\Karir;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreKarirRequest;
+use App\Http\Requests\UpdateKarirRequest;
 
-class VisitorController extends Controller
+class KarirController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,7 +28,7 @@ class VisitorController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreVisitorRequest $request)
+    public function store(StoreKarirRequest $request)
     {
         //
     }
@@ -35,7 +36,7 @@ class VisitorController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Visitor $visitor)
+    public function show(Karir $karir)
     {
         //
     }
@@ -43,7 +44,7 @@ class VisitorController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Visitor $visitor)
+    public function edit(Karir $karir)
     {
         //
     }
@@ -51,7 +52,7 @@ class VisitorController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateVisitorRequest $request, Visitor $visitor)
+    public function update(UpdateKarirRequest $request, Karir $karir)
     {
         //
     }
@@ -59,7 +60,7 @@ class VisitorController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Visitor $visitor)
+    public function destroy(Karir $karir)
     {
         //
     }
