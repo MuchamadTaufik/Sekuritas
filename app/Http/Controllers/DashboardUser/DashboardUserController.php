@@ -2,17 +2,28 @@
 
 namespace App\Http\Controllers\DashboardUser;
 
+use App\Models\Rups;
+use App\Models\Dokumen;
 use App\Models\Kegiatan;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Dokumen;
-use App\Models\Rups;
+use App\Services\VisitorTrackingService;
 
 class DashboardUserController extends Controller
 {
-    public function index()
+    protected $visitorService;
+
+    public function __construct(
+        VisitorTrackingService $visitorService,
+    ) {
+        $this->visitorService = $visitorService;
+    }
+
+    public function index(Request $request)
     {
+        $this->visitorService->trackVisitor($request);
+
         $kegiatan = Kegiatan::latest()->take(10)->get();
 
         foreach ($kegiatan as $data) {

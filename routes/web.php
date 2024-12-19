@@ -64,9 +64,8 @@ Route::group(['middleware' => 'auth'], function(){
    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 });
 
+//Role Admin dan Superadmin
 Route::group(['middleware' => ['auth', 'role:admin,superadmin']], function(){
-   Route::get('/dashboard', [DashboardAdminController::class, 'index'])->name('dashboard');
-
    //Kegiatan
    Route::get('/dashboard/kegiatan', [KegiatanController::class, 'index'])->name('kegiatan');
    Route::get('/dashboard/kegiatan/create', [KegiatanController::class, 'create'])->name('kegiatan.create');
@@ -90,6 +89,11 @@ Route::group(['middleware' => ['auth', 'role:admin,superadmin']], function(){
    Route::get('/dashboard/dokumen/edit/{slug}', [DokumenController::class, 'edit'])->name('dokumen.edit');
    Route::put('/dashboard/dokumen/update/{slug}', [DokumenController::class, 'update'])->name('dokumen.update');
    Route::delete('/dashboard/dokumen/delete/{slug}', [DokumenController::class, 'destroy'])->name('dokumen.delete');
+});
+
+//Dashboard untuk seluruh Role Admin
+Route::group(['middleware' => ['auth', 'role:admin,superadmin,hrd']], function(){
+   Route::get('/dashboard', [DashboardAdminController::class, 'index'])->name('dashboard');
 });
 
 // errors

@@ -29,7 +29,10 @@ class AuthController extends Controller
 
             // Cek role user
             if ($user->role === 'admin') {
-                toast()->success('Hallo', 'Selamat Datang ' . $user->name);
+                toast()->success('Hallo', 'Selamat Datang Admin Kami' . $user->name);
+                return redirect()->intended('/dashboard');
+            } elseif ($user->role === 'hrd') {
+                toast()->success('Hallo', 'Selamat Datang HRD Kami' . $user->name);
                 return redirect()->intended('/dashboard');
             }
 

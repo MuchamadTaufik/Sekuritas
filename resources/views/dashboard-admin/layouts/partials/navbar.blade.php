@@ -87,7 +87,7 @@
                   <li>
                      <div class="user-box">
                         <div class="avatar-lg">
-                           <img src="assets/img/profile.jpg" alt="image profile" class="avatar-img rounded"/>
+                           <img src="/assets/img/profile.jpg" alt="image profile" class="avatar-img rounded"/>
                         </div>
                         <div class="u-text">
                            <h4>{{ auth()->user()->name }}</h4>
