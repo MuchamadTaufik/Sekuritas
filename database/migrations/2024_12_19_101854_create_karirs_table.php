@@ -15,15 +15,14 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->enum('type',['Fresh Graduate','Berpengalaman']);
-            $table->string('program');
             $table->text('tentang_pekerjaan');
             $table->date('tanggal_mulai');
             $table->date('tanggal_berakhir');
             $table->integer('batas_usia');
             $table->integer('kuota');
+            $table->integer('available');
             $table->text('persyaratan');
             $table->string('lokasi_test');
-            $table->string('lokasi_penempatan');
             $table->text('informasi_tambahan')->nullable();
             $table->timestamps();
         });

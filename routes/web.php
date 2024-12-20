@@ -97,9 +97,15 @@ Route::group(['middleware' => ['auth', 'role:admin,superadmin,hrd']], function()
    Route::get('/dashboard', [DashboardAdminController::class, 'index'])->name('dashboard');
 });
 
-//Dashboard untuk seluruh Role Admin
+//Dashboard untuk seluruh Role HRD
 Route::group(['middleware' => ['auth', 'role:superadmin,hrd']], function(){
    Route::get('/dashboard/karir', [KarirController::class, 'index'])->name('karir');
+   Route::get('/dashboard/karir/create', [KarirController::class, 'create'])->name('karir.create');
+   Route::post('/dashboard/karir/store', [KarirController::class, 'store'])->name('karir.store');
+   Route::get('/dashboard/karir/show/{slug}', [KarirController::class, 'show'])->name('karir.show');
+   Route::get('/dashboard/karir/edit/{slug}', [KarirController::class, 'edit'])->name('karir.edit');
+   Route::put('/dashboard/karir/update/{slug}', [KarirController::class, 'update'])->name('karir.update');
+   Route::delete('/dashboard/karir/delete/{slug}',[KarirController::class, 'destroy'])->name('karir.delete');
 });
 
 // errors

@@ -23,7 +23,7 @@ class VisitorTrackingService
                 ->first();
 
             // Cek apakah ada kunjungan dalam 5 menit terakhir
-            if ($lastVisit && Carbon::parse($lastVisit->visited_at)->diffInMinutes($currentTime) < 5) {
+            if ($lastVisit && Carbon::parse($lastVisit->visited_at)->diffInMinutes($currentTime) < 1) {
                 return null;
             }
 
@@ -50,7 +50,7 @@ class VisitorTrackingService
     {
         // Cek apakah IP ini sudah berkunjung dalam 24 jam terakhir
         return !Visitor::where('ip_address', $ipAddress)
-            ->where('visited_at', '>=', $currentTime->copy()->subHours(24))
+            ->where('visited_at', '>=', $currentTime->copy()->subHours(0.1))
             ->exists();
     }
 

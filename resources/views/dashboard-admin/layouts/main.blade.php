@@ -41,6 +41,10 @@
       trix-toolbar [data-trix-button-group="file-tools"]{
           display: none;
         }
+      trix-editor[readonly] {
+            pointer-events: none;
+            background-color: #f7f7f7;
+        }
     </style>
 </head>
 <body>
