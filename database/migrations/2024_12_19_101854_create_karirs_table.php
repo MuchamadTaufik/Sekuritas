@@ -19,6 +19,9 @@ return new class extends Migration
             $table->date('tanggal_mulai');
             $table->date('tanggal_berakhir');
             $table->integer('batas_usia');
+            $table->decimal('ipk', 3, 2);
+            $table->unsignedBigInteger('jurusan_id');
+            $table->foreign('jurusan_id')->references('id')->on('jurusans')->onDelete('cascade');
             $table->integer('kuota');
             $table->integer('available');
             $table->text('persyaratan');

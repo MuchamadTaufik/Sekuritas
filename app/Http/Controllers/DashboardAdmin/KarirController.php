@@ -6,6 +6,7 @@ use App\Models\Karir;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreKarirRequest;
 use App\Http\Requests\UpdateKarirRequest;
+use App\Models\Jurusan;
 use Cviebrock\EloquentSluggable\Services\SlugService;
 
 class KarirController extends Controller
@@ -24,7 +25,8 @@ class KarirController extends Controller
      */
     public function create()
     {
-        return  view('dashboard-admin.karir.create');
+        $jurusans = Jurusan::all();
+        return  view('dashboard-admin.karir.create', compact('jurusans'));
     }
 
     /**
@@ -39,6 +41,7 @@ class KarirController extends Controller
             'tanggal_mulai' => 'required|date_format:Y-m-d',
             'tanggal_berakhir' => 'required|date_format:Y-m-d',
             'batas_usia' => 'required|numeric',
+            'ipk' => 'required|numeric|min:0|max:4',
             'kuota' => 'required|numeric',
             'persyaratan' => 'required',
             'lokasi_test' => 'required|max:255',
@@ -89,6 +92,7 @@ class KarirController extends Controller
                 'tanggal_mulai' => 'required|date_format:Y-m-d',
                 'tanggal_berakhir' => 'required|date_format:Y-m-d',
                 'batas_usia' => 'required|numeric',
+                'ipk' => 'required|numeric|min:0|max:4',
                 'kuota' => 'required|numeric',
                 'persyaratan' => 'required',
                 'lokasi_test' => 'required|max:255',

@@ -33,5 +33,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'rekrutmensekuritas@gmail.com',
             'password' => bcrypt('123456')
         ]);
+
+        $this->call(JurusanSeeder::class);
     }
 }

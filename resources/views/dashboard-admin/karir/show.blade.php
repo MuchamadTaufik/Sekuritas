@@ -43,6 +43,18 @@
                          </div>
                      </div>
                      <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="batas_usia">Batas IPK</label>
+                            <input class="form-control" value="{{ $karir->batas_ipk }}" readonly/>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="jurusan">Syarat Jurusan</label>
+                            <input class="form-control" value="{{ $karir->jurusan->name }}" readonly/>
+                        </div>
+                    </div>
+                     <div class="col-md-6">
                          <div class="form-group">
                              <label for="kuota">Kuota</label>
                              <input class="form-control" value="{{ $karir->kuota }}" readonly/>

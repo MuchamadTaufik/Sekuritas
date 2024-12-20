@@ -7,13 +7,14 @@
                <p>Dashboard</p>
             </a>
          </li>
-         @can('isAdmin')
+         
             <li class="nav-section">
                <span class="sidebar-mini-icon">
                <i class="fa fa-ellipsis-h"></i>
                </span>
                <h4 class="text-section">Components</h4>
             </li>
+            @can('isAdmin')
             <li class="nav-item {{ Route::is('kegiatan*') ? 'active' : '' }}">
                <a href="{{ route('kegiatan') }}">
                   <i class="fas fa-building"></i>
@@ -34,12 +35,17 @@
             </li>
          @endcan
          
-
          @can('isHrd')
             <li class="nav-item {{ Route::is('karir*') ? 'active' : '' }}">
                <a href="{{ route('karir') }}">
                   <i class="fas fa-user"></i>
                   <p>Karir</p>
+               </a>
+            </li>
+            <li class="nav-item {{ Route::is('jurusan*') ? 'active' : '' }}">
+               <a href="{{ route('jurusan') }}">
+                  <i class="fas fa-book"></i>
+                  <p>Jurusan</p>
                </a>
             </li> 
          @endcan

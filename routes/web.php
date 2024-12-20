@@ -8,6 +8,7 @@ use App\Http\Controllers\DashboardAdmin\KegiatanController;
 use App\Http\Controllers\DashboardUser\DashboardUserController;
 use App\Http\Controllers\DashboardAdmin\DashboardAdminController;
 use App\Http\Controllers\DashboardAdmin\DokumenController;
+use App\Http\Controllers\DashboardAdmin\JurusanController;
 use App\Http\Controllers\DashboardAdmin\KarirController;
 
 /*
@@ -99,6 +100,8 @@ Route::group(['middleware' => ['auth', 'role:admin,superadmin,hrd']], function()
 
 //Dashboard untuk seluruh Role HRD
 Route::group(['middleware' => ['auth', 'role:superadmin,hrd']], function(){
+
+   //Karir
    Route::get('/dashboard/karir', [KarirController::class, 'index'])->name('karir');
    Route::get('/dashboard/karir/create', [KarirController::class, 'create'])->name('karir.create');
    Route::post('/dashboard/karir/store', [KarirController::class, 'store'])->name('karir.store');
@@ -106,6 +109,14 @@ Route::group(['middleware' => ['auth', 'role:superadmin,hrd']], function(){
    Route::get('/dashboard/karir/edit/{slug}', [KarirController::class, 'edit'])->name('karir.edit');
    Route::put('/dashboard/karir/update/{slug}', [KarirController::class, 'update'])->name('karir.update');
    Route::delete('/dashboard/karir/delete/{slug}',[KarirController::class, 'destroy'])->name('karir.delete');
+
+   //Jurusan
+   Route::get('/dashboard/jurusan', [JurusanController::class, 'index'])->name('jurusan');
+   Route::get('/dashboard/jurusan/create', [JurusanController::class, 'create'])->name('jurusan.create');
+   Route::post('/dashboard/jurusan/store', [JurusanController::class, 'store'])->name('jurusan.store');
+   Route::get('/dashboard/jurusan/edit/{jurusan}', [JurusanController::class, 'edit'])->name('jurusan.edit');
+   Route::put('/dashboard/jurusan/update/{jurusan}', [JurusanController::class, 'update'])->name('jurusan.update');
+   Route::delete('/dashboard/jurusan/delet/{jurusan}', [JurusanController::class, 'destroy'])->name('jurusan.delete');
 });
 
 // errors

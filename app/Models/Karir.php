@@ -20,4 +20,14 @@ class Karir extends Model
             ]
         ];
     }
+
+    public function lamaran()
+    {
+        return $this->hasMany(Lamaran::class);
+    }
+
+    public function jurusan()
+    {
+        return $this->belongsTo(Jurusan::class);
+    }
 }
