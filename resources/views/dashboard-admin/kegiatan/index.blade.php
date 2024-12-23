@@ -24,6 +24,7 @@
                            <th>Judul</th>
                            <th>Tanggal</th>
                            <th>Total View</th>
+                           <th>Category</th>
                            <th style="width: 10%">Action</th>
                         </tr>
                      </thead>
@@ -42,6 +43,7 @@
                                  <td>{{ $data->title }}</td>
                                  <td>{{ $data->tanggal }}</td>
                                  <td>{{ $data->views }}</td>
+                                 <td>{{ $data->category->name }} </td>
                                  <td>
                                     <div class="form-button-action">
                                        <a href="{{ route('kegiatan.edit', $data->slug) }}" type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task">

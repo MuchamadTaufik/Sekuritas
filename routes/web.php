@@ -60,6 +60,7 @@ Route::get('/kebijakan-kebijakan', [DashboardUserController::class, 'indexKebija
 
 //Halaman Show Kegiatan
 Route::get('/kegiatan/detail/{slug}', [DashboardUserController::class, 'showKegiatan'])->name('kegiatan.dashuser.show');
+Route::get('/kegiatan', [DashboardUserController::class, 'allKegiatan'])->name('kegiatan.dashuser.all');
 
 Route::group(['middleware' => 'guest'], function(){
    Route::get('/login-account-sekuritas', [AuthController::class, 'index'])->name('login');

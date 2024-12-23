@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\StoreKegiatanRequest;
 use App\Http\Requests\UpdateKegiatanRequest;
+use App\Models\Category;
 use Cviebrock\EloquentSluggable\Services\SlugService;
 
 class KegiatanController extends Controller
@@ -25,7 +26,8 @@ class KegiatanController extends Controller
      */
     public function create()
     {
-        return view('dashboard-admin.kegiatan.create');
+        $category = Category::all();
+        return view('dashboard-admin.kegiatan.create', compact('category'));
     }
 
     /**
@@ -34,6 +36,7 @@ class KegiatanController extends Controller
     public function store(StoreKegiatanRequest $request)
     {
         $validateData = $request->validate([
+            'category_id' => 'required',
             'images' => 'required|image|file|max:4096',
             'title' => 'required|max:255',
             'tanggal' => 'required|date_format:Y-m-d',
@@ -81,6 +84,7 @@ class KegiatanController extends Controller
 
         try {
             $rules = [
+                'category_id' => 'required',
                 'images' => 'image|file|max:4096',
                 'title' => 'required|max:255',
                 'tanggal' => 'required|date_format:Y-m-d',

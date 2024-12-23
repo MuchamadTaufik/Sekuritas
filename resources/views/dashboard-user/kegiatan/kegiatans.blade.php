@@ -11,7 +11,7 @@
          <div class="title-route">
             <p class="non-active"><a href="{{ route('/') }}"><i class="fas fa-arrow-left"></i> Kembali</a></p>
             <p>|</p>
-            <p class="non-active"><a href="{{ route('kegiatan.dashuser.all') }}">Kegiatan</a></p>
+            <p>Kegiatan</p>
          </div>
       </div>
    </div>
@@ -19,31 +19,57 @@
    <div class="single">
       <div class="container">
           <div class="section-header">
-              <p>Detail Kegiatan</p>
-              <h2>{{ $kegiatan->title }} </h2>
+              <h2>Kegiatan Kami</p>
           </div>
           <div class="row">
-              <div class="col-lg-8">
-                  <img src="{{ asset('storage/' . $kegiatan->images) }}" alt="Image">
-                  <div class="kegiatan-meta">
-                    <div class="meta-item">
-                        <i class="fa fa-calendar-alt"></i>
-                        <span>{{ \Carbon\Carbon::parse($kegiatan->tanggal)->format('M d, Y') }}</span>
+            <div class="col-lg-8">
+                @if ($kegiatans->isEmpty())
+                    <div class="text-center py-8 text-gray-500">
+                        <i class="fas fa-calendar-times fa-3x mb-3"></i>
+                        <p class="text-lg">Kegiatan Belum Tersedia</p>
                     </div>
-                    <div class="meta-item">
-                        <i class="fa fa-eye"></i>
-                        <span>{{ $kegiatan->views }} view(s)</span>
+                @else
+                    @foreach ($kegiatans as $data)
+                    <div class="kegiatan-card">
+                        <div class="kegiatan-image">
+                            <img src="{{ asset('storage/' . $data->images) }}" alt="{{ $data->title }}">
+                        </div>
+                        <div class="kegiatan-header">
+                            <h3 class="kegiatan-title">{{ $data->title }}</h3>
+                            <div class="kegiatan-meta">
+                                <div class="meta-item">
+                                    <i class="fa fa-calendar-alt"></i>
+                                    <span>{{ \Carbon\Carbon::parse($data->tanggal)->format('M d, Y') }}</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fa fa-eye"></i>
+                                    <span>{{ $data->views }} view(s)</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fa fa-list"></i>
+                                    <a href="#" class="category-link">{{ $data->category->name }}</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <div class="kegiatan-content">
+                            <article>
+                                {!! $data->deskripsi !!}
+                            </article>
+                        </div>
+                        
+                        <div class="kegiatan-footer">
+                            <hr>
+                            <div class="footer-actions">
+                                <a href="{{ route('kegiatan.dashuser.show', $data->slug) }}" class="read-more">Baca selengkapnya</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="meta-item">
-                        <i class="fa fa-list"></i>
-                        <a href="#" class="category-link">{{ $kegiatan->category->name }}</a>
-                    </div>
-                </div>
-                  <article class="my-3 fs-6 mb-5">
-                     {!! $kegiatan->deskripsi !!}
-                  </article>
-                  <hr>
-              </div>
+                    @endforeach
+                @endif
+            </div>
 
               <div class="col-lg-4">
                 <div class="categories mb-5">

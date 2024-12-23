@@ -191,7 +191,7 @@
                                  <i class="fa fa-eye"></i>
                                  <a href="">{{ $data->views }} view(s) </a>
                                  <i class="fa fa-calendar-alt"></i>
-                                 <p>{{ $data->tanggal }} </p>
+                                 <p>{{ \Carbon\Carbon::parse($data->tanggal)->format('M d, Y') }}</p>
                               </div>
                               <div class="blog-text">
                                  <article class="my-3 fs-6">

@@ -8,6 +8,7 @@ use App\Models\Kegiatan;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use App\Services\VisitorTrackingService;
 
 class DashboardUserController extends Controller
@@ -24,7 +25,7 @@ class DashboardUserController extends Controller
     {
         $this->visitorService->trackVisitor($request);
 
-        $kegiatan = Kegiatan::latest()->take(10)->get();
+        $kegiatan = Kegiatan::latest()->take(5)->get();
 
         foreach ($kegiatan as $data) {
             $data->title = Str::limit($data->title, 50);
@@ -104,8 +105,43 @@ class DashboardUserController extends Controller
 
     public function showKegiatan($slug)
     {
+        // Mengambil data kegiatan berdasarkan slug
         $kegiatan = Kegiatan::where('slug', $slug)->firstOrFail();
-        $kegiatanData = Kegiatan::latest()->get();
-        return view('dashboard-user.kegiatan.index', compact('kegiatan','kegiatanData'));
+
+        // Increment jumlah views
+        $kegiatan->increment('views');
+
+        // Mengambil data kegiatan terbaru
+        $kegiatanData = Kegiatan::latest()->take(4)->get();
+
+        $category = Category::all();
+        // Mengambil kategori yang digunakan dalam kegiatan
+        $categories = Category::whereHas('kegiatan')->get();
+
+        // Menghitung total kategori yang digunakan dalam kegiatan
+        $totalCategories = $categories->count();
+
+        return view('dashboard-user.kegiatan.index', compact('kegiatan', 'kegiatanData', 'category', 'totalCategories'));
     }
+
+    public function allKegiatan()
+    {
+        $kegiatans = Kegiatan::latest()->get();
+
+        // Mengambil data kegiatan terbaru
+        $kegiatanData = Kegiatan::latest()->take(4)->get();
+
+        $category = Category::all();
+        // Mengambil kategori yang digunakan dalam kegiatan
+        $categories = Category::whereHas('kegiatan')->get();
+
+        // Menghitung total kategori yang digunakan dalam kegiatan
+        $totalCategories = $categories->count();
+
+        foreach ($kegiatans as $data) {
+            $data->deskripsi = Str::limit($data->deskripsi, 150);
+        }
+        return view('dashboard-user.kegiatan.kegiatans', compact('kegiatans', 'kegiatanData', 'category', 'totalCategories'));
+    }
+
 }
