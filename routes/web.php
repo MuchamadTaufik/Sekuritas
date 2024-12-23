@@ -51,6 +51,7 @@ Route::get('/dashboard/dokumen/download/{dokumenId}', [DashboardUserController::
 
 //Halaman Karir
 Route::get('/karir', [DashboardUserController::class, 'indexKarir'])->name('karir.dashuser');
+Route::get('/karir/{slug}', [DashboardUserController::class, 'karirDetail'])->name('karir.dashuser.detail');
 
 //Halaman FAQ
 Route::get('/faq', [DashboardUserController::class, 'indexFaq'])->name('faq.dashuser');

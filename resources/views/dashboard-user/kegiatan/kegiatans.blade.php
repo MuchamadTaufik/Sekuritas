@@ -47,7 +47,7 @@
                                 </div>
                                 <div class="meta-item">
                                     <i class="fa fa-list"></i>
-                                    <a href="#" class="category-link">{{ $data->category->name }}</a>
+                                    <span>{{ $data->category->name }}</span>
                                 </div>
                             </div>
                         </div>
@@ -68,6 +68,9 @@
                         </div>
                     </div>
                     @endforeach
+                    <div class="pagination-links">
+                        {{ $kegiatans->links('pagination::bootstrap-4') }}
+                    </div>
                 @endif
             </div>
 

@@ -45,11 +45,29 @@
                                     @enderror
                               </div>
                            </div>                           
-                           <div class="col-md-12">
+                           <div class="col-md-6">
                               <div class="form-group">
                                     <label for="title">Judul</label>
                                     <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" placeholder="Masukan Judul..." value="{{ old('title', $kegiatan->title) }}" required/>
                                     @error('title')
+                                       <div class="invalid-feedback">
+                                          {{ $message }}
+                                       </div>
+                                    @enderror
+                              </div>
+                           </div>
+                           <div class="col-md-6">
+                              <div class="form-group">
+                                    <label for="category_id">Category</label>
+                                    <select class="form-control @error('category_id') is-invalid @enderror" id="category_select" name="category_id" required value="{{ old('category_id',$kegiatan->category->name) }}">
+                                       <option value="" disabled selected>Pilih Category</option>
+                                       @foreach($category as $categories)
+                                          <option value="{{ $categories->id }}" {{ (old('category_id', $kegiatan->category_id) ?? '') == $categories->id ? 'selected' : '' }}>
+                                             {{ $categories->name }}
+                                          </option>
+                                       @endforeach
+                                    </select>
+                                    @error('category_id')
                                        <div class="invalid-feedback">
                                           {{ $message }}
                                        </div>

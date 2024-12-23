@@ -14,7 +14,7 @@
                </span>
                <h4 class="text-section">Components</h4>
             </li>
-            @can('isAdmin')
+            @if(auth()->user()->can('isSuperadmin') || auth()->user()->can('isAdmin'))
             <li class="nav-item {{ Route::is('category*') ? 'active' : '' }}">
                <a href="{{ route('category') }}">
                   <i class="fas fa-list"></i>
@@ -39,9 +39,9 @@
                   <p>Dokumen Download</p>
                </a>
             </li>
-         @endcan
+         @endif
          
-         @can('isHrd')
+         @if(auth()->user()->can('isSuperadmin') || auth()->user()->can('isHrd'))
             <li class="nav-item {{ Route::is('karir*') ? 'active' : '' }}">
                <a href="{{ route('karir') }}">
                   <i class="fas fa-user"></i>
@@ -54,7 +54,7 @@
                   <p>Jurusan</p>
                </a>
             </li> 
-         @endcan
+         @endif
       </ul>
    </div>
 </div>

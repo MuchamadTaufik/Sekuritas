@@ -75,8 +75,8 @@
                             <div class="col-md-6">
                               <div class="form-group">
                                   <label for="batas_ipk">Batas IPK</label>
-                                  <input type="number" class="form-control @error('batas_ipk') is-invalid @enderror" id="batas_ipk" name="batas_ipk" value="{{ old('batas_ipk') }}" placeholder="Contoh: 3.00" step="0.01" min="0" max="4.00" required/>
-                                    @error('batas_ipk')
+                                  <input type="number" class="form-control @error('ipk') is-invalid @enderror" id="batas_ipk" name="ipk" value="{{ old('ipk') }}" placeholder="Contoh: 3.00" step="0.01" min="0" max="4.00" required/>
+                                    @error('ipk')
                                        <div class="invalid-feedback">
                                              {{ $message }}
                                        </div>
@@ -86,15 +86,15 @@
                            <div class="col-md-6">
                               <div class="form-group">
                                  <label for="jurusan" class="form-label">Syarat Jurusan</label>
-                                 <select class="form-control @error('jurusan_id') is-invalid @enderror" id="jurusan" name="jurusan_id" required autofocus value="{{ old('jurusan_id') }}">
+                                 <select class="form-control @error('jurusan_id') is-invalid @enderror" id="jurusan" name="jurusan_id" required value="{{ old('jurusan_id') }}">
                                     <option value="" disabled selected>Pilih Jurusan</option>
                                     @foreach($jurusans as $data)
-                                       <option value="{{ $data->id }}" {{ (old('type_id') ?? '') == $data->id ? 'selected' : '' }}>
+                                       <option value="{{ $data->id }}" {{ (old('jurusan_id') ?? '') == $data->id ? 'selected' : '' }}>
                                              {{ $data->name }}
                                        </option>
                                     @endforeach
                                  </select>
-                                 @error('type_id')
+                                 @error('jurusan_id')
                                     <div class="invalid-feedback">
                                        {{ $message }}
                                     </div>

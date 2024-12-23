@@ -34,8 +34,10 @@ class AuthController extends Controller
             } elseif ($user->role === 'hrd') {
                 toast()->success('Hallo', 'Selamat Datang HRD Kami' . $user->name);
                 return redirect()->intended('/dashboard');
+            } elseif ($user->role === 'superadmin') {
+                toast()->success('Hallo', 'Selamat Datang Super Admin Kami' . $user->name);
+                return redirect()->intended('/dashboard');
             }
-
             // Role tidak sesuai
             Auth::logout();
             toast()->error('Akses Ditolak', 'Anda tidak memiliki akses ke halaman ini.');

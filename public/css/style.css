@@ -532,7 +532,6 @@ a:focus {
     .section-header h2 {
         font-size: 1.4rem;
         margin: 0 0 0 10px;
-
     }
 }
 /*******************************/
@@ -1601,7 +1600,7 @@ a:focus {
     .bg-route img {
         max-height: 400px;
     }
-    
+
     .title-route {
         padding: 8px 15px;
     }
@@ -1611,13 +1610,13 @@ a:focus {
     .bg-route img {
         max-height: 300px;
     }
-    
+
     .title-route {
         flex-direction: column;
         text-align: center;
         padding: 8px 10px;
     }
-    
+
     .title-route .non-active a:hover {
         margin-left: 0;
     }
@@ -2298,16 +2297,13 @@ a:focus {
     }
 }
 /* Login End */
- 
-
 
 article.my-3 {
     text-align: justify; /* Mengatur agar teks rata kiri-kanan */
-    width: 100%;         /* Membuat lebar elemen 100% dari kontainer induknya */
-    margin-left: auto;   /* Memberikan margin otomatis di kiri */
-    margin-right: auto;  /* Memberikan margin otomatis di kanan */
+    width: 100%; /* Membuat lebar elemen 100% dari kontainer induknya */
+    margin-left: auto; /* Memberikan margin otomatis di kiri */
+    margin-right: auto; /* Memberikan margin otomatis di kanan */
 }
-
 
 /* Recent Post Start */
 .recent-posts {
@@ -2540,11 +2536,11 @@ article.my-3 {
         flex-direction: column;
         gap: 0.5rem;
     }
-    
+
     .kegiatan-title {
         font-size: 1.25rem;
     }
-    
+
     .kegiatan-header,
     .kegiatan-content,
     .kegiatan-footer {
@@ -2552,7 +2548,7 @@ article.my-3 {
     }
 }
 
-.sekilas-text .feature-img img{
+.sekilas-text .feature-img img {
     width: 100%;
     height: auto;
 }
@@ -2561,16 +2557,16 @@ article.my-3 {
     .kegiatan-card {
         margin-bottom: 1.5rem;
     }
-    
+
     .kegiatan-title {
         font-size: 1.1rem;
     }
-    
+
     .meta-item {
         font-size: 0.8rem;
     }
 
-    .sekilas-text .feature-img img{
+    .sekilas-text .feature-img img {
         width: 50%;
         height: auto;
         margin-bottom: 10px;
@@ -2578,3 +2574,49 @@ article.my-3 {
 }
 /* card kegiatans end */
 
+/* karir detail */
+.karir-detail-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.meta-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 6px;
+    height: 100%;
+}
+
+.section-title {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.section-content {
+    color: #6c757d;
+    line-height: 1.6;
+}
+
+.badge {
+    font-size: 0.875rem;
+    padding: 0.5em 1em;
+}
+
+@media (max-width: 768px) {
+    .karir-detail-card {
+        padding: 1rem;
+    }
+
+    .meta-item {
+        padding: 0.75rem;
+    }
+}
+/* karir detail end */

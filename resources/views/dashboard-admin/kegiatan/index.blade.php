@@ -31,7 +31,7 @@
                      <tbody>
                         @if ($kegiatan->isEmpty())
                            <tr>
-                              <td colspan="6" class="text-center">Data belum tersedia</td>
+                              <td colspan="7" class="text-center">Data belum tersedia</td>
                            </tr>
                         @else
                            @foreach ($kegiatan as $data)

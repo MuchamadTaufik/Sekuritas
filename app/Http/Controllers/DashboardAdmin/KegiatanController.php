@@ -72,7 +72,8 @@ class KegiatanController extends Controller
     public function edit($slug)
     {
         $kegiatan = Kegiatan::where('slug', $slug)->firstOrFail();
-        return view('dashboard-admin.kegiatan.edit', compact('kegiatan'));
+        $category = Category::all();
+        return view('dashboard-admin.kegiatan.edit', compact('kegiatan','category'));
     }
 
     /**

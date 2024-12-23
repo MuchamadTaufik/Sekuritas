@@ -30,12 +30,9 @@
                </div>
             </div>
             <a href="{{ route('karir.dashuser') }}" class="nav-item nav-link {{ Route::is('karir*') ? 'active' : '' }}">Karir</a>
-            @can('isAdmin')
+            @if(auth()->check() && (auth()->user()->can('isSuperAdmin') || auth()->user()->can('isAdmin') || auth()->user()->can('isHrd')))
                <a href="{{ route('dashboard') }}" class="nav-item nav-link">Dashboard</a>
-            @endcan
-            @can('isHrd')
-               <a href="{{ route('dashboard') }}" class="nav-item nav-link">Dashboard</a>
-            @endcan
+            @endif
          </div>
       </div>
    </div>

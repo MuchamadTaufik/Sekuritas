@@ -36,7 +36,7 @@
                     </div>
                     <div class="meta-item">
                         <i class="fa fa-list"></i>
-                        <a href="#" class="category-link">{{ $kegiatan->category->name }}</a>
+                        <span>{{ $kegiatan->category->name }} view(s)</span>
                     </div>
                 </div>
                   <article class="my-3 fs-6 mb-5">

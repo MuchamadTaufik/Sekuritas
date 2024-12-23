@@ -35,6 +35,7 @@ class KarirController extends Controller
     public function store(StoreKarirRequest $request)
     {
         $validateData = $request->validate([
+            'jurusan_id' => 'required',
             'title' => 'required|max:255',
             'type' => 'required|in:Fresh Graduate,Berpengalaman',
             'tentang_pekerjaan' => 'required',
@@ -74,8 +75,9 @@ class KarirController extends Controller
     public function edit($slug)
     {
         $karir = Karir::where('slug', $slug)->firstOrFail();
+        $jurusans = Jurusan::all();
 
-        return view('dashboard-admin.karir.edit', compact('karir'));
+        return view('dashboard-admin.karir.edit', compact('karir','jurusans'));
     }
 
     /**

@@ -45,7 +45,7 @@
                      <div class="col-md-6">
                         <div class="form-group">
                             <label for="batas_usia">Batas IPK</label>
-                            <input class="form-control" value="{{ $karir->batas_ipk }}" readonly/>
+                            <input class="form-control" value="{{ $karir->ipk }}" readonly/>
                         </div>
                     </div>
                     <div class="col-md-6">

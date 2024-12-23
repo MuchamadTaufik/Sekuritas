@@ -9,6 +9,7 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Karir;
 use App\Services\VisitorTrackingService;
 
 class DashboardUserController extends Controller
@@ -90,7 +91,22 @@ class DashboardUserController extends Controller
 
     public function indexKarir()
     {
-        return view('dashboard-user.karir.index');
+        $karir = Karir::latest()->get();
+        return view('dashboard-user.karir.index', compact('karir'));
+    }
+
+    public function karirDetail($slug)
+    {
+        $karir = Karir::where('slug', $slug)->firstOrFail();
+
+        $typeCount = Karir::select('type')
+        ->selectRaw('count(*) as count')
+        ->groupBy('type')
+        ->get();
+
+        $karirData = Karir::latest()->take(4)->get();
+
+        return view('dashboard-user.karir.detail', compact('karir','typeCount','karirData'));
     }
 
     public function indexFaq()
@@ -126,22 +142,34 @@ class DashboardUserController extends Controller
 
     public function allKegiatan()
     {
-        $kegiatans = Kegiatan::latest()->get();
+        // Get paginated main kegiatan with category relationship
+        $kegiatans = Kegiatan::with('category')
+            ->latest()
+            ->paginate(5);
 
-        // Mengambil data kegiatan terbaru
-        $kegiatanData = Kegiatan::latest()->take(4)->get();
-
-        $category = Category::all();
-        // Mengambil kategori yang digunakan dalam kegiatan
-        $categories = Category::whereHas('kegiatan')->get();
-
-        // Menghitung total kategori yang digunakan dalam kegiatan
-        $totalCategories = $categories->count();
-
-        foreach ($kegiatans as $data) {
-            $data->deskripsi = Str::limit($data->deskripsi, 150);
+        // Apply description limit
+        foreach ($kegiatans as $item) {
+            $item->deskripsi = Str::limit($item->deskripsi, 150);
         }
-        return view('dashboard-user.kegiatan.kegiatans', compact('kegiatans', 'kegiatanData', 'category', 'totalCategories'));
+
+        // Get recent kegiatan for sidebar
+        $kegiatanData = Kegiatan::latest()
+            ->take(5)  // Limit to reasonable number
+            ->get();
+
+        // Get categories with kegiatan count
+        $category = Category::withCount('kegiatan')
+            ->having('kegiatan_count', '>', 0)
+            ->get();
+
+        $totalCategories = $category->count();
+
+        return view('dashboard-user.kegiatan.kegiatans', compact(
+            'kegiatans',
+            'kegiatanData', 
+            'category',
+            'totalCategories'
+        ));
     }
 
 }
