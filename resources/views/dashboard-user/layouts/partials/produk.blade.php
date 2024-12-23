@@ -4,17 +4,17 @@
       <div class="row">
          <div class="col-md-4 d-flex justify-content-center align-items-center">
             <div class="left">
-               <img src="img/dashboard-user/bofis1.png" alt="">
+               <img src="/img/dashboard-user/bofis1.png" alt="">
             </div>
          </div>
          <div class="col-md-4 d-flex justify-content-center align-items-center">
             <div class="mid">
-               <img src="img/dashboard-user/bofis.png" alt="">
+               <img src="/img/dashboard-user/bofis.png" alt="">
             </div>
          </div>
          <div class="col-md-4 d-flex justify-content-center align-items-center">
             <div class="right">
-               <img src="img/dashboard-user/bofis2.png" alt="">
+               <img src="/img/dashboard-user/bofis2.png" alt="">
             </div>
          </div>
       </div>

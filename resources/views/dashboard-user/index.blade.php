@@ -197,7 +197,7 @@
                                  <article class="my-3 fs-6">
                                     {!! $data->deskripsi !!}
                                  </article>
-                                 <a class="btn" href="">Read More</a>
+                                 <a class="btn" href="{{ route('kegiatan.dashuser.show', $data->slug) }}">Read More</a>
                               </div>
                            </div>
                      </div>

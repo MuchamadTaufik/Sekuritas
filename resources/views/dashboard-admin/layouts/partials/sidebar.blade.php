@@ -15,6 +15,12 @@
                <h4 class="text-section">Components</h4>
             </li>
             @can('isAdmin')
+            <li class="nav-item {{ Route::is('category*') ? 'active' : '' }}">
+               <a href="{{ route('category') }}">
+                  <i class="fas fa-list"></i>
+                  <p>Category</p>
+               </a>
+            </li>
             <li class="nav-item {{ Route::is('kegiatan*') ? 'active' : '' }}">
                <a href="{{ route('kegiatan') }}">
                   <i class="fas fa-building"></i>

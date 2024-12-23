@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-lg bg-dark navbar-dark">
    <div class="container-fluid">
       <a href="{{ route('/') }}" class="navbar-brand">
-         <img id="logo" src="img/dashboard-user/logo.png" alt="">
+         <img id="logo" src="/img/dashboard-user/logo.png" alt="">
       </a>
       <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
          <span class="navbar-toggler-icon"></span>
@@ -30,6 +30,9 @@
             </div>
             <a href="{{ route('karir.dashuser') }}" class="nav-item nav-link {{ Route::is('karir*') ? 'active' : '' }}">Karir</a>
             @can('isAdmin')
+               <a href="{{ route('dashboard') }}" class="nav-item nav-link">Dashboard</a>
+            @endcan
+            @can('isHrd')
                <a href="{{ route('dashboard') }}" class="nav-item nav-link">Dashboard</a>
             @endcan
          </div>

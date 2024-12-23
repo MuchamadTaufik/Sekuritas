@@ -1321,6 +1321,7 @@ a:focus {
 .single img {
     width: 100%;
     margin: 0 0 25px 0;
+    height: auto;
 }
 
 .single .table,
@@ -2280,3 +2281,84 @@ a:focus {
 }
 /* Login End */
  
+.detail-meta {
+    display: flex;
+    align-items: center;  /* Menyelaraskan elemen secara vertikal */
+    gap: 10px;  /* Jarak antar elemen */
+}
+
+.detail-meta i {
+    margin-right: 5px;  /* Memberikan jarak antara icon dan teks */
+}
+
+.detail-meta p, .detail-meta a {
+    margin: 0;  /* Menghilangkan margin default */
+}
+
+article.my-3 {
+    text-align: justify; /* Mengatur agar teks rata kiri-kanan */
+    width: 100%;         /* Membuat lebar elemen 100% dari kontainer induknya */
+    margin-left: auto;   /* Memberikan margin otomatis di kiri */
+    margin-right: auto;  /* Memberikan margin otomatis di kanan */
+}
+
+
+/* Recent Post Start */
+.recent-posts {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.recent-post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.recent-post-item {
+    display: flex;
+    gap: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.post-img img {
+    max-width: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.post-info {
+    flex-grow: 1;
+}
+
+.post-title {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.post-meta {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.read-more-btn {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.read-more-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Rencet Post End */

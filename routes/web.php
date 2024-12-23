@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ErrorController;
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\DashboardAdmin\CategoryController;
 use App\Http\Controllers\DashboardAdmin\RupsController;
 use App\Http\Controllers\DashboardAdmin\KegiatanController;
 use App\Http\Controllers\DashboardUser\DashboardUserController;
@@ -57,6 +58,9 @@ Route::get('/faq', [DashboardUserController::class, 'indexFaq'])->name('faq.dash
 //Halaman Kebijakan - Kebijakan
 Route::get('/kebijakan-kebijakan', [DashboardUserController::class, 'indexKebijakan'])->name('kebijakan.dashuser');
 
+//Halaman Show Kegiatan
+Route::get('/kegiatan/detail/{slug}', [DashboardUserController::class, 'showKegiatan'])->name('kegiatan.dashuser.show');
+
 Route::group(['middleware' => 'guest'], function(){
    Route::get('/login-account-sekuritas', [AuthController::class, 'index'])->name('login');
    Route::post('/login-account-sekuritas/login', [AuthController::class, 'authenticate'])->name('login.auth');
@@ -91,6 +95,14 @@ Route::group(['middleware' => ['auth', 'role:admin,superadmin']], function(){
    Route::get('/dashboard/dokumen/edit/{slug}', [DokumenController::class, 'edit'])->name('dokumen.edit');
    Route::put('/dashboard/dokumen/update/{slug}', [DokumenController::class, 'update'])->name('dokumen.update');
    Route::delete('/dashboard/dokumen/delete/{slug}', [DokumenController::class, 'destroy'])->name('dokumen.delete');
+
+   //Category
+   Route::get('/dashboard/category', [CategoryController::class, 'index'])->name('category');
+   Route::get('/dashboard/category/create', [CategoryController::class, 'create'])->name('category.create');
+   Route::post('/dashboard/category/store', [CategoryController::class, 'store'])->name('category.store');
+   Route::get('/dashboard/category/edit/{slug}', [CategoryController::class, 'edit'])->name('category.edit');
+   Route::put('/dashboard/category/update/{slug}', [CategoryController::class, 'update'])->name('category.update');
+   Route::delete('/dashboard/category/delete/{slug}', [CategoryController::class, 'destroy'])->name('category.delete');
 });
 
 //Dashboard untuk seluruh Role Admin
@@ -117,6 +129,11 @@ Route::group(['middleware' => ['auth', 'role:superadmin,hrd']], function(){
    Route::get('/dashboard/jurusan/edit/{jurusan}', [JurusanController::class, 'edit'])->name('jurusan.edit');
    Route::put('/dashboard/jurusan/update/{jurusan}', [JurusanController::class, 'update'])->name('jurusan.update');
    Route::delete('/dashboard/jurusan/delet/{jurusan}', [JurusanController::class, 'destroy'])->name('jurusan.delete');
+});
+
+//Dashboard untuk seluruh Role Pelamar
+Route::group(['middleware' => ['auth', 'role:pelamar']], function(){
+   
 });
 
 // errors

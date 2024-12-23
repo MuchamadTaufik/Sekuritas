@@ -64,8 +64,8 @@
             const logo = document.getElementById('logo');
          
             // Define the logo images
-            const staticLogoSrc = 'img/dashboard-user/logo.png';
-            const stickyLogoSrc = 'img/dashboard-user/logo2.png';
+            const staticLogoSrc = '/img/dashboard-user/logo.png';
+            const stickyLogoSrc = '/img/dashboard-user/logo2.png';
          
             // Add a scroll event listener to the window
             window.addEventListener('scroll', function() {

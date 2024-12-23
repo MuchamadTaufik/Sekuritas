@@ -101,4 +101,11 @@ class DashboardUserController extends Controller
     {
         return view('dashboard-user.bantuan.kebijakan-privasi.index');
     }
+
+    public function showKegiatan($slug)
+    {
+        $kegiatan = Kegiatan::where('slug', $slug)->firstOrFail();
+        $kegiatanData = Kegiatan::latest()->get();
+        return view('dashboard-user.kegiatan.index', compact('kegiatan','kegiatanData'));
+    }
 }
