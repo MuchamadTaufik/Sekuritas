@@ -10,12 +10,13 @@
       <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
          <div class="navbar-nav ml-auto">
             <div class="nav-item dropdown">
-               <a href="#" class="nav-link dropdown-toggle {{ Route::is('sekilas*','sejarah*','struktur*','kepatuhan*','kelola*') ? 'active' : '' }}" data-toggle="dropdown">Tentang Kami</a>
+               <a href="#" class="nav-link dropdown-toggle {{ Route::is('sekilas*','sejarah*','struktur*','kepatuhan*','kelola*','kegiatan*') ? 'active' : '' }}" data-toggle="dropdown">Tentang Kami</a>
                <div class="dropdown-menu">
                   <a href="{{ route('sekilas.dashuser') }}" class="dropdown-item {{ Route::is('sekilas*') ? 'active' : '' }}">Sekilas bjb Sekuritas</a>
                   <a href="{{ route('struktur.dashuser') }}" class="dropdown-item {{ Route::is('struktur*') ? 'active' : '' }}">Struktur Organisasi</a>
                   <a href="{{ route('kepatuhan.dashuser') }}" class="dropdown-item {{ Route::is('kepatuhan*') ? 'active' : '' }}">Fakta Kepatuhan & Audit Internal</a>
                   <a href="{{ route('kelola.dashuser') }}" class="dropdown-item {{ Route::is('kelola*') ? 'active' : '' }}">Tata Kelola Perusahaan</a>
+                  <a href="{{ route('kegiatan.dashuser.all') }}" class="dropdown-item {{ Route::is('kegiatan*') ? 'active' : '' }}">Kegiatan Kami</a>
                </div>
             </div>
             <div class="nav-item">
