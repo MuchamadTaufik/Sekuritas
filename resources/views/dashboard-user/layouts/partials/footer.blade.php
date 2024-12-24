@@ -45,13 +45,13 @@
    </div>
    <div class="container-fluid bg-footer">
       <div class="row">
-         <div class="col-4 bar-1" style="background-color: #0078ff; height: 10px;">
+         <div class="col-4 bar-1" style="background-color: rgb(22, 85, 129); height: 10px;">
             <!-- Optional: You can add content here if needed -->
          </div>
-         <div class="col-4 bar-2" style="background-color: #0078ff; height: 10px;">
+         <div class="col-4 bar-2" style="background-color: rgb(41, 170, 226); height: 10px;">
             <!-- Optional: You can add content here if needed -->
          </div>
-         <div class="col-4 bar-3" style="background-color: #edc817; height: 10px;">
+         <div class="col-4 bar-3" style="background-color: rgb(239, 202, 24); height: 10px;">
             <!-- Optional: You can add content here if needed -->
          </div>
       </div>

@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Karir;
+use App\Models\Pengaduan;
 use App\Services\VisitorTrackingService;
 
 class DashboardUserController extends Controller
@@ -29,7 +30,7 @@ class DashboardUserController extends Controller
         $kegiatan = Kegiatan::latest()->take(5)->get();
 
         foreach ($kegiatan as $data) {
-            $data->title = Str::limit($data->title, 50);
+            $data->title = Str::limit($data->title, 25);
             $data->deskripsi = Str::limit($data->deskripsi, 150);
         }
         return view('dashboard-user.index', compact('kegiatan'));
@@ -172,4 +173,29 @@ class DashboardUserController extends Controller
         ));
     }
 
+    public function indexPengaduan()
+    {
+        return view('dashboard-user.pengaduan.index');
+    }
+
+    public function indexForm()
+    {
+        return view('dashboard-user.pengaduan.form');
+    }
+
+     public function storeForm(Request $request, Pengaduan $pengaduan)
+     {
+        $validateData = $request->validate([
+            'name' => 'required|max:255',
+            'email' => 'required|max:255|email',
+            'lokasi' => 'required|max:255',
+            'tanggal' => 'required|date_format|Y-m-D',
+            'waktu' => 'required',
+            'nama_pelaku' => 'required|max:2555',
+            'uraian_kejadian' => 'required'
+        ]);
+
+        Pengaduan::create($validateData);
+
+     }
 }

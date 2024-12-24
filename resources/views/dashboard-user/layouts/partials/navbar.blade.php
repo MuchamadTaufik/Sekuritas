@@ -16,7 +16,6 @@
                   <a href="{{ route('struktur.dashuser') }}" class="dropdown-item {{ Route::is('struktur*') ? 'active' : '' }}">Struktur Organisasi</a>
                   <a href="{{ route('kepatuhan.dashuser') }}" class="dropdown-item {{ Route::is('kepatuhan*') ? 'active' : '' }}">Fakta Kepatuhan & Audit Internal</a>
                   <a href="{{ route('kelola.dashuser') }}" class="dropdown-item {{ Route::is('kelola*') ? 'active' : '' }}">Tata Kelola Perusahaan</a>
-                  <a href="{{ route('kegiatan.dashuser.all') }}" class="dropdown-item {{ Route::is('kegiatan*') ? 'active' : '' }}">Kegiatan Kami</a>
                </div>
             </div>
             <div class="nav-item">
@@ -30,7 +29,7 @@
                </div>
             </div>
             <a href="{{ route('karir.dashuser') }}" class="nav-item nav-link {{ Route::is('karir*') ? 'active' : '' }}">Karir</a>
-            @if(auth()->check() && (auth()->user()->can('isSuperAdmin') || auth()->user()->can('isAdmin') || auth()->user()->can('isHrd')))
+            @if(auth()->check() && (auth()->user()->can('isSuperadmin') || auth()->user()->can('isAdmin') || auth()->user()->can('isHrd')))
                <a href="{{ route('dashboard') }}" class="nav-item nav-link">Dashboard</a>
             @endif
          </div>

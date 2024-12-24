@@ -34,6 +34,9 @@ Route::get('/struktur-organisasi', [DashboardUserController::class, 'indexStrukt
 
 //Halaman Fakta Kepatuhan & Audit Internal
 Route::get('/fakta-kepatuhan', [DashboardUserController::class, 'indexKepatuhan'])->name('kepatuhan.dashuser');
+Route::get('/fakta-kepatuhan/whistleblowing-system', [DashboardUserController::class, 'indexPengaduan'])->name('pengaduan.dashuser');
+Route::get('/fakta-kepatuhan/whistleblowing-system/form', [DashboardUserController::class, 'indexForm'])->name('pengaduan.dashuser.form');
+Route::post('/fakta-kepatuhan/whistleblowing-system/form/store', [DashboardUserController::class, 'storeForm'])->name('pengaduan.dashuser.store');
 
 //Halaman Tata Kelola Perusahaan
 Route::get('/tata-kelola-perusahaan', [DashboardUserController::class, 'indexKelola'])->name('kelola.dashuser');

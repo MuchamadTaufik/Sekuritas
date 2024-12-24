@@ -20,7 +20,7 @@
             <h2>Whistle Blowing System (WBS)</h2>
             <p>Whistle Blowing System (WBS) adalah mekanisme pengungkapan tindakan indikasi fraud Perusahaan yang dikelola oleh Group Compliance and Internal Audit. Beberapa pengungkapan kejadian indikasi fraud dapat dideteksi melalui informasi yang disampaikan oleh pihak internal dan eksternal melalui Whistle Blowing System.</p>
             <p>Dengan implementasi Whistle Blowing System ini, diharapkan dapat menjadi jembatan komunikasi dan salah satu sarana pelaporan dalam rangka mengoptimalkan fungsi pendeteksian dini (Early Warning System) atas penerapan manajemen risiko secara keseluruhan. Pelaksanaan budaya Good Corporate Governance yang semakin meningkat, diharapkan dapat mendorong pencapaian kinerja perusahaaan dan melindungi kepentingan Stakeholder secara optimal, sehingga akan meningkatkan reputasi (Corporate Value) Perusahaan secara kelembagaan.</p>
-            <p>Laporan pengungkapan kejadian indikasi fraud disampaikan melalui alamat email: <a href="mailto:wbs@bjbsekuritas.co.id" style="color: blue;">klik link </a></p>
+            <a href="{{ route('pengaduan.dashuser') }}"><p class="btn btn-primary">WHISTLEBLOWING SYSTEM</p></a>
             <div class="card card-pdf">
                <h3>Pakta Kepatuhan & Audit Internal</h3>
                <a href="https://bjbsekuritas.co.id/pdf/pakta-kepatuhan-dan-audit-internal.pdf" target="_blank">

@@ -14,7 +14,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: #092a49;
+    color: rgb(22, 85, 129);
     font-family: Avenir, Segoe UI, Helvetica Neue, Arial, Noto Sans, sans-serif,
         Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
@@ -27,7 +27,7 @@ a {
 a:hover,
 a:active,
 a:focus {
-    color: #092a49;
+    color: rgb(22, 85, 129);
     outline: none;
     text-decoration: none;
 }
@@ -44,7 +44,7 @@ a:focus {
 .back-to-top {
     position: fixed;
     display: none;
-    background: #0796fe;
+    background: rgb(41, 170, 226);
     width: 44px;
     height: 44px;
     text-align: center;
@@ -57,16 +57,16 @@ a:focus {
 }
 
 .back-to-top i {
-    color: #092a49;
+    color: rgb(22, 85, 129);
     padding-top: 10px;
 }
 
 .back-to-top:hover {
-    background: #092a49;
+    background: rgb(22, 85, 129);
 }
 
 .back-to-top:hover i {
-    color: #0796fe;
+    color: rgb(41, 170, 226);
 }
 
 @media (min-width: 992px) {
@@ -154,7 +154,7 @@ a:focus {
 }
 
 .top-bar .social a:hover {
-    color: #092a49;
+    color: rgb(22, 85, 129);
     background: #ffffff;
 }
 
@@ -201,12 +201,12 @@ a:focus {
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
     padding: 10px 10px 8px 10px;
-    color: #092a49;
+    color: rgb(22, 85, 129);
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-    color: #0796fe;
+    color: rgb(41, 170, 226);
     transition: none;
 }
 
@@ -229,7 +229,7 @@ a:focus {
 
     .navbar.nav-sticky {
         padding: 10px 60px;
-        background: #092a49 !important;
+        background: rgb(22, 85, 129) !important;
         color: #ffffff;
     }
 
@@ -239,11 +239,11 @@ a:focus {
 
     .navbar.nav-sticky .navbar-nav .nav-link:hover,
     .navbar.nav-sticky .navbar-nav .nav-link.active {
-        color: #0796fe; /* Optional: change hover/active link color if needed */
+        color: rgb(41, 170, 226); /* Optional: change hover/active link color if needed */
     }
 
     .page .navbar {
-        background: #092a49 !important;
+        background: rgb(22, 85, 129) !important;
     }
 
     .navbar a.nav-link {
@@ -257,7 +257,7 @@ a:focus {
 @media (max-width: 991.98px) {
     .navbar {
         padding: 15px;
-        background: #092a49 !important;
+        background: rgb(22, 85, 129) !important;
     }
 
     .navbar a.nav-link {
@@ -277,7 +277,7 @@ a:focus {
     width: 100%;
     height: calc(100vh - 35px);
     min-height: 400px;
-    background: #092a49;
+    background: rgb(22, 85, 129);
 }
 
 .carousel .container-fluid {
@@ -360,7 +360,7 @@ a:focus {
 }
 
 .carousel .carousel-text .btn:hover {
-    color: #0796fe;
+    color: rgb(41, 170, 226);
     background: #ffffff;
 }
 
@@ -384,8 +384,8 @@ a:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #0796fe;
-    background: #092a49;
+    color: rgb(41, 170, 226);
+    background: rgb(22, 85, 129);
     font-size: 22px;
     transition: 0.3s;
 }
@@ -393,7 +393,7 @@ a:focus {
 .carousel .owl-nav .owl-prev:hover,
 .carousel .owl-nav .owl-next:hover {
     color: #ffffff;
-    background: #0796fe;
+    background: rgb(41, 170, 226);
 }
 
 .carousel .owl-nav .owl-prev {
@@ -552,7 +552,7 @@ a:focus {
     margin-bottom: 30px;
     padding: 20px 0 15px 0;
     text-align: center;
-    background-color: #092a49;
+    background-color: rgb(22, 85, 129);
     border-radius: 8px; /* Tambahkan border-radius untuk tampilan lebih halus */
     border: 2px solid transparent;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
@@ -563,7 +563,7 @@ a:focus {
 .fact .fact-item:hover {
     transform: scale(1.05); /* Efek membesar saat hover */
     z-index: 1; /* Pastikan item yang dihover berada di atas item lain */
-    background-color: #0796fe;
+    background-color: rgb(41, 170, 226);
 }
 
 .fact .fact-item::before {
@@ -716,16 +716,28 @@ a:focus {
     padding: 12px 25px;
     font-weight: 600;
     letter-spacing: 1px;
-    color: #092a49;
-    border: 2px solid #092a49;
+    color: rgb(22, 85, 129);
+    border: 2px solid rgb(22, 85, 129);
     border-radius: 0;
     background: none;
     transition: 0.3s;
 }
 
 .about .about-text a.btn:hover {
-    color: #0796fe;
-    background: #092a49;
+    color: rgb(41, 170, 226);
+    background: rgb(22, 85, 129);
+}
+
+.about-text p, .sekilas-text p, .sejarah-text p, .kepatuhan-text p, .perantara-text p, .section-content, .faq-answer {
+    text-align: justify; /* Mengatur agar teks rata kiri-kanan */
+    margin-left: auto; /* Memberikan margin otomatis di kiri */
+    margin-right: auto; 
+}
+
+.pedoman ol li, .card-body-pengaduan ol li {
+    text-align: justify; /* Mengatur agar teks rata kiri-kanan */
+    margin-left: auto; /* Memberikan margin otomatis di kiri */
+    margin-right: auto; 
 }
 
 @media (max-width: 767.98px) {
@@ -757,7 +769,7 @@ a:focus {
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
-    background-color: #092a49;
+    background-color: rgb(22, 85, 129);
 }
 
 .service .service-item:hover {
@@ -795,7 +807,7 @@ a:focus {
 
 .service .service-item a {
     position: relative;
-    color: #0796fe;
+    color: rgb(41, 170, 226);
     transition: 0.3s;
 }
 
@@ -806,11 +818,11 @@ a:focus {
     height: 2px;
     bottom: -3px;
     left: 10%;
-    background: #0796fe;
+    background: rgb(41, 170, 226);
 }
 
 .service .service-item:hover a.btn {
-    color: #092a49;
+    color: rgb(22, 85, 129);
     background: #1d2434;
     border-color: #1d2434;
 }
@@ -971,7 +983,7 @@ a:focus {
 }
 
 .team .team-text h2 {
-    color: #0796fe;
+    color: rgb(41, 170, 226);
     font-weight: 400;
     letter-spacing: 1px;
     margin-bottom: 10px;
@@ -979,7 +991,7 @@ a:focus {
 
 .team .team-text p {
     margin-bottom: 20px;
-    color: #092a49;
+    color: rgb(22, 85, 129);
 }
 
 .team .team-social {
@@ -991,7 +1003,7 @@ a:focus {
     display: inline-block;
     text-align: center;
     font-size: 14px;
-    color: #092a49;
+    color: rgb(22, 85, 129);
     transition: 0.3s;
 }
 
@@ -1037,6 +1049,8 @@ a:focus {
 
 .blog .blog-img img {
     width: 100%;
+    max-height: 300px;
+    object-fit: cover;
 }
 
 .blog .blog-content {
@@ -1071,7 +1085,7 @@ a:focus {
 }
 
 .blog .blog-meta i {
-    color: #0796fe;
+    color: rgb(41, 170, 226);
     margin: 0 2px 0 10px;
 }
 
@@ -1093,12 +1107,12 @@ a:focus {
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 1px;
-    color: #0796fe;
+    color: rgb(41, 170, 226)rgb(41, 170, 226);
     transition: 0.3s;
 }
 
 .blog .blog-item a.btn:hover {
-    color: #092a49;
+    color: rgb(22, 85, 129);
 }
 
 .blog .blog-item a.btn::before {
@@ -1108,7 +1122,7 @@ a:focus {
     height: 2px;
     top: 10px;
     left: 0;
-    background: #0796fe;
+    background: rgb(41, 170, 226);
 }
 
 .blog .owl-nav {
@@ -1126,7 +1140,7 @@ a:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #0796fe;
+    color: rgb(41, 170, 226);
     font-size: 25px;
     transition: 0.3s;
 }
@@ -1141,7 +1155,7 @@ a:focus {
 
 .blog .owl-nav .owl-prev:hover,
 .blog .owl-nav .owl-next:hover {
-    color: #092a49;
+    color: rgb(22, 85, 129);
 }
 
 .blog .owl-nav .owl-prev::after,
@@ -1151,7 +1165,7 @@ a:focus {
     width: 80px;
     height: 3px;
     top: 11px;
-    background: #0796fe;
+    background: rgb(41, 170, 226);
     transition: 0.3s;
 }
 
@@ -1164,11 +1178,11 @@ a:focus {
 }
 
 .blog .owl-nav .owl-prev:hover::after {
-    background: #092a49;
+    background: rgb(22, 85, 129);
 }
 
 .blog .owl-nav .owl-next:hover::after {
-    background: #092a49;
+    background: rgb(22, 85, 129);
 }
 
 .blog .pagination {
@@ -1177,15 +1191,15 @@ a:focus {
 
 .blog .pagination .page-link {
     margin-top: -30px;
-    color: #092a49;
+    color: rgb(22, 85, 129);
     border-radius: 0;
-    border-color: #092a49;
+    border-color: rgb(22, 85, 129);
 }
 
 .blog .pagination .page-link:hover,
 .blog .pagination .page-item.active .page-link {
-    color: #0796fe;
-    background: #092a49;
+    color: rgb(41, 170, 226);
+    background: rgb(22, 85, 129);
 }
 
 .blog .pagination .disabled .page-link {
@@ -1227,7 +1241,7 @@ a:focus {
 
 .contact .contact-icon i {
     font-size: 18px;
-    color: #0796fe;
+    color: rgb(41, 170, 226);
 }
 
 .contact .contact-text {
@@ -1239,7 +1253,7 @@ a:focus {
 
 .contact .contact-text h3 {
     font-weight: 400;
-    color: #092a49;
+    color: rgb(22, 85, 129);
     letter-spacing: 1px;
 }
 
@@ -1279,16 +1293,16 @@ a:focus {
     padding: 15px 30px;
     font-weight: 600;
     letter-spacing: 1px;
-    color: #092a49;
+    color: rgb(22, 85, 129);
     background: none;
-    border: 2px solid #092a49;
+    border: 2px solid rgb(22, 85, 129);
     border-radius: 0;
     transition: 0.3s;
 }
 
 .contact .contact-form .btn:hover {
-    color: #0796fe;
-    background: #092a49;
+    color: rgb(41, 170, 226);
+    background: rgb(22, 85, 129);
 }
 
 .contact .help-block ul {
@@ -1345,7 +1359,7 @@ a:focus {
     position: relative;
     margin-top: 45px;
     padding-top: 90px;
-    background: #092a49;
+    background: rgb(22, 85, 129);
 }
 
 .footer .footer-contact,
@@ -1377,7 +1391,7 @@ a:focus {
     height: 2px;
     bottom: 0;
     left: 0;
-    background: #0796fe;
+    background: rgb(41, 170, 226);
 }
 
 .footer .footer-link a {
@@ -1396,7 +1410,7 @@ a:focus {
 }
 
 .footer .footer-link a:hover {
-    color: #0796fe;
+    color: rgb(41, 170, 226);
     letter-spacing: 1px;
 }
 
@@ -1416,7 +1430,7 @@ a:focus {
 .footer .footer-social a i {
     margin-right: 15px;
     font-size: 18px;
-    color: #092a49;
+    color: rgb(22, 85, 129);
 }
 
 .footer .footer-social a:last-child i {
@@ -1446,16 +1460,16 @@ a:focus {
     padding: 8px 20px;
     font-size: 14px;
     font-weight: 600;
-    color: #092a49;
+    color: rgb(22, 85, 129);
     background: none;
     border-radius: 0;
-    border: 2px solid #092a49;
+    border: 2px solid rgb(22, 85, 129);
     transition: 0.3s;
 }
 
 .footer .footer-newsletter .btn:hover {
-    color: #0796fe;
-    background: #092a49;
+    color: rgb(41, 170, 226);
+    background: rgb(22, 85, 129);
 }
 
 .footer .copyright {
@@ -1482,7 +1496,7 @@ a:focus {
 }
 
 .footer .copyright p a:hover {
-    color: #0796fe;
+    color: rgb(41, 170, 226);
 }
 
 @media (max-width: 767.98px) {
@@ -1498,7 +1512,7 @@ a:focus {
 }
 
 .social-icons a:hover {
-    color: #0796fe;
+    color: rgb(41, 170, 226);
 }
 
 /* partner */
@@ -1710,7 +1724,7 @@ a:focus {
 /* Kelola Perusahaan Start */
 
 .card-kelola-left {
-    background-color: #092a49;
+    background-color: rgb(22, 85, 129);
     color: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -1723,7 +1737,7 @@ a:focus {
 
 .card-kelola-left:hover {
     background-color: #ffffff;
-    color: #092a49;
+    color: rgb(22, 85, 129);
 }
 
 .card-kelola-left:after {
@@ -1733,13 +1747,13 @@ a:focus {
     right: -20px;
     width: 40px;
     height: 40px;
-    background-color: #092a49;
+    background-color: rgb(22, 85, 129);
     transform: translateY(-50%) rotate(45deg);
     z-index: -1;
 }
 
 .card-kelola-right {
-    background-color: #092a49;
+    background-color: rgb(22, 85, 129);
     color: #fff;
     padding: 10px;
     margin: 10px 0;
@@ -1751,7 +1765,7 @@ a:focus {
 
 .card-kelola-right:hover {
     background-color: #ffffff;
-    color: #092a49;
+    color: rgb(22, 85, 129);
 }
 
 .card-kelola-right:before {
@@ -1761,7 +1775,7 @@ a:focus {
     left: -20px;
     width: 40px;
     height: 40px;
-    background-color: #092a49;
+    background-color: rgb(22, 85, 129);
     transform: translateY(-50%) rotate(45deg);
     z-index: -1;
 }
@@ -1939,7 +1953,7 @@ a:focus {
 }
 
 .table-download th {
-    background-color: #092a49;
+    background-color: rgb(22, 85, 129);
     color: white;
 }
 
@@ -1953,7 +1967,7 @@ a:focus {
 
 .btn-download {
     color: #fff;
-    background-color: #0796fe;
+    background-color: rgb(41, 170, 226);
     padding: 5px 10px;
     text-decoration: none;
     border-radius: 3px;
@@ -1961,7 +1975,7 @@ a:focus {
 }
 
 .btn-download:hover {
-    background-color: #092a49;
+    background-color: rgb(22, 85, 129);
     color: #fff;
 }
 
@@ -1997,12 +2011,12 @@ a:focus {
 .card-karir h6 {
     font-size: 1.1rem;
     font-weight: bold;
-    color: #092a49;
+    color: rgb(22, 85, 129);
 }
 
 .card-karir p {
     font-size: 0.8rem;
-    color: #0796fe;
+    color: rgb(41, 170, 226);
     margin-bottom: 0;
 }
 
@@ -2010,12 +2024,12 @@ a:focus {
     font-size: 0.875rem;
     padding: 0.5rem 1rem;
     border-radius: 10px;
-    background-color: #092a49;
+    background-color: rgb(22, 85, 129);
     color: white;
 }
 
 .btn-karir:hover {
-    background-color: #0796fe;
+    background-color: rgb(41, 170, 226);
 }
 
 .card-karir .row > div {
@@ -2034,7 +2048,7 @@ a:focus {
 
     .card-karir p {
         font-size: 0.7rem;
-        color: #0796fe;
+        color: rgb(41, 170, 226);
         margin-bottom: 0;
     }
 
@@ -2060,29 +2074,29 @@ a:focus {
     font-size: 0.875rem;
     padding: 0.5rem 1rem;
     border-radius: 10px;
-    background-color: #092a49;
+    background-color: rgb(22, 85, 129);
     color: white;
     margin-right: 20px;
 }
 
 .btn-karir-detail:hover {
     color: white;
-    background-color: #0796fe;
+    background-color: rgb(41, 170, 226);
 }
 
 .card-karir-detail h1 {
     font-weight: bold;
-    color: #092a49;
+    color: rgb(22, 85, 129);
 }
 
 .card-karir-detail h4 {
-    color: #092a49;
+    color: rgb(22, 85, 129);
     font-weight: bold;
 }
 
 .card-karir-detail h6 {
     font-weight: 500;
-    color: #092a49;
+    color: rgb(22, 85, 129);
 }
 /* Karir End */
 
@@ -2095,7 +2109,7 @@ a:focus {
 
 .faq h2 {
     text-align: center;
-    color: #092a49;
+    color: rgb(22, 85, 129);
     margin-bottom: 20px;
     font-size: 2rem;
 }
@@ -2113,7 +2127,7 @@ a:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #092a49;
+    background-color: rgb(22, 85, 129);
     color: #ffffff;
     padding: 15px 20px;
     cursor: pointer;
@@ -2158,11 +2172,11 @@ a:focus {
         font-size: 1.5rem;
     }
 
-    .faq-question {
+    .faq-question, .card-header-pengaduan {
         padding: 12px 15px;
     }
 
-    .faq-answer {
+    .faq-answer, .card-body-pengaduan {
         padding: 15px;
     }
 }
@@ -2245,7 +2259,7 @@ a:focus {
 }
 
 .form-control:focus {
-    border-color: #092a49;
+    border-color: rgb(22, 85, 129);
     box-shadow: 0 0 0 3px rgba(78, 115, 223, 0.25);
 }
 
@@ -2257,7 +2271,7 @@ a:focus {
 }
 
 .btn-primary {
-    background: #092a49;
+    background: rgb(22, 85, 129);
     color: #ffffff;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -2268,11 +2282,11 @@ a:focus {
 .btn-primary:hover {
     transform: translateY(-3px);
     box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1);
-    background-color: #0796fe;
+    background-color: rgb(41, 170, 226);
 }
 
 .forgot-password {
-    color: #092a49;
+    color: rgb(22, 85, 129);
     text-decoration: none;
 }
 
@@ -2334,6 +2348,8 @@ article.my-3 {
 
 .post-img img {
     max-width: 100px;
+    min-width: 100px;
+    height: auto;
     border-radius: 8px;
     object-fit: cover;
 }
@@ -2620,3 +2636,40 @@ article.my-3 {
     }
 }
 /* karir detail end */
+
+/* Pengaduang Start */
+.card-pengaduan {
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card-header-pengaduan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(22, 85, 129);
+    color: #ffffff;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.card-header-pengaduan:hover {
+    background-color: #0a3b63;
+}
+
+.card-header-pengaduan span {
+    font-size: 1.2rem;
+}
+
+.card-body-pengaduan {
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+/* Pengaduan End */

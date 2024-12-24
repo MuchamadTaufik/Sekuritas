@@ -20,7 +20,7 @@
             <div class="col-lg-4">
                <h3>Perantara Pedagang Efek</h3>
                <p>bjb Sekuritas sebagai perusahaan perantara pedagang efek menggunakan aplikasi NEO BOFIS yang memudahkan nasabah untuk bertransaksi efek di mana pun, kapan pun.</p>
-               <Jadikan>Kembangkan Investasi anda dengan percaya diri bersama bjb Sekuritas! dengan platform Pedagang Efek kami yang canggih, anda dapat mengakses Pasar Global, menganalisis tren terbaru, dan melakukan transaksi dengan mudah. Jadikan kami mitra terpercaya anda dalam meraih kesuksesan finansial. Bergabunglah sekarang dan raih peluang-peluang baru di dunia Investasi!</p>
+               <p>Kembangkan Investasi anda dengan percaya diri bersama bjb Sekuritas! dengan platform Pedagang Efek kami yang canggih, anda dapat mengakses Pasar Global, menganalisis tren terbaru, dan melakukan transaksi dengan mudah. Jadikan kami mitra terpercaya anda dalam meraih kesuksesan finansial. Bergabunglah sekarang dan raih peluang-peluang baru di dunia Investasi!</p>
             </div>
             <div class="col-lg-8">
                <h3>Neo Bofis</h3>

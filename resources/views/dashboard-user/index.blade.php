@@ -43,7 +43,7 @@
                </div>
                <div class="col-lg-3 col-md-6">
                      <div class="fact-item">
-                        <a href="">
+                        <a href="{{ route('kegiatan.dashuser.all') }}">
                            <i class="fa-solid fa-newspaper fa-2x"></i>
                            <h2>Media</h2>
                         </a>
