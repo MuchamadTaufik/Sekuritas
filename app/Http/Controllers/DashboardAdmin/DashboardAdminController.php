@@ -31,7 +31,7 @@ class DashboardAdminController extends Controller
             $user = Auth::user();
 
             // Jika pengguna bukan admin, hrd, atau superadmin, kembalikan ke halaman home
-            if (!in_array($user->role, ['admin', 'hrd', 'superadmin'])) {
+            if (!in_array($user->role, ['admin', 'hrd', 'superadmin','audit'])) {
                 return redirect('/')->with('error', 'Anda tidak memiliki akses ke halaman ini');
             }
 

@@ -24,7 +24,7 @@
                     </div>
                     <div class="card-body-pengaduan">
                         <ol>
-                            <li>Sebelum melaporkan pengaduan anda di WBS YPIA, periksa terlebih dahulu kelengkapan pengaduan anda, apakah telah sesuai dengan kriteria pengaduan yang telah ditetapkan yaitu mengandung unsur 4W+1H (What, Who, Where, When dan How).</li>
+                            <li>Sebelum melaporkan pengaduan anda di WBS bjb Sekuritas, periksa terlebih dahulu kelengkapan pengaduan anda, apakah telah sesuai dengan kriteria pengaduan yang telah ditetapkan yaitu mengandung unsur 4W+1H (What, Who, Where, When dan How).</li>
                             <li>Jika pengaduan tersebut telah memenuhi kriteria yang telah ditentukan, tahap berikutnya adalah mengisi formulir pengaduan dengan menekan tombol LAPORKAN. Silahkan mengisi semua data yang diminta secara lengkap dan benar dan lanjutkan dengan menekan tombol “KIRIM” yang muncul setelah mencentang konfirmasi validasi data pengaduan.</li>
                             <li>Setelah laporan dikirim, anda akan mendapat pemberitahuan melalui kontak yang ditinggalkan pada form pengaduan.</li>
                         </ol>
