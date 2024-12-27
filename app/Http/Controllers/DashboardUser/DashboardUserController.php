@@ -189,13 +189,23 @@ class DashboardUserController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|max:255|email',
             'lokasi' => 'required|max:255',
-            'tanggal' => 'required|date_format|Y-m-D',
-            'waktu' => 'required',
-            'nama_pelaku' => 'required|max:2555',
-            'uraian_kejadian' => 'required'
+            'tanggal' => 'required|date_format:Y-m-d',
+            'waktu' => 'required|date_format:H:i',
+            'nama_pelaku' => 'required|max:255',
+            'uraian_kejadian' => 'required',
+            'pdf' => 'required|file|mimes:pdf|max:4096'
         ]);
+
+        // Menyimpan file buku PDF ke storage
+        if ($request->hasFile('pdf')) {
+            $pdfFileName = $request->file('pdf')->store('file-pengaduan');
+            $validateData['pdf'] = $pdfFileName;
+        }
 
         Pengaduan::create($validateData);
 
+        // Menampilkan notifikasi sukses dan redirect
+        toast()->success('Berhasil', 'Pengaduan Berhasil dikirim');
+        return redirect('/fakta-kepatuhan/whistleblowing-system')->withInput();
      }
 }

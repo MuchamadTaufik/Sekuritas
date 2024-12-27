@@ -20,6 +20,7 @@ return new class extends Migration
             $table->time('waktu');
             $table->string('nama_pelaku');
             $table->text('uraian_kejadian');
+            $table->string('pdf');
             $table->timestamps();
         });
     }

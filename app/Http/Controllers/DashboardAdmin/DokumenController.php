@@ -35,7 +35,7 @@ class DokumenController extends Controller
     {
         $validateData = $request->validate([
             'title' => 'required|max:255',
-            'pdf' => 'required|file|mimes:pdf'
+            'pdf' => 'required|file|mimes:pdf|max:4096'  // 4MB
         ]);
 
         $validateData['slug'] = SlugService::createSlug(Dokumen::class, 'slug', $validateData['title']);

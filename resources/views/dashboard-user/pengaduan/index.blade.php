@@ -28,7 +28,7 @@
                             <li>Jika pengaduan tersebut telah memenuhi kriteria yang telah ditentukan, tahap berikutnya adalah mengisi formulir pengaduan dengan menekan tombol LAPORKAN. Silahkan mengisi semua data yang diminta secara lengkap dan benar dan lanjutkan dengan menekan tombol “KIRIM” yang muncul setelah mencentang konfirmasi validasi data pengaduan.</li>
                             <li>Setelah laporan dikirim, anda akan mendapat pemberitahuan melalui kontak yang ditinggalkan pada form pengaduan.</li>
                         </ol>
-                        <a href=""><p class="btn btn-primary">Laporkan</p></a>
+                        <a href="{{ route('pengaduan.dashuser.form') }}"><p class="btn btn-primary">Laporkan</p></a>
                     </div>
                 </div>
             </div>

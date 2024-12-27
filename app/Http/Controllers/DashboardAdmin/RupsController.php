@@ -35,14 +35,14 @@ class RupsController extends Controller
     {
         $validateData = $request->validate([
             'title' => 'required|max:255',
-            'pdf' => 'required|file|mimes:pdf'
+            'pdf' => 'required|file|mimes:pdf,jpeg,png,jpg,gif|max:4096',  // 4MB
         ]);
 
         $validateData['slug'] = SlugService::createSlug(Rups::class, 'slug', $validateData['title']);
 
         // Menyimpan file buku PDF ke storage
         if ($request->hasFile('pdf')) {
-            $pdfFileName = $request->file('pdf')->store('file-rups');
+            $pdfFileName = $request->file('pdf')->store('file-pengaduan');
             $validateData['pdf'] = $pdfFileName;
         }
 
