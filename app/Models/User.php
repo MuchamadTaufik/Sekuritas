@@ -48,4 +48,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Lamaran::class);
     }
+
+    public function biodata()
+    {
+        return $this->hasOne(Biodata::class);
+    }
 }

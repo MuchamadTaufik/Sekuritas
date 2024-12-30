@@ -13,7 +13,7 @@ use App\Http\Controllers\DashboardAdmin\JurusanController;
 use App\Http\Controllers\DashboardAdmin\KarirController;
 use App\Http\Controllers\DashboardAdmin\PengaduanController;
 use App\Http\Controllers\DashboardAdmin\TradingController;
-use App\Http\Controllers\DashboardUser\ProfileController;
+use App\Http\Controllers\DashboardUser\BiodataController;
 
 /*
 |--------------------------------------------------------------------------
@@ -150,7 +150,8 @@ Route::group(['middleware' => ['auth', 'role:superadmin,audit']], function(){
 
 //Dashboard untuk seluruh Role Pelamar
 Route::group(['middleware' => ['auth', 'role:pelamar']], function(){
-   Route::get('/profile/{name}', [ProfileController::class, 'index'])->name('profile');
+   Route::get('/profile/{name}', [BiodataController::class, 'index'])->name('profile');
+   Route::post('/profile-user/{name}/update', [BiodataController::class, 'update'])->name('profile.update');
 });
 
 // errors

@@ -13,22 +13,22 @@
                     <div class="card">
                         <div class="card-body">
                             <div class="d-flex flex-column align-items-center">
-                                <img id="foto-preview" src="{{ $user->biodata && $user->biodata->avatar ? asset('storage/avatar/' . $user->biodata->avatar) : asset('assets/img/profile.jpg') }}" alt="{{ $user->name }}" class="img-fluid rounded-circle mb-3" style="object-fit: cover; width: 150px; height: 150px"/>
+                                <img id="foto-preview" src="{{ $user->biodata && $user->biodata->foto ? asset('storage/foto/' . $user->biodata->foto) : asset('assets/img/profile.jpg') }}" alt="{{ $user->name }}" class="img-fluid rounded-circle mb-3" style="object-fit: cover; width: 150px; height: 150px"/>
                                 <h5 class="card-title text-center">{{ $user->name}}</h5>
                             </div>
                             <hr>
                             <ul class="list-unstyled mb-4">
                                 <li class="mb-2 d-flex align-items-center">
-                                    <i class="fas fa-home me-3"></i> {{ $user->biodata->alamat ?? 'Jl. Karang Pasundan IV E.19 No. 14' }}
+                                    <i class="fas fa-home me-3"></i> {{ $user->biodata->alamat ?? '-' }}
                                 </li>
                                 <li class="mb-2 d-flex align-items-center">
-                                    <i class="fas fa-phone me-3"></i> {{ $user->biodata->no_telp ?? '62895361095444' }}
+                                    <i class="fas fa-phone me-3"></i> {{ $user->biodata->no_telp ?? '-' }}
                                 </li>
                                 <li class="mb-2 d-flex align-items-center">
-                                    <i class="fas fa-user me-3"></i> {{ $user->biodata->gender ?? 'Laki-Laki' }}
+                                    <i class="fas fa-user me-3"></i> {{ $user->biodata->gender ?? '-' }}
                                 </li>
                                 <li class="mb-2 d-flex align-items-center">
-                                    <i class="fas fa-calendar me-3"></i> {{ $user->biodata->tanggal_lahir ?? '23 Mei 2002' }}
+                                    <i class="fas fa-calendar me-3"></i> {{ $user->biodata->tanggal_lahir ?? '-' }}
                                 </li>
                             </ul>
                             <hr>
@@ -53,7 +53,7 @@
                     <div class="card">
                         <h3 class="mb-0">Ubah Biodata</h3>
                         <div class="card-body">
-                            <form class="row g-3" action="" method="POST" enctype="multipart/form-data">
+                            <form class="row g-3" action="{{ route('profile.update', $user->name) }}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="col-md-6 mb-2">
                                     <label for="name" class="form-label">Nama Lengkap</label>
@@ -125,9 +125,9 @@
                                     @enderror
                                 </div>
                                 <div class="col-md-6 mb-2">
-                                    <label for="avatar" class="form-label">Foto Profil</label>
-                                    <input type="file" class="form-control @error('avatar') is-invalid @enderror" value="" id="avatar" name="avatar" onchange="previewImage()">
-                                    @error('avatar')
+                                    <label for="foto" class="form-label">Foto Profil</label>
+                                    <input type="file" class="form-control @error('foto') is-invalid @enderror" value="" id="foto" name="foto" onchange="previewImage()">
+                                    @error('foto')
                                     <div class="invalid-feedback">
                                         {{ $message }}
                                     </div>
@@ -158,7 +158,7 @@
 
     <script>
         function previewImage() {
-            const input = document.getElementById('avatar');
+            const input = document.getElementById('foto');
             const fileSizeError = document.getElementById('fileSizeError');
             if (input.files && input.files[0]) {
                 if (input.files[0].size > 2 * 1024 * 1024) {
