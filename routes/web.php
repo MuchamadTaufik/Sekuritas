@@ -12,6 +12,7 @@ use App\Http\Controllers\DashboardAdmin\DokumenController;
 use App\Http\Controllers\DashboardAdmin\JurusanController;
 use App\Http\Controllers\DashboardAdmin\KarirController;
 use App\Http\Controllers\DashboardAdmin\PengaduanController;
+use App\Http\Controllers\DashboardAdmin\TradingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -109,6 +110,11 @@ Route::group(['middleware' => ['auth', 'role:admin,superadmin']], function(){
    Route::get('/dashboard/category/edit/{slug}', [CategoryController::class, 'edit'])->name('category.edit');
    Route::put('/dashboard/category/update/{slug}', [CategoryController::class, 'update'])->name('category.update');
    Route::delete('/dashboard/category/delete/{slug}', [CategoryController::class, 'destroy'])->name('category.delete');
+
+   //Trading View
+   Route::get('/dashboard/trading-view', [TradingController::class, 'index'])->name('trading');
+   Route::post('/dashboard/trading-view/store', [TradingController::class, 'store'])->name('trading.store');
+   Route::put('/dashboard/trading-view/update/{trading}', [TradingController::class, 'update'])->name('trading.update');
 });
 
 //Dashboard untuk seluruh Role Admin

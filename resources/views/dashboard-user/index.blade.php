@@ -20,6 +20,14 @@
    </div>
    <!-- Carousel End -->
 
+   @php
+   $trading = \App\Models\Trading::latest()->first();
+   @endphp
+
+   @if($trading)
+      {!! $trading->trading_view !!}
+   @endif
+
    <!-- Fact Start -->
    <div class="fact">
          <div class="container">

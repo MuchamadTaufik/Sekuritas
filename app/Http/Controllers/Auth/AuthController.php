@@ -29,19 +29,19 @@ class AuthController extends Controller
 
             // Cek role user
             if ($user->role === 'admin') {
-                toast()->success('Hallo', 'Selamat Datang Admin Kami' . $user->name);
+                toast()->success('Hallo', 'Selamat Datang Admin Kami ' . $user->name);
                 return redirect()->intended('/dashboard');
             } elseif ($user->role === 'hrd') {
-                toast()->success('Hallo', 'Selamat Datang HRD Kami' . $user->name);
+                toast()->success('Hallo', 'Selamat Datang HRD Kami ' . $user->name);
                 return redirect()->intended('/dashboard');
             } elseif ($user->role === 'superadmin') {
-                toast()->success('Hallo', 'Selamat Datang Super Admin Kami' . $user->name);
+                toast()->success('Hallo', 'Selamat Datang Super Admin Kami ' . $user->name);
                 return redirect()->intended('/dashboard');
             } elseif ($user->role === 'audit') {
-                toast()->success('Hallo', 'Selamat Datang Audit Kami' . $user->name);
+                toast()->success('Hallo', 'Selamat Datang Audit Kami ' . $user->name);
                 return redirect()->intended('/dashboard');
             } elseif ($user->role === 'pelamar') {
-                toast()->success('Hallo', 'Selamat Datang' . $user->name);
+                toast()->success('Hallo', 'Selamat Datang ' . $user->name);
                 return redirect()->intended('/');
             } 
             // Role tidak sesuai

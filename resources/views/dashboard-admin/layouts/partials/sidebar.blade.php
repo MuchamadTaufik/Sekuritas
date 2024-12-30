@@ -39,8 +39,25 @@
                   <p>Dokumen Download</p>
                </a>
             </li>
+
+            <li class="nav-section">
+               <span class="sidebar-mini-icon">
+               <i class="fa fa-ellipsis-h"></i>
+               </span>
+               <h4 class="text-section">Graphic</h4>
+            </li>
+
+            <li class="nav-item {{ Route::is('trading') ? 'active' : '' }}">
+               <a href="{{ route('trading') }}">
+                  <i class="fas fa-chart-area"></i>
+                  <p>Trading View</p>
+               </a>
+            </li>
+
          @endif
+
          
+
          @if(auth()->user()->can('isSuperadmin') || auth()->user()->can('isHrd'))
             <li class="nav-item {{ Route::is('karir*') ? 'active' : '' }}">
                <a href="{{ route('karir') }}">
