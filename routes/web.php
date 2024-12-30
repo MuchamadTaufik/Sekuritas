@@ -11,6 +11,7 @@ use App\Http\Controllers\DashboardAdmin\DashboardAdminController;
 use App\Http\Controllers\DashboardAdmin\DokumenController;
 use App\Http\Controllers\DashboardAdmin\JurusanController;
 use App\Http\Controllers\DashboardAdmin\KarirController;
+use App\Http\Controllers\DashboardAdmin\PengaduanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -111,7 +112,7 @@ Route::group(['middleware' => ['auth', 'role:admin,superadmin']], function(){
 });
 
 //Dashboard untuk seluruh Role Admin
-Route::group(['middleware' => ['auth', 'role:admin,superadmin,hrd']], function(){
+Route::group(['middleware' => ['auth', 'role:admin,superadmin,hrd,audit']], function(){
    Route::get('/dashboard', [DashboardAdminController::class, 'index'])->name('dashboard');
 });
 
@@ -137,8 +138,8 @@ Route::group(['middleware' => ['auth', 'role:superadmin,hrd']], function(){
 });
 
 //Dashboard untuk seluruh Role Pelamar
-Route::group(['middleware' => ['auth', 'role:pelamar']], function(){
-   
+Route::group(['middleware' => ['auth', 'role:superadmin,audit']], function(){
+   Route::get('/dashboard/pengaduan', [PengaduanController::class, 'index'])->name('pengaduan');
 });
 
 // errors

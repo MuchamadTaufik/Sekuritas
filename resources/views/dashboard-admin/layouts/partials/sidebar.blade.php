@@ -55,6 +55,15 @@
                </a>
             </li> 
          @endif
+         
+         @if(auth()->user()->can('isSuperadmin') || auth()->user()->can('isAudit'))
+            <li class="nav-item {{ Route::is('pengaduan*') ? 'active' : '' }}">
+               <a href="{{ route('pengaduan') }}">
+                  <i class="fas fa-file"></i>
+                  <p>Pengaduan</p>
+               </a>
+            </li>
+         @endif
       </ul>
    </div>
 </div>

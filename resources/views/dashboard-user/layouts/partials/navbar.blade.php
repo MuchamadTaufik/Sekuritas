@@ -32,6 +32,19 @@
             @if(auth()->check() && (auth()->user()->can('isSuperadmin') || auth()->user()->can('isAdmin') || auth()->user()->can('isHrd')))
                <a href="{{ route('dashboard') }}" class="nav-item nav-link">Dashboard</a>
             @endif
+            @if(auth()->check() && (auth()->user()->can('isPelamar')))
+               <div class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle {{ Route::is('') ? 'active' : '' }}" data-toggle="dropdown"> {{ auth()->user()->name }} </a>
+                  <div class="dropdown-menu">
+                     <a href="{{ route('rups.dashuser') }}" class="dropdown-item {{ Route::is('') ? 'active' : '' }}">Profile</a>
+                     <a href="{{ route('download.dashuser') }}" class="dropdown-item {{ Route::is('') ? 'active' : '' }}">Notification</a>
+                     <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button type="submit" class="dropdown-item">Logout</button>
+                     </form>
+                  </div>
+               </div>
+            @endif
          </div>
       </div>
    </div>

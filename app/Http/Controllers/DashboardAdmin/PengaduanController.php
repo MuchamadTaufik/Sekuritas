@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\DashboardAdmin;
 
 use App\Models\Pengaduan;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\StorePengaduanRequest;
 use App\Http\Requests\UpdatePengaduanRequest;
 
@@ -13,7 +14,9 @@ class PengaduanController extends Controller
      */
     public function index()
     {
-        //
+        $pengaduan = Pengaduan::latest()->get();
+
+        return view('dashboard-admin.wbs.index', compact('pengaduan'));
     }
 
     /**

@@ -20,7 +20,7 @@
             <div class="col-md-6">
                <div class="card-pengaduan">
                   <div class="card-header-pengaduan">
-                     <span>Untuk Melindungi Identitas Gunakan Nama dan Kontak Email Samaran</span>
+                     <span>Form Pengaduang</span>
                   </div>
                   <div class="card-body-pengaduan">
                      <form action="{{ route('pengaduan.dashuser.store') }}" method="POST" enctype="multipart/form-data">
