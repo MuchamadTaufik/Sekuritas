@@ -22,8 +22,4 @@
    <!-- Team Start -->
    @include('dashboard-user.layouts.partials.team')
    <!-- Team End -->
-
-   {{-- partner start --}}
-   @include('dashboard-user.layouts.partials.partner')
-   {{-- partner end --}}
 @endsection

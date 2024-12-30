@@ -36,8 +36,4 @@
    {{-- Perantara Start --}}
    @include('dashboard-user.layouts.partials.produk')
    {{-- Perantara End --}}
-
-   {{-- partner start --}}
-   @include('dashboard-user.layouts.partials.partner')
-   {{-- partner end --}}
 @endsection

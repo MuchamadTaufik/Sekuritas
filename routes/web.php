@@ -13,6 +13,7 @@ use App\Http\Controllers\DashboardAdmin\JurusanController;
 use App\Http\Controllers\DashboardAdmin\KarirController;
 use App\Http\Controllers\DashboardAdmin\PengaduanController;
 use App\Http\Controllers\DashboardAdmin\TradingController;
+use App\Http\Controllers\DashboardUser\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -143,9 +144,13 @@ Route::group(['middleware' => ['auth', 'role:superadmin,hrd']], function(){
    Route::delete('/dashboard/jurusan/delet/{jurusan}', [JurusanController::class, 'destroy'])->name('jurusan.delete');
 });
 
-//Dashboard untuk seluruh Role Pelamar
 Route::group(['middleware' => ['auth', 'role:superadmin,audit']], function(){
    Route::get('/dashboard/pengaduan', [PengaduanController::class, 'index'])->name('pengaduan');
+});
+
+//Dashboard untuk seluruh Role Pelamar
+Route::group(['middleware' => ['auth', 'role:pelamar']], function(){
+   Route::get('/profile/{name}', [ProfileController::class, 'index'])->name('profile');
 });
 
 // errors

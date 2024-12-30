@@ -36,7 +36,7 @@
                <div class="nav-item dropdown">
                   <a href="#" class="nav-link dropdown-toggle {{ Route::is('') ? 'active' : '' }}" data-toggle="dropdown"> {{ auth()->user()->name }} </a>
                   <div class="dropdown-menu">
-                     <a href="{{ route('rups.dashuser') }}" class="dropdown-item {{ Route::is('') ? 'active' : '' }}">Profile</a>
+                     <a href="{{ route('profile', ['name' => $name]) }}" class="dropdown-item {{ Route::is('') ? 'active' : '' }}">Profile</a>
                      <a href="{{ route('download.dashuser') }}" class="dropdown-item {{ Route::is('') ? 'active' : '' }}">Notification</a>
                      <form action="{{ route('logout') }}" method="POST">
                         @csrf

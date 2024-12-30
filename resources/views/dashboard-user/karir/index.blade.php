@@ -74,8 +74,4 @@
          </div>
       </div>
    </div>
-
-   {{-- partner start --}}
-   @include('dashboard-user.layouts.partials.partner')
-   {{-- partner end --}}
 @endsection

@@ -33,6 +33,7 @@ class DashboardUserController extends Controller
             $data->title = Str::limit($data->title, 25);
             $data->deskripsi = Str::limit($data->deskripsi, 150);
         }
+
         return view('dashboard-user.index', compact('kegiatan'));
     }
 

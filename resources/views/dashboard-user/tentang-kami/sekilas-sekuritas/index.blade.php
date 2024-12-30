@@ -54,8 +54,4 @@
          <img src="img/dashboard-user/visi.jpeg" alt="">
       </div>
    </div>
-
-   {{-- partner start --}}
-   @include('dashboard-user.layouts.partials.partner')
-   {{-- partner end --}}
 @endsection
