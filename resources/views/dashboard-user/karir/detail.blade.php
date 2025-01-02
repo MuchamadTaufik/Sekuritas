@@ -42,7 +42,7 @@
                                  <div class="meta-item">
                                     <i class="fas fa-calendar-alt text-primary"></i>
                                     <div>
-                                       <small class="text-muted">Application Period</small>
+                                       <small class="text-muted">Periode Karir</small>
                                        <p class="mb-0">{{ \Carbon\Carbon::parse($karir->tanggal_mulai)->format('d M Y') }} - {{ \Carbon\Carbon::parse($karir->tanggal_berakhir)->format('d M Y') }}</p>
                                     </div>
                                  </div>
@@ -51,7 +51,7 @@
                                  <div class="meta-item">
                                     <i class="fas fa-graduation-cap text-primary"></i>
                                     <div>
-                                       <small class="text-muted">Required Major</small>
+                                       <small class="text-muted">Kebutuhan Jurusan</small>
                                        <p class="mb-0">{{ $karir->jurusan->name }}</p>
                                     </div>
                                  </div>
@@ -60,8 +60,8 @@
                                  <div class="meta-item">
                                     <i class="fas fa-user text-primary"></i>
                                     <div>
-                                       <small class="text-muted">Age Limit</small>
-                                       <p class="mb-0">Maximum {{ $karir->batas_usia }} years old</p>
+                                       <small class="text-muted">Maksimal Umur</small>
+                                       <p class="mb-0">{{ $karir->batas_usia }} Tahun</p>
                                     </div>
                                  </div>
                            </div>
@@ -69,7 +69,7 @@
                                  <div class="meta-item">
                                     <i class="fas fa-award text-primary"></i>
                                     <div>
-                                       <small class="text-muted">Minimum GPA</small>
+                                       <small class="text-muted">Minimal IPK</small>
                                        <p class="mb-0">{{ number_format($karir->ipk, 2) }}</p>
                                     </div>
                                  </div>
@@ -80,7 +80,7 @@
                      <div class="karir-sections">
                         <div class="section mb-4">
                            <h4 class="section-title">
-                                 <i class="fas fa-briefcase me-2"></i> Job Description
+                                 <i class="fas fa-briefcase me-2"></i> Deskripsi Pekerjaan
                            </h4>
                            <div class="section-content">
                                  {!! $karir->tentang_pekerjaan !!}
@@ -89,7 +89,7 @@
                
                         <div class="section mb-4">
                            <h4 class="section-title">
-                                 <i class="fas fa-list-ul me-2"></i> Requirements
+                                 <i class="fas fa-list-ul me-2"></i> Kebutuhan
                            </h4>
                            <div class="section-content">
                                  {!! $karir->persyaratan !!}
@@ -98,7 +98,7 @@
                
                         <div class="section mb-4">
                            <h4 class="section-title">
-                                 <i class="fas fa-map-marker-alt me-2"></i> Test Location
+                                 <i class="fas fa-map-marker-alt me-2"></i> Lokasi Test
                            </h4>
                            <div class="section-content">
                                  <p>{{ $karir->lokasi_test }}</p>
@@ -108,7 +108,7 @@
                         @if($karir->informasi_tambahan)
                         <div class="section mb-4">
                            <h4 class="section-title">
-                                 <i class="fas fa-info-circle me-2"></i> Additional Information
+                                 <i class="fas fa-info-circle me-2"></i> Informasi Tambahan
                            </h4>
                            <div class="section-content">
                                  {!! $karir->informasi_tambahan !!}
@@ -119,9 +119,11 @@
                
                      @if($karir->available > 0)
                      <div class="karir-action mt-4">
-                        <button class="btn btn-primary btn-lg w-100">
-                           Apply Now
-                        </button>
+                        @if(!$alreadyRegistered)
+                           <a href="{{ route('karir.dashuser.lamar', $karir->slug) }}" class="btn btn-primary btn-lg w-100">Lamar Sekarang</a>
+                        @else
+                          <a href="#" class="btn btn-primary btn-lg w-100">Sudah Melamar</a>
+                        @endif
                      </div>
                      @endif
                </div>
@@ -160,7 +162,7 @@
                                        <div class="post-meta">
                                           <span><i class="fa fa-calendar-alt"></i> {{ \Carbon\Carbon::parse($data->tanggal_mulai)->format('d M Y') }} - {{ \Carbon\Carbon::parse($data->tanggal_berakhir)->format('d M Y') }}</span>
                                        </div>
-                                       <a href="{{ route('karir.dashuser.detail', $data->slug) }}" class="read-more-btn">Read More</a>
+                                       <a href="{{ route('karir.dashuser.detail', $data->slug) }}" class="read-more-btn">Selengkapnya</a>
                                     </div>
                               </div>
                            @endforeach

@@ -14,6 +14,7 @@ use App\Http\Controllers\DashboardAdmin\KarirController;
 use App\Http\Controllers\DashboardAdmin\PengaduanController;
 use App\Http\Controllers\DashboardAdmin\TradingController;
 use App\Http\Controllers\DashboardUser\BiodataController;
+use App\Http\Controllers\DashboardUser\LamaranController;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,7 +58,6 @@ Route::get('/dashboard/dokumen/download/{dokumenId}', [DashboardUserController::
 
 //Halaman Karir
 Route::get('/karir', [DashboardUserController::class, 'indexKarir'])->name('karir.dashuser');
-Route::get('/karir/{slug}', [DashboardUserController::class, 'karirDetail'])->name('karir.dashuser.detail');
 
 //Halaman FAQ
 Route::get('/faq', [DashboardUserController::class, 'indexFaq'])->name('faq.dashuser');
@@ -152,6 +152,10 @@ Route::group(['middleware' => ['auth', 'role:superadmin,audit']], function(){
 Route::group(['middleware' => ['auth', 'role:pelamar']], function(){
    Route::get('/profile/{name}', [BiodataController::class, 'index'])->name('profile');
    Route::post('/profile-user/{name}/update', [BiodataController::class, 'update'])->name('profile.update');
+
+   Route::get('/karir/{slug}', [DashboardUserController::class, 'karirDetail'])->name('karir.dashuser.detail');
+   Route::get('/karir/lamar/{slug}', [LamaranController::class, 'create'])->name('karir.dashuser.lamar');
+
 });
 
 // errors

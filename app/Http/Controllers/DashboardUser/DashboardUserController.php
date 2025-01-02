@@ -3,14 +3,15 @@
 namespace App\Http\Controllers\DashboardUser;
 
 use App\Models\Rups;
+use App\Models\Karir;
 use App\Models\Dokumen;
+use App\Models\Category;
 use App\Models\Kegiatan;
+use App\Models\Pengaduan;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Category;
-use App\Models\Karir;
-use App\Models\Pengaduan;
+use Illuminate\Support\Facades\Auth;
 use App\Services\VisitorTrackingService;
 
 class DashboardUserController extends Controller
@@ -106,9 +107,14 @@ class DashboardUserController extends Controller
         ->groupBy('type')
         ->get();
 
-        $karirData = Karir::latest()->take(4)->get();
+        $karirData = Karir::latest()->take(5)->get();
 
-        return view('dashboard-user.karir.detail', compact('karir','typeCount','karirData'));
+        $user = Auth::user();
+
+        // Check if the user has already registered for this karir
+        $alreadyRegistered = $karir->lamaran()->where('user_id', $user->id)->exists();
+
+        return view('dashboard-user.karir.detail', compact('karir','typeCount','karirData','alreadyRegistered'));
     }
 
     public function indexFaq()

@@ -27,7 +27,7 @@ return new class extends Migration
             $table->enum('pendidikan_terakhir',['SMA/SMK','S1','S2','S3']);
             $table->string('universitas');
             $table->date('tanggal_lamar');
-            $table->enum('status', ['diterima','ditolak']);
+            $table->enum('status', ['diterima','pending','ditolak']);
             $table->timestamps();
         });
     }

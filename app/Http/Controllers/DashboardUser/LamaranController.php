@@ -4,8 +4,11 @@ namespace App\Http\Controllers\DashboardUser;
 
 use App\Models\Lamaran;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\StoreLamaranRequest;
 use App\Http\Requests\UpdateLamaranRequest;
+use App\Models\Jurusan;
+use App\Models\Karir;
 
 class LamaranController extends Controller
 {
@@ -20,9 +23,16 @@ class LamaranController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create($slug)
     {
-        //
+        $karir = Karir::where('slug', $slug)->firstOrFail();
+        
+        $user = Auth::user();
+
+        $karirData = Karir::latest()->take(5)->get();
+        $jurusans = Jurusan::all();
+
+        return view('dashboard-user.karir.form', compact('karir', 'user','karirData','jurusans'));
     }
 
     /**

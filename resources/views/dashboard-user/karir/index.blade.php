@@ -37,7 +37,7 @@
                               <h6 class="mb-0"><i class="bi bi-bag-fill"></i> {{ \Carbon\Carbon::parse($data->tanggal_mulai)->format('d M Y') }} - {{ \Carbon\Carbon::parse($data->tanggal_berakhir)->format('d M Y') }}</h6>
                            </div>
                            <div class="col-3 text-end d-none d-md-block">
-                              <a href="{{ route('karir.dashuser.detail', $data->slug) }}" class="btn btn-karir">READ MORE</a>
+                              <a href="{{ route('karir.dashuser.detail', $data->slug) }}" class="btn btn-karir">Selengkapnya</a>
                            </div>
                         </div>
                         <div class="row">
@@ -51,7 +51,7 @@
                            </div>
 
                            <div class="col-6 d-md-none text-end">
-                              <a href="{{ route('karir.dashuser.detail', $data->slug) }}" class="btn btn-karir">READ MORE</a>
+                              <a href="{{ route('karir.dashuser.detail', $data->slug) }}" class="btn btn-karir">Selengkapnya</a>
                            </div>
                         </div>
                         <div class="row">
