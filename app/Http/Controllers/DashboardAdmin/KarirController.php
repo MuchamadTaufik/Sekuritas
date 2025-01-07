@@ -43,7 +43,7 @@ class KarirController extends Controller
             'tanggal_berakhir' => 'required|date_format:Y-m-d',
             'batas_usia' => 'required|numeric',
             'ipk' => 'required|numeric|min:0|max:4',
-            'kuota' => 'required|numeric',
+            'kuota' => 'required|numeric|min:1',
             'persyaratan' => 'required',
             'lokasi_test' => 'required|max:255',
             'informasi_tambahan' => 'nullable'

@@ -142,6 +142,10 @@ Route::group(['middleware' => ['auth', 'role:superadmin,hrd']], function(){
    Route::get('/dashboard/jurusan/edit/{jurusan}', [JurusanController::class, 'edit'])->name('jurusan.edit');
    Route::put('/dashboard/jurusan/update/{jurusan}', [JurusanController::class, 'update'])->name('jurusan.update');
    Route::delete('/dashboard/jurusan/delet/{jurusan}', [JurusanController::class, 'destroy'])->name('jurusan.delete');
+
+   //Lamaran
+   Route::get('/dashboard/lamaran', [LamaranController::class, 'index'])->name('lamaran');
+   Route::get('/dashboard/lamaran/{slug}', [LamaranController::class, 'show'])->name('lamaran.show');
 });
 
 Route::group(['middleware' => ['auth', 'role:superadmin,audit']], function(){
@@ -155,6 +159,7 @@ Route::group(['middleware' => ['auth', 'role:pelamar']], function(){
 
    Route::get('/karir/{slug}', [DashboardUserController::class, 'karirDetail'])->name('karir.dashuser.detail');
    Route::get('/karir/lamar/{slug}', [LamaranController::class, 'create'])->name('karir.dashuser.lamar');
+   Route::post('/karir/lamar', [LamaranController::class, 'store'])->name('karir.dashuser.store');
 
 });
 

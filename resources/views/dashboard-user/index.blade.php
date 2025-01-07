@@ -33,37 +33,36 @@
          <div class="container">
             <div class="row align-items-center">
                <div class="col-lg-3 col-md-6">
+                  <a href="https://opening-jb.bofis.id/#/" target="_blank">
                      <div class="fact-item">
-                        <a href="https://opening-jb.bofis.id/#/" target="_blank">
                            <i class="fa-solid fa-user-plus fa-2x"></i>
                            <h2>Pembukaan Akun</h2>
-                        </a>
                      </div>
+                  </a>
                </div>
                <div class="col-lg-3 col-md-6">
+                  <a href="https://jb.bofis.id/" target="_blank">
                      <div class="fact-item">
-                        <a href="https://jb.bofis.id/" target="_blank">
                            <i class="fa-solid fa-chart-column fa-2x"></i>
-                           <h2>Aplikasi Trading</h2>
-                        </a>
-                        
+                           <h2>Aplikasi Trading</h2>                        
                      </div>
+                  </a>
                </div>
                <div class="col-lg-3 col-md-6">
+                  <a href="{{ route('kegiatan.dashuser.all') }}">
                      <div class="fact-item">
-                        <a href="{{ route('kegiatan.dashuser.all') }}">
                            <i class="fa-solid fa-newspaper fa-2x"></i>
                            <h2>Media</h2>
-                        </a>
                      </div>
+                  </a>
                </div>
                <div class="col-lg-3 col-md-6">
+                  <a href="{{ route('download.dashuser') }}">
                      <div class="fact-item">
-                        <a href="{{ route('download.dashuser') }}">
                            <i class="fa-solid fa-book fa-2x "></i>
                            <h2>Panduan</h2>
-                        </a>
                      </div>
+                  </a>
                </div>
             </div>
          </div>

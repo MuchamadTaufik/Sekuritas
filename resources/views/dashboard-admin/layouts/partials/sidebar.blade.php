@@ -39,21 +39,6 @@
                   <p>Dokumen Download</p>
                </a>
             </li>
-
-            <li class="nav-section">
-               <span class="sidebar-mini-icon">
-               <i class="fa fa-ellipsis-h"></i>
-               </span>
-               <h4 class="text-section">Graphic</h4>
-            </li>
-
-            <li class="nav-item {{ Route::is('trading') ? 'active' : '' }}">
-               <a href="{{ route('trading') }}">
-                  <i class="fas fa-chart-area"></i>
-                  <p>Trading View</p>
-               </a>
-            </li>
-
          @endif
 
          
@@ -67,8 +52,20 @@
             </li>
             <li class="nav-item {{ Route::is('jurusan*') ? 'active' : '' }}">
                <a href="{{ route('jurusan') }}">
-                  <i class="fas fa-book"></i>
+                  <i class="fas fa-list"></i>
                   <p>Jurusan</p>
+               </a>
+            </li> 
+            <li class="nav-section">
+               <span class="sidebar-mini-icon">
+               <i class="fa fa-ellipsis-h"></i>
+               </span>
+               <h4 class="text-section">Data</h4>
+            </li>
+            <li class="nav-item {{ Route::is('lamaran*') ? 'active' : '' }}">
+               <a href="{{ route('lamaran') }}">
+                  <i class="fas fa-book"></i>
+                  <p>Lamaran</p>
                </a>
             </li> 
          @endif
@@ -78,6 +75,22 @@
                <a href="{{ route('pengaduan') }}">
                   <i class="fas fa-file"></i>
                   <p>Pengaduan</p>
+               </a>
+            </li>
+         @endif
+
+         @if(auth()->user()->can('isSuperadmin') || auth()->user()->can('isAdmin'))
+            <li class="nav-section">
+               <span class="sidebar-mini-icon">
+               <i class="fa fa-ellipsis-h"></i>
+               </span>
+               <h4 class="text-section">Graphic</h4>
+            </li>
+
+            <li class="nav-item {{ Route::is('trading') ? 'active' : '' }}">
+               <a href="{{ route('trading') }}">
+                  <i class="fas fa-chart-area"></i>
+                  <p>Trading View</p>
                </a>
             </li>
          @endif

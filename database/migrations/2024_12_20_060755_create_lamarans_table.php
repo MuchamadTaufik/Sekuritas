@@ -24,10 +24,10 @@ return new class extends Migration
             $table->string('pas_foto');
             $table->string('lamaran');
             $table->decimal('ipk', 3, 2);
-            $table->enum('pendidikan_terakhir',['SMA/SMK','S1','S2','S3']);
+            $table->enum('pendidikan_terakhir',['SMA/SMK','D1','D2','D3','S1','S2','S3']);
             $table->string('universitas');
             $table->date('tanggal_lamar');
-            $table->enum('status', ['diterima','pending','ditolak']);
+            $table->enum('status', ['diterima','pending','ditolak'])->default('pending');
             $table->timestamps();
         });
     }

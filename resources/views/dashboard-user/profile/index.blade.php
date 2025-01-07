@@ -35,12 +35,7 @@
                             <ul class="list-unstyled mb-0">
                                 <li class="mb-2">
                                     <a href="#" class="btn btn-primary w-100 d-flex align-items-center justify-content-center">
-                                        Informasi Karir
-                                    </a>
-                                </li>
-                                <li class="mb-2">
-                                    <a href="#" class="btn btn-primary w-100 d-flex align-items-center justify-content-center">
-                                        Riwayat Karir
+                                        Informasi Lamaran
                                     </a>
                                 </li>
                             </ul>

@@ -29,9 +29,9 @@
                         <div class="d-flex justify-content-between align-items-center flex-wrap">
                            <span class="badge bg-primary text-white mb-2">{{ $karir->type }}</span>
                            <div class="status-badges">
-                                 <span class="badge text-white {{ $karir->available > 0 ? 'bg-success' : 'bg-danger' }}">
-                                    {{ $karir->available > 0 ? 'Open' : 'Closed' }}
-                                 </span>
+                              <span class="badge text-white {{ ($karir->available > 0 && now()->lt(Carbon\Carbon::parse($karir->tanggal_berakhir))) ? 'bg-success' : 'bg-danger' }}">
+                                 {{ ($karir->available > 0 && now()->lt(Carbon\Carbon::parse($karir->tanggal_berakhir))) ? 'Open' : 'Closed' }}
+                             </span>
                            </div>
                         </div>
                      </div>
@@ -117,14 +117,18 @@
                         @endif
                      </div>
                
-                     @if($karir->available > 0)
-                     <div class="karir-action mt-4">
-                        @if(!$alreadyRegistered)
-                           <a href="{{ route('karir.dashuser.lamar', $karir->slug) }}" class="btn btn-primary btn-lg w-100">Lamar Sekarang</a>
-                        @else
-                          <a href="#" class="btn btn-primary btn-lg w-100">Sudah Melamar</a>
-                        @endif
-                     </div>
+                     @if($karir->available > 0 && now()->lt(Carbon\Carbon::parse($karir->tanggal_berakhir)))
+                        <div class="karir-action mt-4">
+                           @if(!$alreadyRegistered)
+                                 <a href="{{ route('karir.dashuser.lamar', $karir->slug) }}" class="btn btn-primary btn-lg w-100">Lamar Sekarang</a>
+                           @else
+                                 <a href="#" class="btn btn-primary btn-lg w-100">Sudah Melamar</a>
+                           @endif
+                        </div>
+                     @else
+                        <div class="karir-action mt-4">
+                           <a href="#" class="btn btn-secondary btn-lg w-100 disabled">Lowongan Ditutup</a>
+                        </div>
                      @endif
                </div>
             </div>

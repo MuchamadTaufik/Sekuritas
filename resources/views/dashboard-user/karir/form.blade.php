@@ -84,7 +84,7 @@
             <div class="recent-posts">
                 <h3 class="mb-4">Form Lamaran</h3>
                 <hr>
-                <form class="row g-3" action="" method="POST" enctype="multipart/form-data">
+                <form class="row g-3" action="{{ route('karir.dashuser.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <input type="hidden" name="user_id" value="{{ $user->id }}">
                     <input type="hidden" name="karir_id" value="{{ $karir->id }}">
@@ -106,13 +106,16 @@
                      </div>
                     <div class="col-md-12 mb-3">
                         <label for="ipk" class="form-label">IPK</label>
-                        <input type="text" class="form-control" id="ipk" name="ipk" required>
+                        <input type="text" class="form-control" id="ipk" name="ipk" value="{{ old('ipk') }}" required>
                     </div>
                     <div class="col-md-12 mb-3">
                         <label for="pendidikan_terakhir" class="form-label">Pendidikan Terakhir</label>
                         <select class="form-control @error('pendidikan_terakhir') is-invalid @enderror" id="pendidikan_terakhir" name="pendidikan_terakhir" required>
                             <option value="">Pilih Pendidikan Terakhir</option>
                             <option value="SMA/SMK" {{ old('pendidikan_terakhir') == 'SMA/SMK' ? 'selected' : '' }}>SMA/SMK</option>
+                            <option value="D1" {{ old('pendidikan_terakhir') == 'D1' ? 'selected' : '' }}>D1</option>
+                            <option value="D2" {{ old('pendidikan_terakhir') == 'D2' ? 'selected' : '' }}>D2</option>
+                            <option value="D3" {{ old('pendidikan_terakhir') == 'D3' ? 'selected' : '' }}>D3</option>
                             <option value="S1" {{ old('pendidikan_terakhir') == 'S1' ? 'selected' : '' }}>S1</option>
                             <option value="S2" {{ old('pendidikan_terakhir') == 'S2' ? 'selected' : '' }}>S2</option>
                             <option value="S3" {{ old('pendidikan_terakhir') == 'S3' ? 'selected' : '' }}>S3</option>
@@ -124,8 +127,8 @@
                         @enderror
                     </div>
                     <div class="col-md-12 mb-3">
-                        <label for="universitas" class="form-label">Universitas</label>
-                        <input type="text" class="form-control" id="universitas" name="universitas" required>
+                        <label for="universitas" class="form-label">Asal Sekolah</label>
+                        <input type="text" class="form-control" id="universitas" name="universitas" value="{{ old('universitas') }}" required>
                     </div>
                     <div class="col-md-12 mb-3">
                         <label for="cv" class="form-label">Upload CV</label>

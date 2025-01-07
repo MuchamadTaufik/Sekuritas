@@ -360,7 +360,6 @@ a:focus {
 }
 
 .carousel .carousel-text .btn:hover {
-    color: rgb(41, 170, 226);
     background: #ffffff;
 }
 
@@ -385,7 +384,6 @@ a:focus {
     align-items: center;
     justify-content: center;
     color: rgb(41, 170, 226);
-    background: rgb(22, 85, 129);
     font-size: 22px;
     transition: 0.3s;
 }
@@ -393,7 +391,6 @@ a:focus {
 .carousel .owl-nav .owl-prev:hover,
 .carousel .owl-nav .owl-next:hover {
     color: #ffffff;
-    background: rgb(41, 170, 226);
 }
 
 .carousel .owl-nav .owl-prev {
