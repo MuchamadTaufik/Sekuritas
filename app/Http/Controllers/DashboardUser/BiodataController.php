@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\StoreBiodataRequest;
 use App\Http\Requests\UpdateBiodataRequest;
+use App\Models\Lamaran;
 
 class BiodataController extends Controller
 {
@@ -19,8 +20,15 @@ class BiodataController extends Controller
     public function index($name)
     {
         $user = User::where('name', $name)->firstOrFail();
+        $lamaran = Lamaran::all();
+        return view('dashboard-user.profile.index', compact('user','lamaran'));
+    }
 
-        return view('dashboard-user.profile.index', compact('user'));
+    public function lamaran($name)
+    {
+        $user = User::where('name', $name)->firstOrFail();
+        $lamaran = Lamaran::where('user_id', $user->id)->get();
+        return view('dashboard-user.profile.lamaran', compact('user','lamaran'));
     }
 
     /**

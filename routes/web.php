@@ -157,6 +157,8 @@ Route::group(['middleware' => ['auth', 'role:pelamar']], function(){
    Route::get('/profile/{name}', [BiodataController::class, 'index'])->name('profile');
    Route::post('/profile-user/{name}/update', [BiodataController::class, 'update'])->name('profile.update');
 
+   Route::get('/profil/informasi-lamaran/{name}', [BiodataController::class, 'lamaran'])->name('profile.lamaran');
+
    Route::get('/karir/{slug}', [DashboardUserController::class, 'karirDetail'])->name('karir.dashuser.detail');
    Route::get('/karir/lamar/{slug}', [LamaranController::class, 'create'])->name('karir.dashuser.lamar');
    Route::post('/karir/lamar', [LamaranController::class, 'store'])->name('karir.dashuser.store');

@@ -55,6 +55,13 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('123456')
         ]);
 
+        User::create([
+            'name' => 'Cristiano Ronaldo',
+            'role' => 'pelamar',
+            'email' => 'cr@gmail.com',
+            'password' => bcrypt('123456')
+        ]);
+
         $this->call(JurusanSeeder::class);
     }
 }
