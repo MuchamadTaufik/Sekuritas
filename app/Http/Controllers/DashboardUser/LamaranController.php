@@ -5,6 +5,7 @@ namespace App\Http\Controllers\DashboardUser;
 use App\Models\Karir;
 use App\Models\Jurusan;
 use App\Models\Lamaran;
+use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
@@ -12,6 +13,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\StoreLamaranRequest;
 use App\Http\Requests\UpdateLamaranRequest;
 use Cviebrock\EloquentSluggable\Services\SlugService;
+
 
 class LamaranController extends Controller
 {
@@ -88,7 +90,7 @@ class LamaranController extends Controller
             // Generate nomor_lamar
             $year = $today->format('Y');
             $count = Lamaran::whereYear('created_at', $year)->count() + 1;
-            $nomor_lamar = sprintf('%03d-bjb%03d-sec-%d', $count, $request->karir_id, $year);
+            $nomor_lamar = sprintf('%03d-bjb-sec-%d', $count, $request->karir_id, $year);
 
             $validateData = $request->validate([
                 'user_id' => 'required|exists:users,id',
@@ -155,6 +157,58 @@ class LamaranController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
+
+     public function approve($slug)
+     {
+         try {
+             if (Auth::user()->role === 'hrd') {
+                 $lamaran = Lamaran::find($slug);
+ 
+                 if ($lamaran->status === 'pending') {
+                     $lamaran->update([
+                        'status' => 'diterima'
+                     ]);
+
+                     toast()->success('Berhasil', 'Lamaran telah diapprove');
+                } else {
+                    toast()->error('Gagal', 'Lamaran tidak dapat disetujui karena statusnya sudah diterima');
+                }
+
+                return redirect('/dashboard/lamaran')->withInput();
+            } else {
+                toast()->error('Gagal', 'Anda tidak bisa menyetujui lamaran');
+                return redirect('/dashboard/lamaran')->withInput();
+            }
+        } catch (\Exception $e) {
+            toast()->error('Gagal', 'Gagal Menyetujui lamaran');
+            return redirect('/dashboard/lamaran')->withInput();
+        }
+     }
+
+    public function reject(Request $request, $slug)
+    {
+        try {
+            if (Auth::user()->role === 'hrd') {
+                $lamaran = Lamaran::find($slug);
+
+                if ($lamaran->status === 'pending') {
+                    $lamaran->update([
+                        'status' => 'ditolak'
+                    ]);
+                    toast()->success('Berhasil', 'Lamaran berhasil ditolak');
+                } else {
+                    toast()->error('Gagal', 'Lamaran tidak dapat ditolak karena statusnya sudah diterima');
+                }
+            } else {
+                toast()->error('Gagal', 'Anda tidak bisa menolak lamaran');
+            }
+        } catch (\Exception $e) {
+            toast()->error('Gagal', 'Gagal menolak lamaran');
+        }
+
+        return redirect('/dashboard/lamaran')->withInput();
+    }
+
     public function edit(Lamaran $lamaran)
     {
         //

@@ -131,15 +131,15 @@
                         <input type="text" class="form-control" id="universitas" name="universitas" value="{{ old('universitas') }}" required>
                     </div>
                     <div class="col-md-12 mb-3">
-                        <label for="cv" class="form-label">Upload CV</label>
+                        <label for="cv" class="form-label">Upload CV <span class="text-danger">*PDF</span></label>
                         <input type="file" class="form-control" id="cv" name="cv" required>
                     </div>
                     <div class="col-md-12 mb-3">
-                        <label for="pas_foto" class="form-label">Upload Pas Foto</label>
+                        <label for="pas_foto" class="form-label">Upload Pas Foto <span class="text-danger">*Image</span></label>
                         <input type="file" class="form-control" id="pas_foto" name="pas_foto" required>
                     </div>
                     <div class="col-md-12 mb-3">
-                        <label for="lamaran" class="form-label">Upload Surat Lamaran</label>
+                        <label for="lamaran" class="form-label">Upload Surat Lamaran <span class="text-danger">*PDF</span></label>
                         <input type="file" class="form-control" id="lamaran" name="lamaran" required>
                     </div>
                     <button type="submit" class="btn btn-primary mt-3 w-100">Kirim Lamaran</button>

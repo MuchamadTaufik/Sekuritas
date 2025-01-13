@@ -47,17 +47,29 @@
                                  <td>
                                     <img src="{{ asset('storage/' . $data->pas_foto) }}" alt="" style="width: 100px; height:auto; margin: 5px;">
                                  </td>
-                                <td>
-                                    <div class="form-button-action gap-1">
-                                        <a href="" type="button" data-bs-toggle="tooltip" title="" class="btn btn-primary" data-original-title="View">
-                                            Approve
-                                         </a>
-                                         <a href="" type="button" data-bs-toggle="tooltip" title="" class="btn btn-danger" data-original-title="View">
-                                            Reject
-                                         </a>
-                                    </div>
-                                    
-                                </td>
+                                 <td>
+                                    @if ($data->status === 'pending')
+                                        <div class="form-button-action gap-1">
+                                            <form action="{{ route('lamaran.approve', $data->slug) }}" method="POST">
+                                                @csrf
+                                                <button type="submit" class="btn btn-primary">Approve</button>
+                                            </form>
+                                            <form action="{{ route('lamaran.reject', $data->slug) }}" method="POST">
+                                                @csrf
+                                                <button type="submit" class="btn btn-danger">Reject</button>
+                                            </form>
+                                        </div>
+                                    @else
+                                        @php
+                                            // Status Badge Mapping
+                                            $statusColors = [
+                                                'diterima' => 'success',
+                                                'ditolak' => 'danger',
+                                            ];
+                                        @endphp
+                                        <span class="badge badge-{{ $statusColors[$data->status] ?? 'secondary' }}">{{ ucfirst($data->status) }}</span>
+                                    @endif
+                                </td>                                
                                  <td>
                                     <div class="form-button-action">
                                         <a href="{{ route('lamaran.show', $data->slug) }}" type="button" data-bs-toggle="tooltip" title="" class="btn btn-link btn-success btn-lg" data-original-title="View">

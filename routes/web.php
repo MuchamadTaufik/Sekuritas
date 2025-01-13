@@ -15,6 +15,7 @@ use App\Http\Controllers\DashboardAdmin\PengaduanController;
 use App\Http\Controllers\DashboardAdmin\TradingController;
 use App\Http\Controllers\DashboardUser\BiodataController;
 use App\Http\Controllers\DashboardUser\LamaranController;
+use App\Http\Middleware\Role;
 
 /*
 |--------------------------------------------------------------------------
@@ -146,6 +147,8 @@ Route::group(['middleware' => ['auth', 'role:superadmin,hrd']], function(){
    //Lamaran
    Route::get('/dashboard/lamaran', [LamaranController::class, 'index'])->name('lamaran');
    Route::get('/dashboard/lamaran/{slug}', [LamaranController::class, 'show'])->name('lamaran.show');
+   Route::post('/dashboard/lamaran/approve/{slug}', [LamaranController::class, 'approve'])->name('lamaran.approve');
+   Route::post('/dashboard/lamaran/reject/{slug}', [LamaranController::class, 'reject'])->name('lamaran.reject');
 });
 
 Route::group(['middleware' => ['auth', 'role:superadmin,audit']], function(){

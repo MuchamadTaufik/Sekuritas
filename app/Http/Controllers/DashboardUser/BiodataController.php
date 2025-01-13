@@ -19,6 +19,11 @@ class BiodataController extends Controller
      */
     public function index($name)
     {
+        // Periksa apakah nama di URL sama dengan nama pengguna yang sedang login
+        if ($name !== Auth::user()->name) {
+            abort(403, 'Unauthorized access.');
+        }
+
         $user = User::where('name', $name)->firstOrFail();
         $lamaran = Lamaran::all();
         return view('dashboard-user.profile.index', compact('user','lamaran'));
@@ -26,10 +31,16 @@ class BiodataController extends Controller
 
     public function lamaran($name)
     {
+        // Periksa apakah nama di URL sama dengan nama pengguna yang sedang login
+        if ($name !== Auth::user()->name) {
+            abort(403, 'Unauthorized access.');
+        }
+
         $user = User::where('name', $name)->firstOrFail();
         $lamaran = Lamaran::where('user_id', $user->id)->get();
-        return view('dashboard-user.profile.lamaran', compact('user','lamaran'));
+        return view('dashboard-user.profile.lamaran', compact('user', 'lamaran'));
     }
+
 
     /**
      * Store a newly created resource in storage.

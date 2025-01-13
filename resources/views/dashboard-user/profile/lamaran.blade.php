@@ -15,7 +15,7 @@
                             @include('dashboard-user.layouts.partials.side-profile')
                             <ul class="list-unstyled mb-0">
                                 <li class="mb-2">
-                                    <a href="{{ route('profile', ['name' => $name]) }}" class="btn btn-primary w-100 d-flex align-items-center justify-content-center">
+                                    <a href="{{ route('profile', ['name' => Auth::user()->name]) }}" class="btn btn-primary w-100 d-flex align-items-center justify-content-center">
                                         Profile
                                     </a>
                                 </li>
@@ -52,7 +52,19 @@
                                                <td>{{ $data->karir->title }}</td>
                                                <td>{{ $data->karir->type }}</td>
                                                <td>{{ \Carbon\Carbon::parse($data->karir->tanggal_mulai)->format('d M Y') }} - {{ \Carbon\Carbon::parse($data->karir->tanggal_berakhir)->format('d M Y') }} </td>
-                                               <td>{{ $data->status }} </td>
+                                               <td>
+                                                    @php
+                                                        $statusColors = [
+                                                            'diterima' => 'success',
+                                                            'ditolak' => 'danger',
+                                                            'pending' => 'warning',
+                                                        ];
+                                                    @endphp
+                                                    
+                                                    <span class="badge badge-{{ $statusColors[$data->status] ?? 'secondary' }}">
+                                                        {{ ucfirst($data->status) }}
+                                                    </span>
+                                               </td>
                                             </tr>
                                          @endforeach
                                       @endif
