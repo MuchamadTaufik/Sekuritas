@@ -1,8 +1,8 @@
 @extends('dashboard-user.layouts.main')
 
 @section('container')
-   <div class="login-section">
-      <div class="container">
+    <div class="login-section">
+      <div class="container-login">
          <div class="login-wrapper">
             <div class="login-card">
                <div class="login-content">
@@ -38,22 +38,16 @@
                            <button type="submit" class="btn btn-primary">
                               Login
                            </button>
-                           <a href="" class="forgot-password">
+                           {{-- <a href="" class="forgot-password">
                               Forgot Password?
-                           </a>
+                           </a> --}}
                         </div>
 
-                        <div class="signup-link">
-                           Don't have an account? 
+                        {{-- <div class="signup-link">
+                           Don't have an account?
                            <a href="">Create Account</a>
-                        </div>
+                        </div> --}}
                      </form>
-                  </div>
-
-                  <div class="login-description-side">
-                     <div class="description-content">
-                        <img src="img/dashboard-user/sekuritas.jpg" alt="">
-                     </div>
                   </div>
                </div>
             </div>

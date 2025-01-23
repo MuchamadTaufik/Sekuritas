@@ -4,7 +4,7 @@
    <div class="route mb-5">
       <div class="container-fluid">
          {{-- bg-route start --}}
-         @include('dashboard-user.layouts.partials.bg-route')
+         @include('dashboard-user.layouts.partials.bg-route-tatakelola')
          {{-- bg-route-end --}}
          <div class="title-route">
             <p class="non-active"><a href=""><i class="fas fa-arrow-left"></i> Kembali</a></p>
@@ -65,22 +65,22 @@
             </div>
             <div class="col-md-6">
                <div class="card card-pedoman-pdf">
-                  <p>Pedoman Kerja Direksi & Dewan Komisaris 
-                     <a href="https://bjbsekuritas.co.id/pdf/pedoman-kerja-direksi-dan-komisaris.pdf" target="_blank">
+                  <p>Pedoman Kerja Direksi & Dewan Komisaris
+                     <a href="/pdf/pedoman-kerja-direksi-dan-komisaris.pdf" target="_blank">
                         <i class="fas fa-file-pdf"></i>
                      </a>
                   </p>
                </div>
                <div class="card card-pedoman-pdf">
-                  <p>Fungsi dan Kebijakan Manajemen Risiko 
-                     <a href="https://bjbsekuritas.co.id/pdf/fungsi-dan-kebijakan-manajemen-risiko.pdf" target="_blank">
+                  <p>Fungsi dan Kebijakan Manajemen Risiko
+                     <a href="/pdf/fungsi-dan-kebijakan-manajemen-risiko.pdf" target="_blank">
                         <i class="fas fa-file-pdf"></i>
                      </a>
                   </p>
                </div>
                <div class="card card-pedoman-pdf">
-                  <p>Kode Etik Perusahaan 
-                     <a href="https://bjbsekuritas.co.id/pdf/KEBIJAKAN%20KODE%20ETIK%20BJB%20SEKURITAS.pdf" target="_blank">
+                  <p>Kode Etik Perusahaan
+                     <a href="/pdf/kode-etik.pdf" target="_blank">
                         <i class="fas fa-file-pdf"></i>
                      </a>
                   </p>

@@ -4,7 +4,7 @@
    <div class="route mb-5">
       <div class="container-fluid">
          {{-- bg-route start --}}
-         @include('dashboard-user.layouts.partials.bg-route')
+         @include('dashboard-user.layouts.partials.bg-route-kepatuhan')
          {{-- bg-route-end --}}
          <div class="title-route">
             <p class="non-active"><a href="{{ route('/') }}"><i class="fas fa-arrow-left"></i> Kembali</a></p>
@@ -23,10 +23,10 @@
             <a href="{{ route('pengaduan.dashuser') }}"><p class="btn btn-primary">WHISTLEBLOWING SYSTEM</p></a>
             <div class="card card-pdf">
                <h3>Pakta Kepatuhan & Audit Internal</h3>
-               <a href="https://bjbsekuritas.co.id/pdf/pakta-kepatuhan-dan-audit-internal.pdf" target="_blank">
+               <a href="/pdf/pakta-kepatuhan-dan-audit-internal.pdf" target="_blank">
                   <i class="fas fa-file-pdf"></i>
                </a>
-            </div>           
+            </div>
          </div>
       </div>
    </div>

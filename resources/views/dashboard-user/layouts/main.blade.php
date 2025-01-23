@@ -12,7 +12,7 @@
 
       <!-- Google Font -->
       <link href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
-      
+
       <!-- CSS Libraries -->
       <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -51,7 +51,7 @@
       <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
       <script src="/lib/waypoints/waypoints.min.js"></script>
       <script src="/lib/counterup/counterup.min.js"></script>
-      
+
       <!-- Contact Javascript File -->
       <script src="/mail/jqBootstrapValidation.min.js"></script>
       <script src="/mail/contact.js"></script>
@@ -59,26 +59,37 @@
       <!-- Template Javascript -->
       <script src="/js/main.js"></script>
       <script>
-            // Get the navbar element and logo element
-            const navbar = document.querySelector('.navbar');
-            const logo = document.getElementById('logo');
-         
-            // Define the logo images
-            const staticLogoSrc = '/img/dashboard-user/logo.png';
-            const stickyLogoSrc = '/img/dashboard-user/logo2.png';
-         
-            // Add a scroll event listener to the window
-            window.addEventListener('scroll', function() {
-            // Check if the navbar has the 'nav-sticky' class
-            if (navbar.classList.contains('nav-sticky')) {
-               // Change the logo to the sticky version
-               logo.src = stickyLogoSrc;
+        // Get the navbar element and logo element
+        const navbar = document.querySelector('.navbar');
+        const logo = document.getElementById('logo');
+
+        // Define the logo images
+        const staticLogoSrc = '/img/dashboard-user/logo.png';
+        const stickyLogoSrc = '/img/dashboard-user/logo2.png';
+
+        // Function to update the logo based on screen width and scroll state
+        function updateLogo() {
+            if (window.innerWidth <= 993) {
+                // Directly set the logo to sticky version for screens <= 993px
+                logo.src = stickyLogoSrc;
             } else {
-               // Change the logo to the static version
-               logo.src = staticLogoSrc;
+                // Check if the navbar has the 'nav-sticky' class
+                if (navbar.classList.contains('nav-sticky')) {
+                    logo.src = stickyLogoSrc;
+                } else {
+                    logo.src = staticLogoSrc;
+                }
             }
-            });
-      </script>
+        }
+
+        // Add a scroll event listener to the window
+        window.addEventListener('scroll', updateLogo);
+
+        // Update the logo on page load and resize
+        window.addEventListener('load', updateLogo);
+        window.addEventListener('resize', updateLogo);
+    </script>
+
       <script>
          class InfiniteCarousel {
             constructor(trackSelector, options = {}) {
@@ -99,7 +110,7 @@
             init() {
                // Hitung total lebar logo
                this.logos.forEach(logo => {
-                     this.totalWidth += logo.offsetWidth + 
+                     this.totalWidth += logo.offsetWidth +
                         (parseInt(getComputedStyle(logo).marginLeft) || 0) +
                         (parseInt(getComputedStyle(logo).marginRight) || 0);
                });
@@ -166,7 +177,7 @@
    <script>
       document.addEventListener('DOMContentLoaded', () => {
             const faqQuestions = document.querySelectorAll('.faq-question');
-            
+
             faqQuestions.forEach(question => {
                question.addEventListener('click', () => {
                      const answer = question.nextElementSibling;
@@ -190,14 +201,14 @@
    <script>
       document.addEventListener('DOMContentLoaded', () => {
             const serviceItems = document.querySelectorAll('.service-item');
-         
+
             serviceItems.forEach(item => {
                const iconDetail = item.querySelector('.icon-detail');
-               
+
                iconDetail.addEventListener('click', () => {
                      // Toggle active class on clicked item
                      item.classList.toggle('active');
-         
+
                      // Optional: Close other open items
                      serviceItems.forEach(otherItem => {
                         if (otherItem !== item) {

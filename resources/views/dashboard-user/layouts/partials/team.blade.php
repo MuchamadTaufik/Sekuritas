@@ -12,7 +12,7 @@
                   <div class="team-text mt-3">
                      <h2 class="h5">Muhammad As'adi Budiman</h2>
                      <div class="team-social">
-                           <p class="text-muted">Commisioner</p>
+                           <p class="text-muted">Board of Commisioner</p>
                      </div>
                   </div>
                </div>
@@ -117,10 +117,10 @@
          <div class="col-lg-4 col-md-6 mb-4">
                <div class="team-item">
                   <div class="team-img">
-                     <img src="/img/dashboard-user/team/nuryane.png" alt="Team Image" class="img-fluid rounded-circle">
+                     <img src="/img/dashboard-user/team/mita.png" alt="Team Image" class="img-fluid rounded-circle">
                   </div>
                   <div class="team-text mt-3">
-                     <h2 class="h5">Nuryane Komalasari</h2>
+                     <h2 class="h5">Mita Nur Nugrahani Alawiyah</h2>
                      <div class="team-social">
                         <p class="text-muted">Group Head Risk Management</p>
                      </div>

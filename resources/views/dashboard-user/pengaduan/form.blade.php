@@ -4,7 +4,7 @@
    <div class="route mb-5">
       <div class="container-fluid">
          {{-- bg-route start --}}
-         @include('dashboard-user.layouts.partials.bg-route-bantuan')
+         @include('dashboard-user.layouts.partials.bg-route-kepatuhan')
          {{-- bg-route-end --}}
          <div class="title-route">
             <p class="non-active"><a href="{{ route('kepatuhan.dashuser') }}"><i class="fas fa-arrow-left"></i> Kembali</a></p>

@@ -1,7 +1,7 @@
 <nav class="navbar navbar-header navbar-header-transparent navbar-expand-lg border-bottom">
    <div class="container-fluid">
       <ul class="navbar-nav topbar-nav ms-md-auto align-items-center">
-         <li class="nav-item topbar-icon dropdown hidden-caret">
+         {{-- <li class="nav-item topbar-icon dropdown hidden-caret">
             <a class="nav-link dropdown-toggle" href="#" id="notifDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                <i class="fa fa-bell"></i>
                <span class="notification">4</span>
@@ -64,7 +64,7 @@
                   </a>
                </li>
             </ul>
-         </li>
+         </li> --}}
 
          <li class="nav-item topbar-icon dropdown hidden-caret">
             <a class="nav-link dropdown-toggle" href="{{ route('/') }}">
@@ -87,18 +87,18 @@
                   <li>
                      <div class="user-box">
                         <div class="avatar-lg">
-                           <img src="/assets/img/BJB.png" alt="image profile" class="avatar-img rounded"/>
+                           <img src="/assets/img/BJB.png" alt="image profile" class="avatar-img rounded" style="width: auto; height:40px;"/>
                         </div>
                         <div class="u-text">
                            <h4>{{ auth()->user()->name }}</h4>
                            <p class="text-muted">{{ auth()->user()->email }}</p>
-                           <a href="profile.html" class="btn btn-xs btn-secondary btn-sm">View Profile</a>
+                           {{-- <a href="profile.html" class="btn btn-xs btn-secondary btn-sm">View Profile</a> --}}
                         </div>
                      </div>
                   </li>
                   <li>
                      <div class="dropdown-divider"></div>
-                     <a class="dropdown-item" href="#">My Profile</a>
+                     {{-- <a class="dropdown-item" href="#">My Profile</a> --}}
                      <form action="{{ route('logout') }}" method="POST">
                         @csrf
                         <button type="submit" class="dropdown-item">Logout</button>

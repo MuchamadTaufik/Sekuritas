@@ -10,7 +10,7 @@
       <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
          <div class="navbar-nav ml-auto">
             <div class="nav-item dropdown">
-               <a href="#" class="nav-link dropdown-toggle {{ Route::is('sekilas*','sejarah*','struktur*','kepatuhan*','kelola*','kegiatan*','pengaduan*') ? 'active' : '' }}" data-toggle="dropdown">Tentang Kami</a>
+               <a href="" class="nav-link dropdown-toggle {{ Route::is('sekilas*','sejarah*','struktur*','kepatuhan*','kelola*','kegiatan*','pengaduan*') ? 'active' : '' }}" data-toggle="dropdown">Tentang Kami</a>
                <div class="dropdown-menu">
                   <a href="{{ route('sekilas.dashuser') }}" class="dropdown-item {{ Route::is('sekilas*') ? 'active' : '' }}">Sekilas bjb Sekuritas</a>
                   <a href="{{ route('struktur.dashuser') }}" class="dropdown-item {{ Route::is('struktur*') ? 'active' : '' }}">Struktur Organisasi</a>
@@ -22,7 +22,7 @@
                <a href="{{ route('perantara.dashuser') }}" class="nav-link {{ Route::is('perantara*') ? 'active' : '' }}">Produk & Layanan</a>
             </div>
             <div class="nav-item dropdown">
-               <a href="#" class="nav-link dropdown-toggle {{ Route::is('rups*','download*') ? 'active' : '' }}" data-toggle="dropdown">Hubungan Investor</a>
+               <a href="" class="nav-link dropdown-toggle {{ Route::is('rups*','download*') ? 'active' : '' }}" data-toggle="dropdown">Hubungan Investor</a>
                <div class="dropdown-menu">
                   <a href="{{ route('rups.dashuser') }}" class="dropdown-item {{ Route::is('rups*') ? 'active' : '' }}">RUPS</a>
                   <a href="{{ route('download.dashuser') }}" class="dropdown-item {{ Route::is('download*') ? 'active' : '' }}">Download</a>
@@ -34,7 +34,7 @@
             @endif
             @if(auth()->check() && (auth()->user()->can('isPelamar')))
                <div class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle {{ Route::is('') ? 'active' : '' }}" data-toggle="dropdown"> {{ auth()->user()->name }} </a>
+                  <a href="" class="nav-link dropdown-toggle {{ Route::is('') ? 'active' : '' }}" data-toggle="dropdown"> {{ auth()->user()->name }} </a>
                   <div class="dropdown-menu">
                      <a href="{{ route('profile', ['name' => $name]) }}" class="dropdown-item {{ Route::is('') ? 'active' : '' }}">Profile</a>
                      <a href="{{ route('download.dashuser') }}" class="dropdown-item {{ Route::is('') ? 'active' : '' }}">Notification</a>

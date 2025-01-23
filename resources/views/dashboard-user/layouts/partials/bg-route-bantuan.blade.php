@@ -1,3 +1,3 @@
 <div class="bg-route">
-   <img src="/img/dashboard-user/carousel/carousel-1.png" alt="Image">
+   <img src="/img/dashboard-user/galeri/9.jpg" alt="Image">
 </div>

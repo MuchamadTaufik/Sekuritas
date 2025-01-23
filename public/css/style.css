@@ -217,6 +217,16 @@ a:focus {
     background: #f8f9fa;
 }
 
+@media (max-width: 992px) {
+    .navbar-dark .navbar-nav .nav-link,
+    .navbar-dark .navbar-nav .nav-link:focus,
+    .navbar-dark .navbar-nav .nav-link:hover,
+    .navbar-dark .navbar-nav .nav-link.active {
+        padding: 10px 10px 8px 10px;
+        color: rgb(255, 255, 255);
+    }
+}
+
 @media (min-width: 992px) {
     .navbar {
         position: absolute;
@@ -728,13 +738,13 @@ a:focus {
 .about-text p, .sekilas-text p, .sejarah-text p, .kepatuhan-text p, .perantara-text p, .section-content, .faq-answer {
     text-align: justify; /* Mengatur agar teks rata kiri-kanan */
     margin-left: auto; /* Memberikan margin otomatis di kiri */
-    margin-right: auto; 
+    margin-right: auto;
 }
 
 .pedoman ol li, .card-body-pengaduan ol li {
     text-align: justify; /* Mengatur agar teks rata kiri-kanan */
     margin-left: auto; /* Memberikan margin otomatis di kiri */
-    margin-right: auto; 
+    margin-right: auto;
 }
 
 @media (max-width: 767.98px) {
@@ -2191,7 +2201,15 @@ a:focus {
 
 .login-wrapper {
     width: 100%;
-    max-width: 1200px;
+    max-width: 500px;
+}
+
+.container-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
 }
 
 .login-card {
