@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardAdmin\AkunController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ErrorController;
 use App\Http\Controllers\Auth\AuthController;
@@ -124,9 +125,18 @@ Route::group(['middleware' => ['auth', 'role:admin,superadmin,hrd,audit']], func
    Route::get('/dashboard', [DashboardAdminController::class, 'index'])->name('dashboard');
 });
 
+//Dashboard untuk Superadmin
+Route::group(['middleware' => ['auth', 'role:superadmin']], function(){
+    Route::get('/dashboard/kontrol-akun', [AkunController::class, 'index'])->name('akun');
+    Route::get('/dashboard/kontrol-akun/create', [AkunController::class, 'create'])->name('akun.create');
+    Route::post('/dashboard/kontrol-akun/store', [AkunController::class, 'store'])->name('akun.store');
+    Route::get('/dashboard/kontrol-akun/edit/{id}', [AkunController::class, 'edit'])->name('akun.edit');
+    Route::put('/dashboard/kontrol-akun/update/{id}', [AkunController::class, 'update'])->name('akun.update');
+    Route::delete('/dashboard/kontrol-akun/delete/{id}', [AkunController::class, 'destroy'])->name('akun.delete');
+ });
+
 //Dashboard untuk seluruh Role HRD
 Route::group(['middleware' => ['auth', 'role:superadmin,hrd']], function(){
-
    //Karir
    Route::get('/dashboard/karir', [KarirController::class, 'index'])->name('karir');
    Route::get('/dashboard/karir/create', [KarirController::class, 'create'])->name('karir.create');

@@ -7,7 +7,7 @@
                <p>Dashboard</p>
             </a>
          </li>
-         
+
             <li class="nav-section">
                <span class="sidebar-mini-icon">
                <i class="fa fa-ellipsis-h"></i>
@@ -41,7 +41,7 @@
             </li>
          @endif
 
-         
+
 
          @if(auth()->user()->can('isSuperadmin') || auth()->user()->can('isHrd'))
             <li class="nav-item {{ Route::is('karir*') ? 'active' : '' }}">
@@ -55,7 +55,7 @@
                   <i class="fas fa-list"></i>
                   <p>Jurusan</p>
                </a>
-            </li> 
+            </li>
             <li class="nav-section">
                <span class="sidebar-mini-icon">
                <i class="fa fa-ellipsis-h"></i>
@@ -67,9 +67,9 @@
                   <i class="fas fa-book"></i>
                   <p>Lamaran</p>
                </a>
-            </li> 
+            </li>
          @endif
-         
+
          @if(auth()->user()->can('isSuperadmin') || auth()->user()->can('isAudit'))
             <li class="nav-item {{ Route::is('pengaduan*') ? 'active' : '' }}">
                <a href="{{ route('pengaduan') }}">
@@ -94,6 +94,14 @@
                </a>
             </li>
          @endif
+         @can('isSuperadmin')
+         <li class="nav-item {{ Route::is('akun*') ? 'active' : '' }}">
+            <a href="{{ route('akun') }}">
+               <i class="fas fa-users"></i>
+               <p>Kontrol Akun</p>
+            </a>
+         </li>
+         @endcan
       </ul>
    </div>
 </div>
