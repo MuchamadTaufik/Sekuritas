@@ -4,11 +4,11 @@
       <meta charset="utf-8">
       <title>bjb Sekuritas</title>
       <meta content="width=device-width, initial-scale=1.0" name="viewport">
-      <meta content="Consulting Website Template Free Download" name="keywords">
-      <meta content="Consulting Website Template Free Download" name="description">
+      <meta content="bjb Sekuritas, Sekuritas, Trading, Reksadana, Obligasi, bjb Sekuritas Jawa Barat, Saham" name="keywords">
+      <meta content="bjb Sekuritas sebagai PED pertama di Indonesia memberikan layanan Pertama Pedagang Efek bagi masyarakat Jawa Barat" name="description">
 
       <!-- Favicon -->
-      <link href="/img/favicon.ico" rel="icon">
+      <link href="/img/dashboard-user/favicon.ico" rel="icon">
 
       <!-- Google Font -->
       <link href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">

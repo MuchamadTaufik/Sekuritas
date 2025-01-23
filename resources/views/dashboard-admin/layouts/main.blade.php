@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Dashboard bjb Sekuritas</title>
     <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
-    <link rel="icon" href="/assets/img/kaiadmin/favicon.ico" type="image/x-icon"/>
+    <link href="/img/dashboard-user/favicon.ico" rel="icon">
 
     <!-- Fonts and icons -->
     <script src="/assets/js/plugin/webfont/webfont.min.js"></script>
@@ -355,15 +355,15 @@
               const fileInput = document.getElementById('images');
               const imagePreview = document.getElementById('image-preview');
               const file = fileInput.files[0];
-              
+
               if (file) {
                 const reader = new FileReader();
-                
+
                 reader.onload = function(e) {
                     imagePreview.src = e.target.result;
                     imagePreview.style.display = 'block';
                 }
-                
+
                 reader.readAsDataURL(file);
               } else {
                 imagePreview.style.display = 'none';
